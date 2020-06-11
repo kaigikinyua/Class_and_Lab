@@ -1,3 +1,5 @@
 1: Rocket Launch Sim [OOP,IO,MODULE INTERGRATION]
+	acceleration[ F=ma]
+	Fnet_of_rocket=thrust-weight
 2: Remote Payment [http testing, error handling]
 3: Student application [DataBases, Inheritance]

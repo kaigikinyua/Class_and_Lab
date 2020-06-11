@@ -1,10 +1,11 @@
+import Data.*;
 class Rocket{
 	public String model;
 	public String mission;
 	public String fuelCapacity;
-	public int weight;
+	public int weight;//weight=mass*gravity
 	public int engine_number;
-
+	public int thrust;
 	Rocket(String model,String mission,String fuelCapacity, String weight, String engine_number){
 		this.model=model;
 		this.mission=mission;
@@ -14,12 +15,16 @@ class Rocket{
 	}
 
 	public int calcAcceleration(){
-		//factor weight,thrust,gravity
-		return 0;
-	}
-
-	public int calcThrust(){
-		return 0;
+		//a=Fnet/mass
+		//Fnet=Thrust-weight
+		int acc=0;
+		int fNet=this.thrust-this.weight;
+		try{
+			int acc=fNet/this.weight;
+		}catch(Exception e){
+			Data.consoleOutput("Weight is 0",'Error');
+		}
+		return acc;
 	}
 
 	public int calcHeight(){
