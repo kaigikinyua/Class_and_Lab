@@ -12,4 +12,5 @@ fun main(){
     student1.register()
     var student2=Student("James","CS-3013")
     student2.register()
+    println(student1.name)
 }
