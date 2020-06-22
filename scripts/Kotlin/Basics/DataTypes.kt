@@ -6,6 +6,12 @@ class Student(val name:String,val regNumber:String){
         println("Registering $name with regnumber $regNumber")
     }
 }
+class Teacher(name:String,staffID:String){
+    init(){}
+    fun fetchClasses(){}
+    fun enterStudentData(){}    
+}
+
 
 fun main(){
     var student1=Student("Jim","BBIT-3435")
