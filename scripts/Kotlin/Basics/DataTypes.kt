@@ -11,13 +11,20 @@ class MathOperations(values:Array<Int>){
     fun multiply(){}
     fun division(){}
     // fun sort(){
-    //     var pivot:Int=values.size/2
+    //     var pivot:Int=(values.size/2).toInt()
     // }
 }
 
+class UserData(name:String,email:String){
+    val username=name
+    val userEmail=email
+}
 
 fun main(){
-    var myarray=arrayOf(10,20,30)
-    var opp=MathOperations(myarray)
-    println(opp.add())
+    var users:Array<UserData> = arrayOf(UserData("Myname","email@domain.com"),UserData("Myname2","myemail@domain.com"))
+    for (user in users){
+        var uname:String=user.username
+        var email:String=user.userEmail
+        println("Hello $uname I have sent the email to $email")
+    }
 }
