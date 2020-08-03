@@ -1,0 +1,7 @@
+{
+	"static_reg":[
+		{"expr":"<script src=*.*></script>"},
+		{"expr":"src"},
+		{"expr":"<link href=*.* />"},
+	]
+}
