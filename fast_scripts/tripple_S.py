@@ -3,7 +3,6 @@ import os
 import sys
 import re
 
-
 class WebPage:
 	def __init__(url):
 		self.base_url=url
@@ -16,7 +15,8 @@ class WebPage:
 		pass
 
 class Save:
-
+	
+	@staticmethod
 	def save_file(filename,content):
 		try:
 			file_path="./Tests/"+str(filename)
@@ -27,6 +27,7 @@ class Save:
 			print(e)
 			print("Error while saving the file")
 
+	@staticmethod
 	def read_file(file_path):
 		data=[]
 		try:
@@ -38,17 +39,20 @@ class Save:
 			data=False
 		return data
 
+	@staticmethod
 	def save_refined_file(file_path):
 		data=read_file(file_path)
 		for line in data:
 			print(line)
 
+	@staticmethod
 	def extract_file_name(url):
 		x=url.split('/')
 		return x[len(x)-1]
 
-class RegularExp
-	
+class RegularExp:
+
+	@staticmethod
 	def find_reg_expr(expr,search_data):
 		pass
 
