@@ -1,6 +1,6 @@
 using System;
 namespace SpaceCraft{
-    public struct Craft{
+    public struct CraftState{
         public string craftID,missionType,wethearCondition;
         public int[] targetCordinates={0,0,0},fuelCapacity,cargoWeight,velocity;
         class Vehicle{
