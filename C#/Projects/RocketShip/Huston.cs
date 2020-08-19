@@ -1,21 +1,35 @@
 using System;
-using Rocket;
-using SpaceCraft;
+using System.Threading;
+using Utils;
 namespace Huston{
     class Mission{
         public bool loadCraft(){
-            boolState=false;
-            
+            bool boolState=false;
+            Messages.success("Loading space craft");
+            return boolState;
         }
-        public void setEnvironmentConditions(){}
-        public void launch(){}
+        public void setEnvironmentConditions(){
+            Messages.success("Setting envionment Conditions");
+        }
+        public void launch(){
+            Messages.success("Initiating launch sequence");
+            int i=10;
+            while(i>0){
+                Console.Write("{0} \r",i);
+                Thread.Sleep(1000);
+                i--;
+            }
+        }
         public void landing(){}
         public void sequence(){}
         public void diagnostics(){}
         public void blackbox(){}
 
         public static void Main(string[] args){
-            loadCraft();
+            Mission m=new Mission();
+            m.loadCraft();
+            m.setEnvironmentConditions();
+            m.launch();
         }
     }
 }
