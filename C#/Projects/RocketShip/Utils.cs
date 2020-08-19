@@ -13,15 +13,13 @@ namespace Utils{
             Console.ForegroundColor=ConsoleColor.White;
             Console.WriteLine(message);
         }
+        public static void animation(string message){
+            Console.WriteLine(message+"\r");
+        }
     }
     class Files{
         public static void readFile(string filePath){}
         public static void writeFile(string filePath){}
-        public static void Main(string[] args){
-            Messages.error("Test error message");
-            Messages.success("Testing success message");
-            Messages.notification("Testing print message");
-        }
     }
     
 }
