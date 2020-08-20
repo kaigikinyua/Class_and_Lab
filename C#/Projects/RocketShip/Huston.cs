@@ -20,7 +20,10 @@ namespace Huston{
                 i--;
             }
         }
-        public void landing(){}
+        public void landing(){
+            Messages.success("Starting landing sequence")
+            int i=
+        }
         public void sequence(){}
         public void diagnostics(){}
         public void blackbox(){}
