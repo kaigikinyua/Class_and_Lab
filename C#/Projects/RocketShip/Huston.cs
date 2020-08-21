@@ -21,8 +21,14 @@ namespace Huston{
             }
         }
         public void landing(){
-            Messages.success("Starting landing sequence")
-            int i=
+            Messages.success("Starting landing sequence");
+            Messages.success("Initiating landing sequence");
+            int i=10;
+            while (i>0){   
+                Console.Write("{0} \r",i);
+                Thread.Sleep(1000);
+                i--;
+            }
         }
         public void sequence(){}
         public void diagnostics(){}
