@@ -30,9 +30,15 @@ namespace Huston{
                 i--;
             }
         }
-        public void sequence(){}
-        public void diagnostics(){}
-        public void blackbox(){}
+        public void sequence(int countdown,string message){
+            int i=countdown;
+            Messages.success(message);
+            while(i>0){
+                Console.Write("{0} \r",i);
+                i--;
+            }
+        }
+        public void blackbox(string state){}
 
         public static void Main(string[] args){
             Mission m=new Mission();
