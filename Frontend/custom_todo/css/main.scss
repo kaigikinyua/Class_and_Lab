@@ -1,0 +1,99 @@
+@import './mixins.scss';
+$shadow:rgba(10,10,10,0.5);
+$prim_color:lightseagreen;
+$background:rgba(150,150,150,0.8);
+
+*{
+	padding:0px;
+	margin:0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar{
+	background:$shadow;
+	width:8px;
+}
+::-webkit-scrollbar-thumb {
+	background:$prim_color;
+	width:7px;
+	border-radius: 10px;
+}
+body{
+	overflow-x:hidden;
+	background: $background;
+}
+nav.topnav{
+	padding:20px;
+	box-shadow: 1px 1px 10px 10px $shadow;
+	margin-bottom:20px;
+	background:$prim_color;
+	color:white;
+	letter-spacing: 2px;
+	h3{
+		font-weight: lighter;
+	}
+}
+footer{
+	position: fixed;
+	bottom:0px;
+}
+div.container{
+	position: relative;
+	@include center_h;
+	max-width:1000px;
+}
+section.full{
+	position: relative;
+	height: 100vh;
+	width:100vw;
+}
+
+div.split_screen{
+	position: relative;
+	height:100%;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+div.tiles{
+	position: relative;
+	height:100%;
+	max-height:600px;
+	overflow-y:scroll;
+	background:whitesmoke;
+	overflow-x:hidden;
+	margin-right: 5px;
+	h3.tileHeader{
+		margin-bottom:20px;
+		padding:10px;
+		background:white;
+		border-bottom:2px solid $background;
+	}
+	div.tile{
+		padding:10px;
+		background:white;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		margin:10px;
+		border-bottom: 1px solid lighten($background,20%);
+		h3{
+			font-size: 18px;
+			font-weight: lighter;
+		}
+	}
+}
+div.mainbar{
+	background:white;
+	height:100%;
+	max-height:600px;
+	overflow-y:scroll;
+}
+div.group{
+	padding:10px;
+}
+
+
+.clickable{transition:0.5s;}
+.clickable:hover{
+	box-shadow: 1px 1px 3px 3px $shadow;
+	transform: scale(1.005);
+}
