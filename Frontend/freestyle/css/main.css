@@ -9,13 +9,19 @@ section.full {
 }
 
 section.landing {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  background: rgba(10, 10, 10, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 div.image {
+  position: relative;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,6 +29,18 @@ div.image {
 }
 
 .one {
+  background: rgba(10, 10, 10, 0.8);
+  -webkit-clip-path: polygon(0px 100%, 46.4% 427px, 120.2% 1.11%, 458px 1.25%, 0.77% 0.54%);
+          clip-path: polygon(0px 100%, 46.4% 427px, 120.2% 1.11%, 458px 1.25%, 0.77% 0.54%);
+}
+
+.two {
+  background: rgba(10, 10, 10, 0.8);
+  -webkit-clip-path: polygon(-267px 99.77%, 30.59% 427px, 62.88% 56.33%, 458px 1.25%, 0.77% 0.54%);
+          clip-path: polygon(-267px 99.77%, 30.59% 427px, 62.88% 56.33%, 458px 1.25%, 0.77% 0.54%);
+}
+
+.three {
   background: rgba(10, 10, 10, 0.8);
   -webkit-clip-path: polygon(0px 100%, 80% 399px, 100% 80%, 458px 1.25%, 0.77% 0.54%);
           clip-path: polygon(0px 100%, 80% 399px, 100% 80%, 458px 1.25%, 0.77% 0.54%);
