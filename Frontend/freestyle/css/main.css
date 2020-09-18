@@ -45,4 +45,14 @@ div.image {
   -webkit-clip-path: polygon(0px 100%, 80% 399px, 100% 80%, 458px 1.25%, 0.77% 0.54%);
           clip-path: polygon(0px 100%, 80% 399px, 100% 80%, 458px 1.25%, 0.77% 0.54%);
 }
+
+div.message {
+  display: none;
+  opacity: 0;
+}
+
+div.image:hover div.message {
+  opacity: 1;
+  display: block;
+}
 /*# sourceMappingURL=main.css.map */
