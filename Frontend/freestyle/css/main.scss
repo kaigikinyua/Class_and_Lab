@@ -13,29 +13,36 @@ section.full{
     width:100vw;
 }
 section.landing{
+    height:100vh;
+    width:100vw;
     background:rgba(10,10,10,0.8);
     display: flex;
-    justify-content: center;
-    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 div.image{
-    position: relative;
-    height:100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
+    transition:clip-path 1s;
 }
 .one{
     background:rgba(10,10,10,0.8);
-    clip-path: polygon(0px 100%, 46.40% 427px, 120.2% 1.11%, 458px 1.25%, 0.77% 0.54%);
+    clip-path: polygon(0 0,55% 0,20% 100%,0% 100%);
 }
 .two{
     background:rgba(10,10,10,0.8);
-    clip-path: polygon(-267px 99.77%, 30.59% 427px, 62.88% 56.33%, 458px 1.25%, 0.77% 0.54%);
+    clip-path: polygon(55% 0, 100% 0,45% 100%,20% 100%);
 }
 .three{
     background:rgba(10,10,10,0.8);
-    clip-path: polygon(0px 100%, 80% 399px, 100% 80%, 458px 1.25%, 0.77% 0.54%);
+    clip-path: polygon(100% 0%,100% 0,100% 100%,45% 100%);
 }
 div.message{
     display: none;
@@ -44,4 +51,26 @@ div.message{
 div.image:hover div.message{
     opacity: 1;
     display: block;
+    padding:10px;
+    background:white;
+    position: relative;
+    width:100%;
+    font-size: 30px;
+    transition:1s;
+    animation: 1s show 0s ease-in-out;
+}
+section.landing:hover div.image{
+    clip-path: polygon(100% 0,100% 0,100% 100%,100% 100%);
+}
+section.landing div.image:hover{
+    clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
