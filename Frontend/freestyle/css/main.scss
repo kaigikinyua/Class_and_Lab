@@ -7,6 +7,7 @@ body{
     // justify-content: center;
     // align-content: center;
     // min-height: 100vh;
+    overflow-x:hidden;
 }
 section.full{
     height:100vh;
@@ -64,6 +65,68 @@ section.landing:hover div.image{
 }
 section.landing div.image:hover{
     clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+}
+div.content{
+    position: relative;
+    max-width: 1000px;
+    left:50%;
+    transform: translateX(-50%);
+    transition:1s;
+    padding:20px 0px;
+}
+h3.header{
+    padding:10px;
+    font-weight: lighter;
+    font-size: 30px;
+    position: sticky;
+    color: rgb(50,50,50);
+    letter-spacing: 2px;
+}
+h3.header::after{
+    content:"";
+    background:white;
+    position: relative;
+    height:5px;
+    width:170px;
+    display: block;
+    border-radius: 5px;
+}
+div.split_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    div.side_image{
+        overflow: hidden;
+        clip-path: polygon(0 100%,100% 0%,0 0%,0% 0%);
+        transition:1s;
+    }
+    img{
+        position: relative;
+        height:auto;
+        width:100%;
+    }
+}
+p{
+    padding:10px;
+    font-family: Arial;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: lighter;
+}
+div.content:hover div.side_image{
+    //clip-path: polygon(0 100%,100% 0%,0% 0%,100% 0%);
+    clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+}
+div.content:hover h3.header{
+    color:lightgray;
+}
+div.content:hover p{
+    color:whitesmoke;
+}
+section.animated{
+    transition:1s;
+}
+section.animated:hover{
+    background:rgba(10,10,10,0.8);
 }
 
 @keyframes show{
