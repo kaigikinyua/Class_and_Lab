@@ -1,10 +1,9 @@
-
 # Personal_ClassRoom_&_Lab
 
 
 # Badges
-![Python](res/python.jpg){:height=50px width=50px}
-![Javascript](res/js.png) 
-![NodeJS](res/nodejs.png)
-![React](/res/react.png)
-![C#](/res/csharp.png)
+    <img src="./res/python.jpg" style="height:50px;width:50px; border-radius:50%;"/>
+    <img src="./res/js.jpg" style="height:50px;width:50px; border-radius:50%;"/>
+    <img src="./res/nodejs.png" style="height:50px;width:50px; border-radius:50%;"/>
+    <img src="./res/react.png" style="height:50px;width:50px; border-radius:50%;" />
+    <img src="./res/c#.png" style="height:50px;width:50px; border-radius:50%;" >
