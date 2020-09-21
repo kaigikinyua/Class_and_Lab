@@ -3,45 +3,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Me</title>
+    <title>Project</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header>
-        <h3>ReactJS</h3>
-        <ul class="links">
-            <a href="#"><li>Home</li></a>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Contacts</li></a>
-        </ul>
+        <div class="content">
+            <h3>ReactJS</h3>
+            <ul class="links">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Contacts</li></a>
+            </ul>
+        </div>
     </header>
-    <section class="landing" id="app">
-
+    <section class="full landing" id="app">
+        <div class="content">
+            <div class="slide">
+                <div class="card_content">
+                    <div class="card">Card</div>
+                    <img class="slide" src="./images/react-one.jpg"/>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="full" id="app2"></section>
+    <section class="full">
+        <div class="content">
+            <h3>Reviews</h3>
+            <div class="reviews" id="reviews"></div>
+        </div>
+    </section>
 </body>
 <script src="../build/react.js"></script>
 <script src="../build/react-dom.js"></script>
 <script src="../babel/babel.js"></script>
 <script type="text/babel">
-    var ExampleOne=React.createClass({
-        render:function(){
-            var message="This is react lesson one"
-            return <div>{message}</div>;
-        }
-    });
-    ReactDOM.render(
-        <ExampleOne/>,
-        document.getElementById('app')
-    );
 
-    var ExampleTwo=React.createClass({
+    var ReviewContainer=React.createClass({
         render:function(){
-            return <div>{this.props.msg}</div>
+            const pics=[
+            {"username":"User One","content":"","url":""},
+            {"username":"Two","content":"","url":""},
+            {"username":"Three User One","content":"","url":""},
+            {"username":"Four","content":"","url":""},
+            ]
+            return <ul class="reviews">
+                {
+                    Object.keys(pics).map((key,i)=>(
+                        <li className="card" key={i}><div className="title">{pics[key].username}</div></li>
+                    ))
+                }
+            </ul>
+        },
+        loopJson:function(){
+            
         }
     });
+
     ReactDOM.render(
-        <ExampleTwo msg="Hello World"/>,
-        document.getElementById('app2')
+        <ReviewContainer msg="Hello World"/>,
+        document.getElementById('reviews')
     )
 </script>
 </html>
