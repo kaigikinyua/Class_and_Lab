@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Me</title>
+</head>
+<body>
+    <header>
+        <h3>ReactJS</h3>
+        <ul class="links">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contacts</li></a>
+        </ul>
+    </header>
+    <section class="landing" id="app">
+
+    </section>
+    <section class="full" id="app2"></section>
+</body>
+<script src="../build/react.js"></script>
+<script src="../build/react-dom.js"></script>
+<script src="../babel/babel.js"></script>
+<script type="text/babel">
+    var ExampleOne=React.createClass({
+        render:function(){
+            var message="This is react lesson one"
+            return <div>{message}</div>;
+        }
+    });
+    ReactDOM.render(
+        <ExampleOne/>,
+        document.getElementById('app')
+    );
+
+    var ExampleTwo=React.createClass({
+        render:function(){
+            return <div>{this.props.msg}</div>
+        }
+    });
+    ReactDOM.render(
+        <ExampleTwo msg="Hello World"/>,
+        document.getElementById('app2')
+    )
+</script>
+</html>
