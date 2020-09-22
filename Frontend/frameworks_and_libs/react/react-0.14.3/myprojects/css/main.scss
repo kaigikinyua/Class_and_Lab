@@ -67,3 +67,7 @@ img.slide{
     height:60%;
     width:auto;
 }
+.dual{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
