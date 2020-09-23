@@ -1,7 +1,7 @@
 import './IO.dart';
 import './Rocket.dart';
 
-void main(){
+void main() async{
   //String rocketSimNum=UserInput.enter(true,"How many rocket simulations would you like to run");
   List<Rocket> rocketList=[];
   for(int i=0;i<3;i++){
@@ -13,4 +13,7 @@ void main(){
   rocketList.forEach((f)=>{
     print("Rocket name:"+f.name+" model:"+f.model)
   });
+  //async
+  print(await UserInput.longInput());
+  print("Program wait");
 }

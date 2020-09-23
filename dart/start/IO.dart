@@ -11,4 +11,9 @@ class UserInput{
   static void output(String message){
     print(message);
   }
+  static Future<String> longInput() async{
+    String x=await UserInput.stringWait();
+    return x;
+  }
+  static Future <String> stringWait()=>Future.delayed(Duration(seconds:3),()=>"Wait");
 }
