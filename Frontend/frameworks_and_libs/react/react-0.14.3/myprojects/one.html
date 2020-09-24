@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project</title>
     <link rel="stylesheet" href="./css/main.css">
@@ -17,7 +17,7 @@
             </ul>
         </div>
     </header>
-    <section class="full landing" id="app">
+    <section class="full landing">
         <div class="slides">
             <div class="slide" id="one" style="background-image: url('./images/one.png');">
                 <div class="dual center_v">
@@ -51,8 +51,8 @@
             <a href="#four"><div></div></a>
         </div>
     </section>
-    <section class="full">
-        <div class="content">
+    <section class="full" style="display: flex; justify-content: center;">
+        <div class="content" style="display: block; max-width:800px; height: auto;">
             <h3>Reviews</h3>
             <div class="reviews" id="reviews"></div>
         </div>
@@ -86,13 +86,13 @@
             const pics=[
             {"username":"User One","content":"","url":""},
             {"username":"Two","content":"","url":""},
-            {"username":"Three User One","content":"","url":""},
+            {"username":"Three One","content":"","url":""},
             {"username":"Four","content":"","url":""},
             ]
-            return <ul class="reviews">
+            return <ul className="reviews">
                 {
                     Object.keys(pics).map((key,i)=>(
-                        <li className="card" key={i}><div className="title">{pics[key].username}</div></li>
+                        <li className="card" key={i}><div className="title">{pics[key].username}</div><div className="profile"></div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sit?</p></li>
                     ))
                 }
             </ul>

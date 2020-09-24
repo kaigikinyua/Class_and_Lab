@@ -14,8 +14,8 @@ div::-webkit-scrollbar-track{
     background:transparent;
 }
 body{
-    width:100vw;
     overflow-x:hidden;
+    overflow-y:scroll;
 }
 a{
     color:currentColor;
@@ -151,4 +151,33 @@ img.card_image{
     position: relative;
     left:50%;
     transform: translateX(-50%);
+}
+ul.reviews{
+    position: relative;
+    list-style-type: none;
+    overflow-x:scroll;
+    div{
+        padding:10px;
+    }
+    li.card{
+        padding:10px;
+        display: inline-block;
+        margin:10px;
+        max-width:100px;
+        min-height: 200px;
+        max-height: 300px;
+        text-align: center;
+    }
+    div.title{
+        font-weight: bolder;
+    }
+    div.profile{
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+        height:30px;
+        width:30px;
+        border-radius: 50%;
+        background:lightseagreen;
+    }
 }

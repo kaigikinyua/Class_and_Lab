@@ -18,8 +18,8 @@ div::-webkit-scrollbar-track {
 }
 
 body {
-  width: 100vw;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 a {
@@ -210,5 +210,40 @@ img.card_image {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+ul.reviews {
+  position: relative;
+  list-style-type: none;
+  overflow-x: scroll;
+}
+
+ul.reviews div {
+  padding: 10px;
+}
+
+ul.reviews li.card {
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  max-width: 100px;
+  min-height: 200px;
+  max-height: 300px;
+  text-align: center;
+}
+
+ul.reviews div.title {
+  font-weight: bolder;
+}
+
+ul.reviews div.profile {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: lightseagreen;
 }
 /*# sourceMappingURL=main.css.map */
