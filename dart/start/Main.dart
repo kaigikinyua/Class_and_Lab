@@ -3,7 +3,9 @@ import './Rocket.dart';
 
 void main() async{
   //String rocketSimNum=UserInput.enter(true,"How many rocket simulations would you like to run");
-  List<Rocket> rocketList=[];
+  Files("./test.txt").readFile();
+  
+  /*List<Rocket> rocketList=[];
   for(int i=0;i<3;i++){
     String rName=UserInput.enter(true,"Rocket name");
     String rModel=UserInput.enter(true,"Rocket model");
@@ -15,5 +17,5 @@ void main() async{
   });
   //async
   print(await UserInput.longInput());
-  print("Program wait");
+  print("Program wait");*/
 }
