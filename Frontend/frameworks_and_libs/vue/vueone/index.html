@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VueJS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all.min.css">
     <script src="./js/vue.js"></script>
 </head>
 <body>
@@ -31,19 +32,18 @@
                 </div>
             </div>
             <div class="controlls">
-                
             </div>
         </div>
     </header>
     <section class="full">
         <div class="container middle">
-            <h3>Services</h3>
+            <h3><i class="num">#</i> Services</h3>
             <p>Expedita suscipit eum quasi dolore, inventore maiores earum nihil magnam aliquam soluta</p>
         </div>
     </section>
     <section class="full">
         <div class="container middle">
-            <h3>Packages</h3>
+            <h3><i class="num">#</i> Packages</h3>
             <div class="cards">
                 <!--
                 <div class="card">
@@ -51,6 +51,18 @@
                     <i class="icon"></i>
                 </div>
                 -->
+            </div>
+        </div>
+    </section>
+    <section class="full">
+        <div class="container middle">
+            <h3><i class="num">#</i> Client Reviews</h3>
+            <div class="reviews" id="reviews">
+                <div class="review" v-for="review in reviews">
+                    <i class="fa fa-user"></i>
+                    <h3 class="title">{{review.username}}</h3>
+                    <p>{{review.review}}</p>
+                </div>
             </div>
         </div>
     </section>

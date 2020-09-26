@@ -1,6 +1,7 @@
 *{
     padding:0px;
     margin:0px;
+    font-family: Arial;
 }
 .container{
     max-width: 1000px;
@@ -30,10 +31,18 @@ nav{
     padding:10px;
     z-index: 10;
     width:100vw;
+    background:rgba(10,10,10,0.4);
+    color:white;
     .container{
         display: grid;
         grid-template-columns:1fr 1fr;
-        text-align: center;
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .barner{
+        padding:10px;
+        text-align: left;
     }
 }
 
@@ -57,16 +66,19 @@ div.slides{
     position: relative;
     height:auto;
     margin:5px;
-    width:1200px;
+    width:1000px;
     top:50%;left:50%;
     transform: translate(-50%,-50%);
     display: flex;
     overflow-x:scroll;
     overflow-y:hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     div.slide{
         position: relative;
         height:100%;width:100%;
         flex-shrink: 0;
+        scroll-snap-align:center;
     }
     img.s_image{
         position: relative;
@@ -91,4 +103,40 @@ div.slides{
 .dual_res{
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+section.full{
+    position: relative;
+    height:100vh;
+    width:100vw;
+}
+i.num{
+    color:lightseagreen;
+}
+div.reviews{
+    display: flex;
+    justify-content: space-around;
+    overflow-x:scroll;
+    div.review{
+        margin:5px;
+        text-align: center;
+        padding:10px;
+        background:white;
+        box-shadow: 1px 1px 10px 10px rgba(10,10,10,0.1);
+        border-radius: 10px;
+        min-width:200px;
+        min-height: 200px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        i{
+            font-size: 30px;
+            margin:10px 0px;
+            color:lightseagreen;
+        }
+        h3{
+            color:darken(lightseagreen,20%);
+        }
+    }
 }
