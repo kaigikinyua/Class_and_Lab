@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VueJS</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/vue.js"></script>
 </head>
 <body>
     <nav>
@@ -19,25 +21,28 @@
         </div>
     </nav>
     <header class="landing">
-        <div class="container">
-            <div class="slides" id="slides">
-                <!--<div class="slide">
+        <div class="container" style="background-image:url(./images/sun.jpg);">
+            <div class="slides i_scroll" id="slides">
+                <div class="slide" v-for="slide in slides" v-bind:id="slide.image">
                     <div class="dual_res">
-                        <div class="text"></div>
-                        <img class="s_image" src=""/>
+                        <div class="text">{{slide.text_content}}</div>
+                        <img class="s_image" v-bind:src="slide.image"/>
                     </div>
-                </div>-->
+                </div>
+            </div>
+            <div class="controlls">
+                
             </div>
         </div>
     </header>
     <section class="full">
-        <div class="continer">
+        <div class="container middle">
             <h3>Services</h3>
             <p>Expedita suscipit eum quasi dolore, inventore maiores earum nihil magnam aliquam soluta</p>
         </div>
     </section>
     <section class="full">
-        <div class="container">
+        <div class="container middle">
             <h3>Packages</h3>
             <div class="cards">
                 <!--
@@ -50,7 +55,7 @@
         </div>
     </section>
     <section class="contacts">
-        <div class="container">
+        <div class="container middle">
             <div class="contacts">
                 <h3>Contacts</h3>
             </div>
@@ -58,4 +63,5 @@
         </div>
     </section>
 </body>
+<script src="./js/index.js"></script>
 </html>
