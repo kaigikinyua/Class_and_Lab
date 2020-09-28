@@ -16,6 +16,9 @@ new Vue({
     data:{
         slides:[
             {"text_content":"This is slide one","image":"./images/food.jpg"},
+            {"text_content":"This is another slide","image":"./images/nature_view.jpg"},
+            {"text_content":"This is another slide","image":"./images/adventure.jpg"},
+            {"text_content":"This is another slide","image":"./images/bed.jpg"},
             {"text_content":"This is slide two","image":"./images/fruits.jpg"},
             {"text_content":"This is slide three","image":"./images/pool.jpeg"}
         ]
