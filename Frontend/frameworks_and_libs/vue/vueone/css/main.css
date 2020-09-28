@@ -124,7 +124,7 @@ div.slides {
   position: relative;
   height: auto;
   margin: 5px;
-  width: 1000px;
+  width: 100vw;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -253,5 +253,19 @@ section.contacts table td {
   padding: 10px;
   font-size: 1.1em;
   color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .dual_res {
+    display: block;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  section.contacts {
+    height: 100vh;
+  }
+  ul.horizontal {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
