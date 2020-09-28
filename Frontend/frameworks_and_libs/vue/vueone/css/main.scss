@@ -3,8 +3,20 @@
     margin:0px;
     font-family: Arial;
 }
+body{
+    overflow-x:hidden;
+}
 .container{
     max-width: 1000px;
+    h3.title{
+        i{
+            opacity: 0;
+            transition:1s;
+        }
+    }
+}
+.container:hover h3.title i{
+    opacity: 1;
 }
 .middle{
     position: relative;
@@ -25,13 +37,31 @@ ul.horizontal{
         display: inline-block;
     }
 }
+ul.links{
+    li{
+        overflow:hidden;
+    }
+    span{
+        position: relative;
+        display: block;
+        width:100%;
+        height:2px;
+        background:lightseagreen;
+        border-radius: 10px;
+        margin-left: -120%;
+        transition:.5s;
+    }
+    li:hover span{
+        margin-left: 0%;
+    }
+}
 nav{
     position: fixed;
     top:0px;
     padding:10px;
     z-index: 10;
     width:100vw;
-    background:rgba(10,10,10,0.4);
+    background:rgba(10,10,10,0.8);
     color:white;
     .container{
         display: grid;
@@ -43,6 +73,10 @@ nav{
     .barner{
         padding:10px;
         text-align: left;
+        color:lightseagreen;
+        font-size: 1.2em;
+        font-weight: bold;
+        letter-spacing: 2px;
     }
 }
 
@@ -137,6 +171,26 @@ div.reviews{
         }
         h3{
             color:darken(lightseagreen,20%);
+        }
+    }
+}
+section.contacts{
+    position: relative;
+    height:40vh;
+    background:rgba(10,10,10,0.8);
+    margin-top:20px;
+    h3{
+        font-size: 1.4em;
+        color:whitesmoke;
+        font-weight: lighter;
+        letter-spacing: 2px;
+    }
+    table{
+        margin-left: 20px;
+        td{
+            padding:10px;
+            font-size: 1.1em;
+            color:white;
         }
     }
 }

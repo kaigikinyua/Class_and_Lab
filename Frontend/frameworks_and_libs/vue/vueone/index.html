@@ -13,10 +13,10 @@
         <div class="container">
             <div class="barner">Hotel Vue</div>
             <div class="links">
-                <ul class="horizontal">
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>Blog</li></a>
-                    <a href="#"><li>Reviews</li></a>
+                <ul class="horizontal links">
+                    <a href="#"><li>Home <span></span></li></a>
+                    <a href="#"><li>Blog <span></span></li></a>
+                    <a href="#"><li>Reviews <span></span></li></a>
                 </ul>
             </div>
         </div>
@@ -37,13 +37,13 @@
     </header>
     <section class="full">
         <div class="container middle">
-            <h3><i class="num">#</i> Services</h3>
+            <h3 class="title"><i class="num">#</i> Services</h3>
             <p>Expedita suscipit eum quasi dolore, inventore maiores earum nihil magnam aliquam soluta</p>
         </div>
     </section>
     <section class="full">
         <div class="container middle">
-            <h3><i class="num">#</i> Packages</h3>
+            <h3 class="title"><i class="num">#</i> Packages</h3>
             <div class="cards">
                 <!--
                 <div class="card">
@@ -56,7 +56,7 @@
     </section>
     <section class="full">
         <div class="container middle">
-            <h3><i class="num">#</i> Client Reviews</h3>
+            <h3 class="title"><i class="num">#</i> Client Reviews</h3>
             <div class="reviews" id="reviews">
                 <div class="review" v-for="review in reviews">
                     <i class="fa fa-user"></i>
@@ -67,11 +67,25 @@
         </div>
     </section>
     <section class="contacts">
-        <div class="container middle">
-            <div class="contacts">
+        <div class="container middle dual_res">
+            <div>
                 <h3>Contacts</h3>
+                <table>
+                    <tr><td><i class="fa fa-phone"></i></td><td>+001-356-466</td></tr>
+                    <tr><td><i class="fab fa-facebook-f"></i></td><td>@user</td></tr>
+                    <tr><td><i class="fab fa-twitter"></i></td><td>@user_name</td></tr>
+                    <tr><td><i class="fab fa-instagram"></i></td><td>@user_inst</td></tr>
+                </table>
             </div>
-            <div class="contacts"></div>
+            <div>
+                <h3>Location</h3>
+                <table>
+                    <tr><td><i class="fa fa-phone"></i></td><td>+001-356-466</td></tr>
+                    <tr><td><i class="fab fa-facebook-f"></i></td><td>@user</td></tr>
+                    <tr><td><i class="fab fa-twitter"></i></td><td>@user_name</td></tr>
+                    <tr><td><i class="fab fa-instagram"></i></td><td>@user_inst</td></tr>
+                </table>
+            </div>
         </div>
     </section>
 </body>
