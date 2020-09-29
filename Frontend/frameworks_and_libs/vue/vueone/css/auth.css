@@ -1,0 +1,94 @@
+body {
+  background-image: url("../images/nature_view.jpg");
+}
+
+section.full {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 400px;
+}
+
+div.auth_form {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: rgba(10, 10, 10, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+div.auth_form * {
+  display: block;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+div.auth_form button, div.auth_form .submit, div.auth_form input {
+  position: relative;
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+
+div.auth_form input {
+  background: none;
+  border-bottom: 1px solid green;
+  width: 70%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 1s;
+  transition: 1s;
+  outline: lightgreen;
+  color: white;
+}
+
+div.auth_form input:hover {
+  width: 100%;
+}
+
+div.auth_form input::-webkit-input-placeholder {
+  color: lightseagreen;
+}
+
+div.auth_form input:-ms-input-placeholder {
+  color: lightseagreen;
+}
+
+div.auth_form input::-ms-input-placeholder {
+  color: lightseagreen;
+}
+
+div.auth_form input::placeholder {
+  color: lightseagreen;
+}
+
+div.auth_form button, div.auth_form .submit {
+  background: lightseagreen;
+  color: white;
+}
+
+div.auth_form i {
+  font-size: 50px;
+  color: #116e11;
+  border-radius: 50%;
+  border: 1px solid white;
+  border-top: 1px solid transparent;
+  height: 65px;
+  width: 65px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+div.auth_form .title {
+  color: white;
+}
+/*# sourceMappingURL=auth.css.map */

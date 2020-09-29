@@ -1,0 +1,66 @@
+body{
+    background-image:url('../images/nature_view.jpg');
+}
+section.full{
+    display: flex;
+    justify-content: center;
+    min-width: 400px;
+}
+div.auth_form{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    background:rgba(10,10,10,0.8);
+    padding:30px;
+    border-radius: 20px;
+    width:100%;
+    *{
+        display: block;
+        text-align: center;
+        margin:20px 0px;
+    }
+    button,.submit,input{
+        position: relative;
+        width:100%;
+        padding:5px 10px;
+        border:1px solid transparent;
+    }
+    input{
+        background:none;
+        border-bottom: 1px solid green;
+        width:70%;
+        left:50%;
+        transform: translateX(-50%);
+        transition:1s;
+        outline:lightgreen;
+        color:white;
+    }
+    input:hover{
+        width:100%;
+    }
+    input::placeholder{
+        color:lightseagreen;
+    }
+    button,.submit{
+        background:lightseagreen;
+        color:white;
+    }
+    i{
+        font-size: 50px;
+        color:darken(lightgreen,50%);
+        border-radius: 50%;
+        border:1px solid white;
+        border-top:1px solid transparent;
+        height:65px;
+        width:65px;
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .title{
+        color:white;
+    }
+}
+div.form_container{
+
+}
