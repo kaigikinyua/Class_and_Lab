@@ -35,19 +35,19 @@ div.auth_form{
         outline:lightgreen;
         color:white;
     }
-    input:hover{
+    input:hover,input:focus{
         width:100%;
     }
     input::placeholder{
         color:lightseagreen;
     }
     button,.submit{
-        background:lightseagreen;
+        background:lighten(green,10%);
         color:white;
     }
     i{
         font-size: 50px;
-        color:darken(lightgreen,50%);
+        color:lighten(green,10%);
         border-radius: 50%;
         border:1px solid white;
         border-top:1px solid transparent;
