@@ -394,4 +394,31 @@ div.card {
     font-size: 10px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .dual_res {
+    display: block;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  section.contacts {
+    height: 100vh;
+  }
+  ul.horizontal {
+    font-size: 10px;
+  }
+  section.full {
+    position: relative;
+    height: 110vh;
+    margin: 200px 0px;
+  }
+  div.cards div.card {
+    position: relative;
+    width: 60%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-top: 30px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
