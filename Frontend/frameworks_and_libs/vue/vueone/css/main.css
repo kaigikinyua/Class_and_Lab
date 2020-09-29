@@ -8,8 +8,16 @@ body {
   overflow-x: hidden;
 }
 
+body :nth-child(odd) section.full {
+  background: #fef1f4;
+}
+
 .container {
   max-width: 1000px;
+}
+
+.container h3.title {
+  margin: 20px 0px;
 }
 
 .container h3.title i {
@@ -231,8 +239,8 @@ div.reviews div.review h3 {
 }
 
 section.contacts {
-  position: relative;
-  height: 40vh;
+  height: auto;
+  height: 70vh;
   background: rgba(10, 10, 10, 0.8);
   margin-top: 20px;
 }
@@ -252,6 +260,120 @@ section.contacts table td {
   padding: 10px;
   font-size: 1.1em;
   color: white;
+}
+
+div.form input, div.form textarea, div.form button {
+  display: block;
+  padding: 10px;
+  margin: 10px 0px;
+  position: relative;
+  width: 100%;
+  outline: none;
+  border: 1px transparent;
+  color: lightseagreen;
+  background: gray;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+div.form input::-webkit-input-placeholder, div.form textarea::-webkit-input-placeholder {
+  color: #57e1d9;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+div.form input:-ms-input-placeholder, div.form textarea:-ms-input-placeholder {
+  color: #57e1d9;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+div.form input::-ms-input-placeholder, div.form textarea::-ms-input-placeholder {
+  color: #57e1d9;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+div.form input::placeholder, div.form textarea::placeholder {
+  color: #57e1d9;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+div.form input:hover, div.form textarea:hover {
+  background: white;
+}
+
+div.form button, div.form input.submit {
+  background: lightseagreen;
+  color: white;
+}
+
+div.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+div.cards i {
+  font-size: 40px;
+  text-align: center;
+  color: #82e9e3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+div.cards h3 {
+  text-align: center;
+  color: #14716c;
+  padding: 10px 0px;
+  margin-top: 10px;
+}
+
+div.cards div.more {
+  padding: 3px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+div.cards div.card {
+  overflow: hidden;
+  background: white;
+  width: 150px;
+  margin-top: 10px;
+  -webkit-box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.2);
+          box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.2);
+  border-radius: 20px;
+}
+
+div.cards div.card:hover div.more {
+  opacity: 1;
+}
+
+div.cards div.card:hover i {
+  color: lightseagreen;
+}
+
+div.card {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media only screen and (max-width: 800px) {

@@ -6,9 +6,13 @@
 body{
     overflow-x:hidden;
 }
+body :nth-child(odd) section.full{
+    background:lighten(crimson,50%);
+}
 .container{
     max-width: 1000px;
     h3.title{
+        margin:20px 0px;
         i{
             opacity: 0;
             transition:1s;
@@ -174,8 +178,8 @@ div.reviews{
     }
 }
 section.contacts{
-    position: relative;
-    height:40vh;
+    height:auto;
+    height:70vh;
     background:rgba(10,10,10,0.8);
     margin-top:20px;
     h3{
@@ -192,6 +196,80 @@ section.contacts{
             color:white;
         }
     }
+}
+div.form{
+    input,textarea,button{
+        display: block;
+        padding:10px;
+        margin:10px 0px;
+        position: relative;
+        width:100%;
+        outline:none;
+        border:1px transparent;
+        color:lightseagreen;
+        background:gray;
+        transition:0.7s;
+    }
+    input::placeholder,textarea::placeholder{
+        color:lighten(lightseagreen,20%);
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    input:hover,textarea:hover{
+        background:white;
+    }
+    button,input.submit{
+        background:lightseagreen;
+        color:white;
+    }
+}
+div.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:10px;
+    margin-top:20px;
+    i{
+        font-size: 40px;
+        text-align: center;
+        color:lighten(lightseagreen,30%);
+        transition:0.3s;
+    }
+    h3{
+        text-align: center;
+        color:darken(lightseagreen,15%);
+        padding:10px 0px;
+        margin-top:10px;
+    }
+    div.more{
+        padding:3px;
+        opacity: 0;
+        transition:0.5s;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+    div.card{
+        overflow:hidden;
+        background:white;
+        width:150px;
+        margin-top:10px;
+        box-shadow: 1px 1px 10px 10px rgba(10,10,10,0.2);
+        border-radius:20px;
+    }
+    div.card:hover{
+        div.more{
+            opacity: 1;
+        }
+        i{
+            color:lightseagreen;
+        }
+    }
+}
+div.card{
+    padding:10px;
+    display: flex;
+    flex-direction: column;
 }
 @media only screen and (max-width:800px){
     .dual_res{

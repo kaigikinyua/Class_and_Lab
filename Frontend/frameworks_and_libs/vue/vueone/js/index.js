@@ -25,6 +25,29 @@ new Vue({
     }
 });
 new Vue({
+    el:"#packages",
+    data:{
+        packages:[
+            {"name":"V.I.P","icon":"fa fa-star","more":"First Class Everything"},
+            {"name":"Adventure","icon":"fa fa-plane-departure","more":"Amazing views and events"},
+            {"name":"Comfort","icon":"fa fa-bed","more":"Your comfort is our priority"},
+            {"name":"Chill","icon":"fa fa-couch","more":"Relax and Reflect"},
+            {"name":"Economy","icon":"fa fa-coins","more":"Enjoy without letting your bank know"}
+        ]
+    }
+});
+new Vue({
+    el:"#hotel",
+    data:{
+        hotels:[
+            {"name":"Marvelous Views","icon":"fa fa-binoculars","more":"Get to explore and see your home planet"},
+            {"name":"Eat","icon":"fa fa-utensils","more":""},
+            {"name":"Sleep","icon":"fa fa-bed","more":""},
+            {"name":"Explore","icon":"fa fa-tree","more":""},
+        ]
+    }
+});
+new Vue({
     el:"#reviews",
     data:{
         reviews:[
