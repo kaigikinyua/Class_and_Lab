@@ -13,7 +13,11 @@ new Vue({
     el:"#blog",
     data:{
         "myblogs":[
-            {"title":"","author":"","date":"11/11/2011","paragraphs":[]}
+            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
+            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
+            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
+            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
+            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
         ]
     }
 })
