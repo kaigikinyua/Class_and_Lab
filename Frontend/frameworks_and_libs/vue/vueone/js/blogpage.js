@@ -13,11 +13,31 @@ new Vue({
     el:"#blog",
     data:{
         "myblogs":[
-            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
-            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
-            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
-            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
-            {"title":"","author":"","date":"11/11/2011","paragraphs":[]},
+            {"title":"Title One","author":"Jim","date":"11/11/2011","paragraphs":[
+                {"par":""},
+                {"par":""},
+                {"par":""},
+            ]},
+            {"title":"Title Three","author":"Kim","date":"11/11/2011","paragraphs":[
+                {"par":""},
+                {"par":""},
+                {"par":""},
+            ]},
+            {"title":"Title Four","author":"Tim","date":"11/11/2011","paragraphs":[
+                {"par":""},
+                {"par":""},
+                {"par":""},
+            ]},
+            {"title":"Title Five","author":"James","date":"11/11/2011","paragraphs":[
+                {"par":""},
+                {"par":""},
+                {"par":""},
+            ]},
+            {"title":"Title 6","author":"Bim","date":"11/11/2011","paragraphs":[
+                {"par":""},
+                {"par":""},
+                {"par":""},
+            ]},
         ]
     }
 })
