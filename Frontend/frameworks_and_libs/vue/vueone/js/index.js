@@ -41,9 +41,9 @@ new Vue({
     data:{
         hotels:[
             {"name":"Marvelous Views","icon":"fa fa-binoculars","more":"Get to explore and see your home planet"},
-            {"name":"Eat","icon":"fa fa-utensils","more":""},
-            {"name":"Sleep","icon":"fa fa-bed","more":""},
-            {"name":"Explore","icon":"fa fa-tree","more":""},
+            {"name":"Eat","icon":"fa fa-utensils","more":"Choose from a wide variety of delicacies"},
+            {"name":"Sleep","icon":"fa fa-bed","more":"Come and experience rest like never before."},
+            {"name":"Explore","icon":"fa fa-tree","more":"Quench your thirst for adventure."},
         ]
     }
 });
