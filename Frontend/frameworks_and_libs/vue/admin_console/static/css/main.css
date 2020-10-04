@@ -1,0 +1,24 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+header.topnav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+/*# sourceMappingURL=main.css.map */
