@@ -2,11 +2,40 @@
     padding:0px;
     margin:0px;
 }
+body{
+    background:gray;
+}
 a{
     color: currentColor;
     text-decoration: none;
 }
-
+ul{
+    list-style: none;
+}
+ul.links{
+    overflow: hidden;
+    li{
+        display: inline-block;
+        margin:0px 5px;
+        padding:5px;
+        overflow: hidden;
+    }
+    li::after{
+        content:"";
+        position: relative;
+        width:100%;
+        margin-top:0px;
+        margin-left: -120%;
+        height:5px;
+        background:pink;
+        border-radius: 5px;
+        display: block;
+        transition:0.5s;
+    }
+    li:hover::after{
+        margin-left: 0px;
+    }
+}
 header.topnav{
     position: fixed;
     top:0px;left:0px;
@@ -14,4 +43,45 @@ header.topnav{
     padding:10px;
     display: flex;
     justify-content: space-evenly;
+}
+div.side_nav{
+    position: fixed;
+    left:0px;
+    top:50%;
+    transform: translateY(-50%);
+    background:darken(pink,20%);
+    padding:20px 5px;
+    ul.vert{
+        li{
+            margin:10px 0px;
+            small{display: none;}
+            color:white;
+        }
+    }
+}
+
+section.app{
+    position: relative;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+}
+div.app_container{
+    width:90vw;
+    position: relative;
+    margin-top:100px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 1px 1px 20px 20px rgba(10,10,10,0.3);
+}
+div.app_bar{
+    padding:10px;
+    position: relative;
+    width:100%;
+    font-size: 20px;
+    background:rgba(10,10,10,0.3);
+    i{
+        margin:0px 10px;
+    }
 }
