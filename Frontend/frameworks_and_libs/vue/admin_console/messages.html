@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>admin | console</title>
+    <title>admin | messages</title>
     <link rel="stylesheet" href="./static/css/all.min.css"/>
     <link rel="stylesheet" href="./static/css/main.css"/>
     <script src="./static/js/vue.js"></script>
@@ -20,23 +20,21 @@
             </ul>
         </div>
     </div>
-    <!--sidenav-->
-    <div class="side_nav">
-        <ul class="vert">
-            <a href="#"><li></li></a>
-        </ul>
-    </div>
-    <!--Users [login,signup,deactive,daily active]-->
     <section class="app">
-        <div class="app_container"></div>
-    </section>
-    <!--Database [users,sales,etc]-->
-    <section class="app">
-        <div class="app_container"></div>
-    </section>
-    <!--Files uploaded-->
-    <section class="app">
-        <div class="app_container"></div>
+        <div class="user_messages">
+            <div class="search">
+                <i class="fa fa-search"></i>
+                <input type="text" class="search"/>
+            </div>
+        </div>
+        <div class="app_container">
+            <div class="app_bar">Username</div>
+            <div class="messages"></div>
+            <div class="keyboard">
+                <input type="text" class="message"/>
+                <button class="send"><i class="fa fa-send"></i></button>
+            </div>
+        </div>
     </section>
 </body>
 <script src="./static/js/dynamic.js"></script>
