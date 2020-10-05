@@ -2,7 +2,7 @@ window.onload= async ()=>{
     //setInterval(increment,1000);
     for(var i=0;i<100;i++){
         increment();
-        await sleep(5000);
+        await sleep(90);
     }  
 }
 function increment(){
@@ -16,3 +16,9 @@ function increment(){
 function sleep(time){
     return new Promise(resolve=>setTimeout(resolve,time));
 }
+
+
+function changeTab(){
+    
+}
+function activateTabButton(){}
