@@ -5,6 +5,15 @@
 }
 body{
     background:rgba(10,10,10,0.8);
+    overflow-x:hidden;
+}
+::-webkit-scrollbar{
+    width:5px;
+    background:rgba(10,10,10,0.3);
+}
+::-webkit-scrollbar-thumb{
+    background:darken(red,20%);
+    border-radius: 5px;
 }
 a{
     color: currentColor;
