@@ -37,7 +37,6 @@ class Files:
         except:
             return False
 
-
 class Poke:
     def __init__(self,webUrl):
         self.webUrl=webUrl
@@ -58,8 +57,8 @@ class Poke:
 class SiteParse:
     def __init__(self,siteText):
         self.img_tag=re.compile('^<img.*src=.*>$')
-        self.css_tag=re.compile('^<link rel=.* href=.*>$')
-        self.js_tag=re.compile('^<script.*src= .*></script>$')
+        self.css_tag=re.compile('^<link.*rel=.* href=.*>$')
+        self.js_tag=re.compile('^<script.*src=.*></script>$')
         self.siteText=siteText.split("\n")
 
     def parse_img(self):
@@ -77,9 +76,18 @@ class SiteParse:
                 print(self.css_tag.search(line))
                 print(line)
                 time.sleep(5)
+
+    def parse_js(self):
+        for line in self.siteText:
+            line.strip()
+            if(self.js_tag.search(line)!=None):
+                print(self.js_tag.search(line))
+                print(line)
+                time.sleep(5)
         
 
 x=Poke("https://kaigikinyua.github.io/StaticPortfolio/")
 sP=SiteParse(x.poke_site().text)
 sP.parse_css()
+sP.parse_js()
 
