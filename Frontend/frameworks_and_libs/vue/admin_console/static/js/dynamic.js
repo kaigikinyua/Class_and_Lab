@@ -18,7 +18,20 @@ function sleep(time){
 }
 
 
-function changeTab(){
+function tabsActionListener(){
+    var buttons=document.querySelectorAll('tab-button')
+    buttons.forEach(button=>{
+        button.addEventListener('click',e=>{
+            changeTab(e);
+        })
+    })
+}
+function changeTab(e){
+    var tab=e.target.dataset.tab
+    var tabActivate=document.getElementById(tab);
+    tabActivate.classList.toggle('active')
+    activateTabButton(e)
+}
+function activateTabButton(e){
     
 }
-function activateTabButton(){}

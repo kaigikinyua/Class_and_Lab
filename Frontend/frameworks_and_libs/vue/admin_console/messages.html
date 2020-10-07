@@ -7,32 +7,92 @@
     <link rel="stylesheet" href="./static/css/all.min.css"/>
     <link rel="stylesheet" href="./static/css/main.css"/>
     <script src="./static/js/vue.js"></script>
+    <style>
+        div.app_container{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+        div.user_messages{
+            background:rgba(10,10,10,0.4);
+        }
+        div.search{
+            padding:10px;
+            background:white;
+            display: flex;
+            justify-content: center;
+        }
+        input.search{
+            background:none;
+            border:none;
+            position: relative;
+            padding:5px;
+            width:100%;
+            outline: none;
+        }
+        div.user_messages{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        div.client_pills{
+            position: relative;
+            overflow-y:scroll;
+            height:auto;
+        }
+        div.client_pill{
+            margin:10px 5px;
+            background:whitesmoke;
+            padding:5px 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;  
+        }
+        div.client_pill h3{
+            font-weight: lighter;
+            font-size: 1.1em;
+            letter-spacing: 0.1em;
+        }
+    </style>
 </head>
 <body>
-    <div class="topnav">
-        <div class="barner"></div>
+    <header class="topnav">
+        <div class="barner">Admin | Messages</div>
         <div class="links">
             <ul class="links">
-                <a href="#"><li>Users</li></a>
-                <a href="#"><li>Sales</li></a>
-                <a href="#"><li>Products</li></a>
-                <a href="#"><li>Messages</li></a>
+                <a href="index.html"><li>Home</li></a>
+                <a href="sales.html"><li>Sales</li></a>
             </ul>
         </div>
-    </div>
+    </header>
     <section class="app">
-        <div class="user_messages">
-            <div class="search">
-                <i class="fa fa-search"></i>
-                <input type="text" class="search"/>
-            </div>
-        </div>
         <div class="app_container">
-            <div class="app_bar">Username</div>
-            <div class="messages"></div>
-            <div class="keyboard">
-                <input type="text" class="message"/>
-                <button class="send"><i class="fa fa-send"></i></button>
+            <div class="user_messages">
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input type="seach" class="search" placeholder="Search"/>
+                </div>
+                <div class="client_pills">
+                    <div class="client_pill">
+                        <h3>Username</h3>
+                        <small>12:04</small>
+                    </div>
+                    <div class="client_pill">
+                        <h3>Username</h3>
+                        <small>12:04</small>
+                    </div>
+                    <div class="client_pill">
+                        <h3>Username</h3>
+                        <small>12:04</small>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="app_bar">Username</div>
+                <div class="messages"></div>
+                <div class="keyboard">
+                    <input type="text" class="message" placeholder="Message"/>
+                    <button class="send"><i class="fa fa-send"></i></button>
+                </div>
             </div>
         </div>
     </section>
