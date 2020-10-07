@@ -113,6 +113,37 @@
             color:white;
             border-bottom-left-radius: 10px;
         }
+        #message_list{
+            width:0px;
+            height:0px;
+            overflow: hidden;
+        }
+        @media only screen and (max-width: 650px){
+            div.app_container{
+                width:100vw;
+                grid-template-columns: 0fr 2fr;
+            }
+            div.user_messages{
+                overflow: hidden;
+                width:0px;
+            }
+            div.keyboard div{
+                width:60%;
+            }
+            #message_list{
+                height:20px;
+                width:20px;
+                background:white;
+                position: fixed;
+                left:20px;
+                bottom:20px;
+                padding:5px;
+                border-radius: 20px;
+                color:crimson;
+                text-align: center;
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -160,6 +191,7 @@
                     </div>
                     <div class="keyboard">
                         <div>
+                            <div id="message_list"><i class="fa fa-comment"></i></div>
                             <input type="text" class="message" placeholder="Message"/>
                             <button class="send"><i class="fa fa-paper-plane"></i></button>
                         </div>
