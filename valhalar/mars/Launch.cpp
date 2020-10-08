@@ -1,14 +1,13 @@
 #include <iostream>
 using namespace std;
-
+/*
 int paramChecker(int arg,char* argv[]){
-    //commands
-    /*
+    /*  //commands
         1.launch rocket_name
         2.log rocket_name
         3.new rocket_name
         4.diagnostics rocket_name
-    */
+    
     char* commands[]={"launch","log","diagnostics"};
     if(argv[1]==commands[0]){
         return 1;
@@ -18,7 +17,7 @@ int paramChecker(int arg,char* argv[]){
         return 0;
     }
 }
-
+*/
 void launchRocket(){
 
 }
@@ -29,13 +28,16 @@ void newRocket(){
 
 }
 void logRocket(){
-    
+
 }
 
 int main(int arg,char* argv[]){
-    cout<<paramChecker(arg,argv)<<endl;
+    //cout<<paramChecker(arg,argv)<<endl;
     for(int i=0;i<arg;i++){
         cout<<argv[i]<<endl;
     }
+    char* rocketName[2];
+    cin>>rocketName[0];
+    cout<<&rocketName[0]<<endl;
     return 0;
 }
