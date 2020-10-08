@@ -1,5 +1,6 @@
 window.onload= async ()=>{
     //setInterval(increment,1000);
+    tabsActionListener()
     for(var i=0;i<100;i++){
         increment();
         await sleep(90);
@@ -19,18 +20,21 @@ function sleep(time){
 
 
 function tabsActionListener(){
-    var buttons=document.querySelectorAll('tab-button')
+    console.log("Tab actions")
+    var buttons=document.querySelectorAll('button.tab-button')
     buttons.forEach(button=>{
         button.addEventListener('click',e=>{
             changeTab(e);
+            console.warn("Hello WOrld")
         })
     })
 }
 function changeTab(e){
-    var tab=e.target.dataset.tab
+    console.log(e.target.dataset.tab)
+    /*var tab=e.target.dataset.tab
     var tabActivate=document.getElementById(tab);
     tabActivate.classList.toggle('active')
-    activateTabButton(e)
+    activateTabButton(e)*/
 }
 function activateTabButton(e){
     

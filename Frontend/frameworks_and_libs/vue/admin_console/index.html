@@ -6,6 +6,7 @@
     <title>admin | console</title>
     <link rel="stylesheet" href="./static/css/all.min.css"/>
     <link rel="stylesheet" href="./static/css/main.css"/>
+    <link rel="stylesheet" href="./static/css/index.css"/>
     <script src="./static/js/vue.js"></script>
 </head>
 <body>
@@ -32,12 +33,12 @@
             <div class="app_bar"><i class="fa fa-users"></i>Users</div>
             <div class="content">
                 <div class="tab_nav">
-                    <button class="active">Sign Ups</button>
-                    <button>Daily Active</button>
-                    <button>Deleted</button>
+                    <button data-tab="signup" class="active tab-button">Sign Ups</button>
+                    <button data-tab="dailyActive" class="tab-button">Daily Active</button>
+                    <button data-tab="deleted" class="tab-button">Deleted</button>
                 </div>
                 <!--vue for loop to create tab-->
-                <div class="tab">
+                <div class="tab active">
                     <div class="tab_main">
                         <i class="fa fa-user"></i>
                         <h2 class="header increment" data-inc="2">1002</h2>

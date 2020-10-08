@@ -161,10 +161,6 @@ div.tab_nav button.active {
 div.tab {
   position: relative;
   height: 79%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
 }
 
 div.tab div.tab_main {
