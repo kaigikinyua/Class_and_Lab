@@ -1,17 +1,19 @@
+//#include "Thor.h"
 #include <iostream>
-#include <string>
 using namespace std;
-
-class Files{
-    public: char filePath;
-    int files(){ return 0;}
-    bool createFile(){
-        cout<<"Creating a file"<<endl;
-        return true;
-    }
+//using namespace ThorNameSpace;
+class ThorClass{
+    public:
+        void createFile(){
+            cout<<"Creating File"<<endl;
+        }
+        void deleteFile(){
+            cout<<"Deleting file"<<endl;
+        }
 };
-int main(){
-    Files f=Files();
-    f.createFile();
-    return 0;
+/*void ThorClass::createFile(){
+    cout<<"Creating file"<<endl;
 }
+void ThorClass::deleteFile(){
+    cout<<"Deleting file"<<endl;
+}*/
