@@ -1,33 +1,30 @@
 #include <iostream>
 using namespace std;
-/*
-int paramChecker(int arg,char* argv[]){
-    /*  //commands
-        1.launch rocket_name
-        2.log rocket_name
-        3.new rocket_name
-        4.diagnostics rocket_name
-    
-    char* commands[]={"launch","log","diagnostics"};
-    if(argv[1]==commands[0]){
-        return 1;
-    }else if(argv[2]==commands[1]){
-        return 2;
+enum PrimaryCommands {Launch,Diagnose,New,Log};
+void primaryCommandCheck(string command,string rocketName){
+    if(command=="launch"){
+        launchRocket(rocketName);
+    }else if(command=="diagnose"){
+        diagnoseRocket(rocketName);
+    }else if(command=="new"){
+        newRocket(rocketName);
+    }else if(command=="log"){
+        logRocket(rocketName);
     }else{
-        return 0;
+        cout<<"<!#--------Command Not Found---------#!>"<<endl;
     }
 }
-*/
-void launchRocket(){
+
+void launchRocket(string rocketName){
 
 }
-void diagnoseRocket(){
+void diagnoseRocket(string rocketName){
 
 }
-void newRocket(){
+void newRocket(string rocketName){
 
 }
-void logRocket(){
+void logRocket(string rocketName){
 
 }
 
