@@ -1,12 +1,12 @@
-class Messages{
-    static error(message:string){
+module Messages{
+    export function error_msg(message:string){
         console.error(message);
     }
-    static success(message:string){
+    export function success(message:string){
         console.log(message);
     }
-    static warning(message:string){
+    export function warning(message:string){
         console.warn(message);
     }
 }
-export default{Messages};
+//export default{Messages};
