@@ -1,11 +1,11 @@
-module Messages{
-    export function error_msg(message:string){
+export class Messages{
+    error_msg(message:string){
         console.error(message);
     }
-    export function success(message:string){
+    success(message:string){
         console.log(message);
     }
-    export function warning(message:string){
+    warning(message:string){
         console.warn(message);
     }
 }

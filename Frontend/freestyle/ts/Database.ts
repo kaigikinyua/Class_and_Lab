@@ -1,8 +1,10 @@
-class Database{
+import {Messages} from './Messages';
+export class Database{
     key:string;value:string|number;
     constructor(key:string,value:string|number){
-        this.key=key
-        this.value=value
+        console.log("Hello world")
+        //this.key=key
+        //this.value=value
         Messages.success("Hello World");
     }
     static localStorageSupport=()=>{
@@ -28,5 +30,3 @@ class Database{
         }
     }   
 }
-
-export default {Database};
