@@ -1,11 +1,11 @@
 export class Messages{
-    error_msg(message:string){
+    static error_msg(message:string){
         console.error(message);
     }
-    success(message:string){
+    static success(message:string){
         console.log(message);
     }
-    warning(message:string){
+    static warning(message:string){
         console.warn(message);
     }
 }

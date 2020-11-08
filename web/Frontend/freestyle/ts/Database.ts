@@ -1,11 +1,11 @@
-import {Messages} from './Messages';
+import { Messages } from './Messages';
 export class Database{
     key:string;value:string|number;
     constructor(key:string,value:string|number){
         console.log("Hello world")
         //this.key=key
         //this.value=value
-        Messages.success("Hello World");
+        Messages.error_msg("Hello World");
     }
     static localStorageSupport=()=>{
         if(window.localStorage)return true;

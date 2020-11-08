@@ -1,12 +1,13 @@
 "use strict";
 exports.__esModule = true;
 exports.Database = void 0;
+var Messages_1 = require("./Messages");
 var Database = /** @class */ (function () {
     function Database(key, value) {
         console.log("Hello world");
         //this.key=key
         //this.value=value
-        //Messages.success("Hello World");
+        Messages_1.Messages.success("Hello World");
     }
     Database.prototype.saveItem = function () {
         if (Database.localStorageSupport() != true) {
@@ -29,7 +30,7 @@ var Database = /** @class */ (function () {
             return data;
         }
         catch (e) {
-            Messages.error_msg(e);
+            Messages_1.Messages.error_msg(e);
             return false;
         }
     };
