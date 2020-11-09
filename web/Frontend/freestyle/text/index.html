@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transparent Text</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        body{
+            overflow:hidden;
+        }
+        header{
+            position: relative;
+            width:100vw;
+            height:100vh;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            background:lightseagreen;
+        }
+        h3{
+            position: relative;
+            font-size: 100px;
+            font-weight: lighter;
+            align-self: center;
+            letter-spacing: 5px;
+            color:#fff;
+            text-shadow: 0px 5px 10px black;
+            mix-blend-mode: overlay;
+            animation: 3s slide_in ease-in;
+        }
+        @keyframes slide_in {
+            0%{
+                left:-100%;
+            }
+            50%{
+                left:20%;
+                transform: rotate(0deg);
+            }
+            100%{
+                left:-10px;
+                transform: rotate(-5deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Hello World</h3>
+    </header>
+</body>
+</html>
