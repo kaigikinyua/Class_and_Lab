@@ -32,15 +32,22 @@ class Files{
     print("Start reading file");
     final file=new File(this._filePath);
     Stream<List<int>> inputStream=file.openRead();
+    var data;
     inputStream
     .transform(utf8.decoder)
-    .transform(new LineSplitter()).
-    listen((String line){
+    .transform(new LineSplitter())
+    .listen((String line){
       print('$line :${line.length}');
     },
       onDone: (){print("Closing file");},
       onError: (e){print(e.toString());},
     );
+    print(data);
     return "File Data";
   }
 }
+
+//void main(){
+//  Files F=new Files("./test.txt");
+//  F.readFile();
+//}
