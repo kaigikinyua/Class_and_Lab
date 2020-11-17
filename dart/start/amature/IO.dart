@@ -25,8 +25,22 @@ class Files{
   bool fileExists(){
     return false;
   }
-  bool writeToFile(){
-    return false;
+  bool writeToFile(String contents){
+    File f=new File(this._filePath);
+    f.writeAsString(contents);
+    return true;
+  }
+  String getFileData(){
+    File f=new File(this._filePath);
+    String data=f.readAsStringSync();
+    return data;
+  }
+  bool appendToFile(String contents){
+    File f=new File(this._filePath);
+    String data=f.readAsStringSync();
+    String fData=data+"\n"+contents;
+    f.writeAsStringSync(fData);
+    return true;
   }
   String readFile(){
     print("Start reading file");
@@ -47,7 +61,10 @@ class Files{
   }
 }
 
-//void main(){
-//  Files F=new Files("./test.txt");
-//  F.readFile();
-//}
+void main(){
+  Files F=new Files("./test.txt");
+  //F.readFile();
+  //print(F.getFileData());
+  F.appendToFile("Hello World");
+  print(F.getFileData());
+}

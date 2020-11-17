@@ -1,18 +1,22 @@
- 1005  gmcs
- 1006  mcs
- 1007  pwd
- 1008  msc Database.cs
- 1009  mcs Database.cs
- 1010  clear
- 1011  ls
- 1012  mcs Database.cs
- 1013  mcs Main.cs
- 1014  mono Main.exe
- 1015  clear
- 1016  code .
- 1017  mono Main.exe
- 1018  mcs InputOutput.cs 
- 1019  mono InputOutput.
- 1020  mono InputOutput.exe
- 1021  mcs InputOutput.cs 
- 1022  mono InputOutput.exe
+1005  gmcs
+1006  mcs
+1007  pwd
+1008  msc Database.cs
+1009  mcs Database.cs
+1010  clear
+1011  ls
+1012  mcs Database.cs
+1013  mcs Main.cs
+1014  mono Main.exe
+1015  clear
+1016  code .
+1017  mono Main.exe
+1018  mcs InputOutput.cs 
+1019  mono InputOutput.
+1020  mono InputOutput.exe
+1021  mcs InputOutput.cs 
+1022  mono InputOutput.exe
+Hello World
+Hello World
+Hello World
+Hello World
