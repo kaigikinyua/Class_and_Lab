@@ -13,7 +13,17 @@
     <section class="app">
         <div class="app_bar" id="app_bar"><h3>Project Manager</h3></div>
         <div class="app_body" id="app_body">
-
+            <!--List Project tiles here-->
+            <div class="project tiles">
+                <!--Onclick Project tiles show project breakdown-->
+                <div class="project_tile" v-for="project in projects">
+                    <div class="p_icon">
+                        <!--Bind class to project.complete and project.expred-->
+                        {{project.title[0]}}
+                    </div>
+                    <div class="p_title">{{project.title}}</div>
+                </div>
+            </div>
         </div>
     </section>
     <footer>
@@ -21,4 +31,6 @@
         <div class="info"></div>
     </footer>
 </body>
+<script src="../static/js/vue.js"></script>
+<script src="../static/js/project.js"></script>
 </html>
