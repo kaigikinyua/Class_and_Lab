@@ -8,7 +8,10 @@
 </head>
 <body>
     <nav class="topnav">
-        <div class="barner"><h3 class="barner">P.Manager</h3></div>
+        <div class="barner">
+            <!--Image barner-->
+            <h3 class="barner">P.Manager</h3>
+        </div>
         <div class="links"></div>
     </nav>
     <section class="app">
@@ -22,13 +25,18 @@
                         <!--Bind class to project.complete and project.expred-->
                         {{project.title[0]}}
                     </div>
-                    <div class="p_title">{{project.title}}</div>
+                    <div class="p_title">
+                        {{project.title}}
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <footer>
-        <div class="barner"></div>
+        <div class="barner">
+            <!--image barner-->
+            <img src="../static/images/" alt="" class="barner"/>
+        </div>
         <div class="info"></div>
     </footer>
 </body>
