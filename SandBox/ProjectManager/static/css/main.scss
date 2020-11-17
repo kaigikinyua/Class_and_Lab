@@ -1,0 +1,44 @@
+//defaults
+*{
+    padding:0px;
+    margin:0px;
+}
+
+//components
+nav.topnav{
+    position: relative;
+    padding:10px;
+    width:100vw;
+}
+div.project_tiles{
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+div.project_tile{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    margin:10px 0px;
+    div.p_icon{
+        padding:10px;
+        font-size: 20px;
+        height: 20px;
+        width:20px;
+        border-radius: 50%;
+        background:lightgreen;
+        text-align: center;
+    }
+    div.p_title{
+        font-size: 18px;
+        padding:10px;
+    }
+}
+
+
+//fonts
+.barner{
+    font-family: cursive;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}

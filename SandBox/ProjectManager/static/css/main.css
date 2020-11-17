@@ -1,0 +1,52 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+nav.topnav {
+  position: relative;
+  padding: 10px;
+  width: 100vw;
+}
+
+div.project_tiles {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 500px;
+}
+
+div.project_tile {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 6fr;
+      grid-template-columns: 1fr 6fr;
+  margin: 10px 0px;
+}
+
+div.project_tile div.p_icon {
+  padding: 10px;
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: lightgreen;
+  text-align: center;
+}
+
+div.project_tile div.p_title {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.barner {
+  font-family: cursive;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+/*# sourceMappingURL=main.css.map */
