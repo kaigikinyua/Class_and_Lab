@@ -9,6 +9,18 @@ class MyMethods{
   }
 }
 
+class MyMathLib{
+  static int divide(int i,int j){
+    int result=0;
+    try{result=i~/j;}
+    on IntegerDivisionByZeroException{print("Tried to divide by zero");}
+    catch(exeption,stacktrace){
+      print("Exeption $exeption");
+      print("$stacktrace");
+    }finally{print("divide method");}
+    return result;
+  }
+}
 
 
 void main() async{
@@ -22,4 +34,7 @@ void main() async{
   print(name);
   print("Done");
   print(await MyMethods.wait());
+
+  print(MyMathLib.divide(100, null));
+
 }
