@@ -32,7 +32,32 @@ class _Home extends State<Home> {
       body: Container(
         child:Column(
           children: <Widget>[
-            Container(child:ProductCard("Product One","ksh 400","New"))
+            Container(
+              height:200,
+              child:ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                ProductCard("Product One","ksh 400","New"),
+                ProductCard("Product One","ksh 400","New"),
+                ProductCard("Product One","ksh 400","New"),
+                ProductCard("Product One","ksh 400","New"),
+                ProductCard("Product One","ksh 400","New"),
+              ],
+            )),
+            Container(
+              height:300,
+              margin: EdgeInsets.fromLTRB(0.0,20.0, 0.0,20.0),
+              child:ListView(
+                children: <Widget>[
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                ],
+              )
+            )
           ],
         ),
       ),

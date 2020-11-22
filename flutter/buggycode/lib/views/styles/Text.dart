@@ -32,6 +32,6 @@ class Fonts{
       child:Text(title,style: TextStyle(fontSize: 20.0,color: Colors.black87)));
   }
   static subtitle(String subtitle){
-    return Text(subtitle,style: TextStyle(fontSize: 15.0,color:Colors.black26),);
+    return Text(subtitle,style: TextStyle(fontSize: 15.0,color:Colors.black54),);
   }
 }
