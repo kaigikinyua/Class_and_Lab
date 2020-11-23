@@ -39,4 +39,7 @@ class Fonts{
   static smalltext(String text){
     return Text(text,style:TextStyle(fontSize: 11.0,color:Colors.black));
   }
+  static normalText(String text){
+    return Text(text,style:TextStyle(fontSize: 15.0,color:Colors.black));
+  }
 }

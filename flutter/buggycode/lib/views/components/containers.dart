@@ -15,6 +15,7 @@ class ProductCard extends StatelessWidget{
       margin: EdgeInsets.all(5.0),
       decoration: BoxDecoration(
         color:this.bgcolor,
+        borderRadius: BorderRadius.all(const Radius.circular(10.0)),
         boxShadow:[
           BoxShadow(color:Colors.black12,
           offset:Offset(4,0),
@@ -48,16 +49,65 @@ class Tile extends StatelessWidget{
     return Container(
       padding: EdgeInsets.all(10.0),
       margin: EdgeInsets.all(5.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [BoxShadow(
+          color: Colors.black12,
+          blurRadius: 10.0,
+          offset: Offset(4,0),
+        ),
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 10.0,
+            offset: Offset(4,0)
+          )
+        ]
+      ),
       child:Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Padding(
-            padding:EdgeInsets.all(5.0),
-            child:Icon(Icons.verified_user)),
-          Fonts.title(this._title),
-          Fonts.subtitle(this._subTitle)
+          CircleAvatar(
+            //padding:EdgeInsets.all(5.0),
+            backgroundColor: Colors.blueAccent,
+            child:Icon(Icons.verified_user,size: 20.0,color: Colors.white,)),
+          Fonts.subtitle(this._title),
+          Fonts.smalltext(this._subTitle)
         ],
       )
+    );
+  }
+}
+
+
+class BottomNavItem extends StatelessWidget{
+  final String _tooltip;final IconData _icon;bool _active=false;
+  BottomNavItem(this._tooltip,this._icon,this._active);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 35.0,
+      width:35.0,
+      padding:EdgeInsets.all(3.0),
+      decoration: BoxDecoration(
+        color:Colors.white,//this._active?Colors.white:Colors.blueGrey,
+        shape: BoxShape.circle,
+        boxShadow:this._active? null:[
+          BoxShadow(
+            offset: Offset(2,0),
+            color:Colors.black12,
+            blurRadius: 5.0,
+          ),
+          BoxShadow(
+            offset: Offset(0,2),
+            color:Colors.black12,
+            blurRadius: 5.0
+          )
+        ]
+      ),
+      child: Column(children: <Widget>[
+            Icon(this._icon,size: 27.0,color:this._active?Colors.blueAccent:Colors.black45)
+        //Fonts.smalltext(this._tooltip)
+      ],),
     );
   }
 }

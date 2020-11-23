@@ -61,6 +61,20 @@ class _Home extends State<Home> {
           ],
         ),
       ),
+      bottomNavigationBar: Container(
+        color: Colors.black12,
+        padding:EdgeInsets.all(3.0),
+        height: 40.0,
+        //constraints for overflow
+        child:Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+        BottomNavItem("Home",Icons.home,true),
+        BottomNavItem("Favourite", Icons.favorite,false),
+        BottomNavItem("Favourite", Icons.movie,false),
+        BottomNavItem("Favourite", Icons.image,false),
+      ]),
+      )
     );
   }
 }
