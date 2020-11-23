@@ -1,4 +1,6 @@
 //Icons and Texts
+import 'dart:ui' as prefix0;
+
 import 'package:flutter/material.dart';
 
 class StyledTexts{
@@ -33,5 +35,8 @@ class Fonts{
   }
   static subtitle(String subtitle){
     return Text(subtitle,style: TextStyle(fontSize: 15.0,color:Colors.black54),);
+  }
+  static smalltext(String text){
+    return Text(text,style:TextStyle(fontSize: 11.0,color:Colors.black));
   }
 }
