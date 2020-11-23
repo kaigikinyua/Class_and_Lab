@@ -37,11 +37,11 @@ class _Home extends State<Home> {
               child:ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                ProductCard("Flutter","ksh 1,000","New",Icons.wb_sunny),
-                ProductCard("Python3","ksh 500","New",Icons.favorite),
-                ProductCard("JavaScript","ksh 499","New",Icons.color_lens),
-                ProductCard("Dart","ksh 355","New",Icons.settings_input_composite),
-                ProductCard("Blender","ksh 299","New",Icons.airport_shuttle),
+                ProductCard("Flutter","ksh 1,000","New",Icons.wb_sunny,Colors.blueAccent),
+                ProductCard("Python3","ksh 500","New",Icons.favorite,Colors.greenAccent),
+                ProductCard("JavaScript","ksh 499","New",Icons.color_lens,Colors.yellowAccent),
+                ProductCard("Dart","ksh 355","New",Icons.settings_input_composite,Colors.blueAccent),
+                ProductCard("Blender","ksh 299","New",Icons.airport_shuttle,Colors.orangeAccent),
               ],
             )),
             Container(

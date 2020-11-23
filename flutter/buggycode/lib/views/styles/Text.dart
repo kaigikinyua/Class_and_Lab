@@ -31,10 +31,10 @@ class Fonts{
   static title(String title){
     return Padding(
       padding:EdgeInsets.all(5.0),
-      child:Text(title,style: TextStyle(fontSize: 20.0,color: Colors.black87)));
+      child:Text(title,style: TextStyle(fontSize: 25.0,color: Colors.black87)));
   }
   static subtitle(String subtitle){
-    return Text(subtitle,style: TextStyle(fontSize: 15.0,color:Colors.black54),);
+    return Text(subtitle,style: TextStyle(fontSize: 18.0,color:Colors.black54),);
   }
   static smalltext(String text){
     return Text(text,style:TextStyle(fontSize: 11.0,color:Colors.black));

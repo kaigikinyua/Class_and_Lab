@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../styles/Text.dart';
 class ProductCard extends StatelessWidget{
-  final String _title,_subtitle,_content;IconData icon;bool showIcon=false;
-  ProductCard(this._title,this._subtitle,this._content,this.icon){
+  final String _title,_subtitle,_content;IconData icon;bool showIcon=false;Color bgcolor;
+  ProductCard(this._title,this._subtitle,this._content,this.icon,this.bgcolor){
     if(this.icon!=null){
       showIcon=true;
     }
@@ -11,9 +11,10 @@ class ProductCard extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
+      width:150.0,
       margin: EdgeInsets.all(5.0),
       decoration: BoxDecoration(
-        color:Colors.white,
+        color:this.bgcolor,
         boxShadow:[
           BoxShadow(color:Colors.black12,
           offset:Offset(4,0),
@@ -29,7 +30,7 @@ class ProductCard extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Fonts.title(this._title),
-            showIcon?Icon(this.icon):Container(width:0,height:0),
+            showIcon?Icon(this.icon,size:30.0,color: Colors.white,):Container(width:0,height:0),
             Fonts.subtitle(this._subtitle),
             Text(this._content)
           ],
