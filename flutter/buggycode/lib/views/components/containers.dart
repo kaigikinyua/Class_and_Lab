@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../styles/Text.dart';
 class ProductCard extends StatelessWidget{
-  String _title,_subtitle,_content;IconData icon;bool showIcon=false;
-  ProductCard(this._title,this._subtitle,this._content,{this.icon}){
+  final String _title,_subtitle,_content;IconData icon;bool showIcon=false;
+  ProductCard(this._title,this._subtitle,this._content,this.icon){
     if(this.icon!=null){
       showIcon=true;
     }

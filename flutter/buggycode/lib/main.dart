@@ -1,4 +1,4 @@
-import 'package:buggycode/views/styles/Text.dart';
+//import 'package:buggycode/views/styles/Text.dart';
 import 'package:flutter/material.dart';
 import './views/components/containers.dart';
 
@@ -37,11 +37,11 @@ class _Home extends State<Home> {
               child:ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                ProductCard("Product One","ksh 400","New"),
-                ProductCard("Product One","ksh 400","New"),
-                ProductCard("Product One","ksh 400","New"),
-                ProductCard("Product One","ksh 400","New"),
-                ProductCard("Product One","ksh 400","New"),
+                ProductCard("Flutter","ksh 1,000","New",Icons.wb_sunny),
+                ProductCard("Python3","ksh 500","New",Icons.favorite),
+                ProductCard("JavaScript","ksh 499","New",Icons.color_lens),
+                ProductCard("Dart","ksh 355","New",Icons.settings_input_composite),
+                ProductCard("Blender","ksh 299","New",Icons.airport_shuttle),
               ],
             )),
             Container(
