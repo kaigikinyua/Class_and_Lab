@@ -29,7 +29,7 @@ class _Home extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title:Text("SampleCode")),
-      body: Container(
+      body: SingleChildScrollView(
         child:Column(
           children: <Widget>[
             Container(
@@ -45,9 +45,23 @@ class _Home extends State<Home> {
               ],
             )),
             Container(
-              height:300,
+              height:500,
               margin: EdgeInsets.fromLTRB(0.0,20.0, 0.0,20.0),
-              child:ListView(
+              child:Column(
+                children: <Widget>[
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                  Tile("User One","12:00pm"),
+                ],
+              )
+            ),
+            Container(
+              height:500,
+              margin: EdgeInsets.fromLTRB(0.0,20.0, 0.0,20.0),
+              child:Column(
                 children: <Widget>[
                   Tile("User One","12:00pm"),
                   Tile("User One","12:00pm"),
