@@ -79,8 +79,8 @@ class Tile extends StatelessWidget{
 }
 
 class BottomNavItem extends StatelessWidget{
-  final String _tooltip;final IconData _icon;bool _active=false;
-  BottomNavItem(this._tooltip,this._icon,this._active);
+  final IconData _icon;bool _active=false;
+  BottomNavItem(this._icon,this._active);
   @override
   Widget build(BuildContext context) {
     return Container(

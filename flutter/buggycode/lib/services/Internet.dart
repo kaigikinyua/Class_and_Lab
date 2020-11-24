@@ -18,7 +18,7 @@ class Internet{
 }
 
 class BlogActions{
-  static Future fetchBlogsIntro(){}
+  /*static Future fetchBlogsIntro(){}
 
   //blog specific
   static Future fetchBlog(String blogID){}
@@ -30,7 +30,7 @@ class BlogActions{
   static Future deleteBlog(String blogID){}
 
   static Future likeBlog(String blogID){}
-
+  */
 }
 
 

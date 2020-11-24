@@ -83,10 +83,10 @@ class _Home extends State<Home> {
         child:Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-        BottomNavItem("Home",Icons.home,true),
-        BottomNavItem("Favourite", Icons.favorite,false),
-        BottomNavItem("Favourite", Icons.movie,false),
-        BottomNavItem("Favourite", Icons.image,false),
+        BottomNavItem(Icons.home,true),
+        BottomNavItem(Icons.favorite,false),
+        BottomNavItem(Icons.movie,false),
+        BottomNavItem(Icons.image,false),
       ]),
       )
     );
