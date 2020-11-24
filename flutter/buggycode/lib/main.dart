@@ -59,19 +59,18 @@ class _Home extends State<Home> {
               )
             ),
             Container(
-              height:500,
-              margin: EdgeInsets.fromLTRB(0.0,20.0, 0.0,20.0),
-              child:Column(
+              height:250,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  Tile("User One","12:00pm"),
-                  Tile("User One","12:00pm"),
-                  Tile("User One","12:00pm"),
-                  Tile("User One","12:00pm"),
-                  Tile("User One","12:00pm"),
-                  Tile("User One","12:00pm"),
+                  PostCard("assets/testImages/beach.jpeg",10,2,false,false,false),
+                  PostCard("assets/testImages/car1.jpg",3,0,true,false,false),
+                  PostCard("assets/testImages/car2.jpg",9,2,false,true,false),
+                  PostCard("assets/testImages/car3.jpeg",7,3,true,false,false),
+                  PostCard("assets/testImages/fruits.jpg",9,1,true,false,true),
                 ],
-              )
-            )
+              ),
+            ),
           ],
         ),
       ),
