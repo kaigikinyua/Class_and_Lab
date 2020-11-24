@@ -63,7 +63,7 @@ class _Home extends State<Home> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  PostCard("assets/testImages/beach.jpeg",10,2,false,false,false),
+                  PostCard("assets/testImages/beach.jpeg",10,2,true,false,false),
                   PostCard("assets/testImages/car1.jpg",3,0,false,false,false),
                   PostCard("assets/testImages/car2.jpg",9,2,false,false,false),
                   PostCard("assets/testImages/car3.jpeg",7,3,false,false,false),

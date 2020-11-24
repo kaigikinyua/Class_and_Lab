@@ -136,14 +136,22 @@ class _PostCardState extends State<PostCard> {
            Container(height:30,padding: EdgeInsets.all(5),child:Row(
              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children:<Widget>[
-                this._seen?Icon(
-                    Icons.favorite,color: this._liked?Colors.blueAccent:Colors.green
-                  )
-                  :IconButton(
+                this._seen?Container(
+                  child: Row(children: <Widget>[
+                    Icon(Icons.favorite,color: this._liked?Colors.blueAccent:Colors.green),
+                    Text("$_likes")
+                  ],),
+                )
+                  :Container(
+                  child: Row(children: <Widget>[
+                    IconButton(
                     icon: Icon(Icons.favorite,color:Colors.black12), 
-                    onPressed:()=>setState((){_liked=true;}),
+                    onPressed:()=>_likePost,
                     tooltip: "Hello",
                   ),
+                    Text("$_likes")
+                  ],),
+                ),
                 this._seen?Icon(Icons.favorite,color: this._disliked?Colors.blueAccent:Colors.black12,):IconButton(icon: Icon(Icons.thumb_down), onPressed: null),
                 RaisedButton(
                   child: Fonts.subtitle("Click Me"),
@@ -159,7 +167,8 @@ class _PostCardState extends State<PostCard> {
   _likePost(){
     setState(() {
       print(this._liked);
-      this._liked=true;
+      this._liked=!this._liked;
+      this._likes+=1;
       print(this._liked);
     });
   }
