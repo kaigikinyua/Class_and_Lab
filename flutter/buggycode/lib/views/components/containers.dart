@@ -78,7 +78,6 @@ class Tile extends StatelessWidget{
   }
 }
 
-
 class BottomNavItem extends StatelessWidget{
   final String _tooltip;final IconData _icon;bool _active=false;
   BottomNavItem(this._tooltip,this._icon,this._active);
@@ -108,6 +107,35 @@ class BottomNavItem extends StatelessWidget{
             Icon(this._icon,size: 27.0,color:this._active?Colors.blueAccent:Colors.black45)
         //Fonts.smalltext(this._tooltip)
       ],),
+    );
+  }
+}
+
+class PostCard extends StatefulWidget {
+  String imagePath;int likes; int dislikes;bool seen;bool liked=false;bool disliked=false;
+  PostCard({Key key}) : super(key: key);
+  @override
+  _PostCardState createState() => _PostCardState(imagePath,likes,dislikes,seen);
+}
+
+class _PostCardState extends State<PostCard> {
+  String _imagePath;int _likes; int _dislikes;bool _seen;bool _liked=false;bool _disliked=false;
+  _PostCardState(this._imagePath,this._likes,this._dislikes,this._seen);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+       child: Column(
+         children: <Widget>[
+           Container(height:300,child: Image.asset(this._imagePath),),
+           Container(height:50,child:Row(
+              children:<Widget>[
+                this._seen?Icon(Icons.favorite,color: this._liked?Colors.blueAccent:Colors.black12,):IconButton(icon: Icon(Icons.favorite), onPressed: null),
+                this._seen?Icon(Icons.favorite,color: this._disliked?Colors.blueAccent:Colors.black12,):IconButton(icon: Icon(Icons.thumb_down), onPressed: null),
+              ]
+            )
+           )
+         ],
+       ),
     );
   }
 }
