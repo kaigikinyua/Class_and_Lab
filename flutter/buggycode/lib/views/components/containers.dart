@@ -115,7 +115,7 @@ class PostCard extends StatefulWidget {
   String imagePath;int likes; int dislikes;bool seen;bool liked=false;bool disliked=false;
   PostCard(this.imagePath,this.likes,this.dislikes,this.seen,this.liked,this.disliked,{Key key}) : super(key: key);
   @override
-  _PostCardState createState() => _PostCardState(imagePath,likes,dislikes,seen);
+  _PostCardState createState() => _PostCardState(imagePath,likes,dislikes,seen,liked,disliked);
 }
 
 class _PostCardState extends State<PostCard> {
@@ -124,7 +124,7 @@ class _PostCardState extends State<PostCard> {
   initState(){
     super.initState();
   }
-  _PostCardState(this._imagePath,this._likes,this._dislikes,this._seen);
+  _PostCardState(this._imagePath,this._likes,this._dislikes,this._seen,this._liked,this._disliked);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -138,25 +138,23 @@ class _PostCardState extends State<PostCard> {
               children:<Widget>[
                 this._seen?Container(
                   child: Row(children: <Widget>[
-                    Icon(Icons.favorite,color: this._liked?Colors.blueAccent:Colors.green),
-                    Text("$_likes")
+                    Icon(Icons.favorite,color: this._liked?Colors.redAccent:Colors.black38),
+                    Text("$_likes",style: TextStyle(color:this._liked?Colors.redAccent:Colors.black38 ),)
                   ],),
-                )
-                  :Container(
+                ):Container(
                   child: Row(children: <Widget>[
                     IconButton(
-                    icon: Icon(Icons.favorite,color:Colors.black12), 
-                    onPressed:()=>_likePost,
-                    tooltip: "Hello",
+                    icon: Icon(Icons.favorite,color:Colors.black38), 
+                    onPressed:()=>_likePost(),
                   ),
-                    Text("$_likes")
+                    Text("$_likes",style: TextStyle(color: Colors.black38),)
                   ],),
                 ),
-                this._seen?Icon(Icons.favorite,color: this._disliked?Colors.blueAccent:Colors.black12,):IconButton(icon: Icon(Icons.thumb_down), onPressed: null),
-                RaisedButton(
+                this._seen?Icon(Icons.thumb_down,color: this._disliked?Colors.blueAccent:Colors.black12,):IconButton(icon: Icon(Icons.thumb_down), onPressed: null),
+                /*RaisedButton(
                   child: Fonts.subtitle("Click Me"),
                   onPressed: _likePost,
-                )
+                )*/
               ]
             )
            )
@@ -167,8 +165,10 @@ class _PostCardState extends State<PostCard> {
   _likePost(){
     setState(() {
       print(this._liked);
-      this._liked=!this._liked;
+      //this._liked=!this._liked;
+      this._liked=true;
       this._likes+=1;
+      this._seen=true;
       print(this._liked);
     });
   }

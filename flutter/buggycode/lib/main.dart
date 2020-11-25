@@ -16,15 +16,15 @@ void main() => runApp(MaterialApp(
 
 
 
-class Home extends StatefulWidget{
+/*class Home extends StatefulWidget{
   @override
   State<StatefulWidget> createState() =>_Home();
-}
+}*/
 
 
 
-class _Home extends State<Home> {
-
+//class _Home extends State<Home> {
+class Home extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,11 +63,11 @@ class _Home extends State<Home> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  PostCard("assets/testImages/beach.jpeg",10,2,true,false,false),
+                  PostCard("assets/testImages/beach.jpeg",10,2,true,false,true),
                   PostCard("assets/testImages/car1.jpg",3,0,false,false,false),
                   PostCard("assets/testImages/car2.jpg",9,2,false,false,false),
                   PostCard("assets/testImages/car3.jpeg",7,3,false,false,false),
-                  PostCard("assets/testImages/fruits.jpg",9,1,false,false,true),
+                  PostCard("assets/testImages/fruits.jpg",9,1,false,false,false),
                 ],
               ),
             ),
