@@ -1,0 +1,26 @@
+{
+    "categories":[
+        {"name":"Electronics"},
+        {"name":"Food"},
+        {"name":"Clothes and Fashion"},
+        {"name":"Machines"},
+        {"name":"Cooking"},
+        {"name":"Sanitery"},
+        {"name":"Stationery"}
+    ],
+    "products":[
+        {"category":"Electronics","sub_cat":"Laptops","list":[
+            {"name":"HP","stock":"1000"},
+            {"name":"Dell","stock":"1001"},
+            {"name":"Lenovo","stock":"578"},
+            {"name":"Mac","stock":"203"},
+            {"name":"Samsung","stock":"157"}
+        ]},
+        {"category":"Electronics","sub_cat":"Phones","list":[
+            {"name":"Tecno","stock":"1000"},
+            {"name":"Infinix","stock":"1001"},
+            {"name":"iPhone 12","stock":"578"},
+            {"name":"Samsung","stock":"157"}
+        ]}
+    ]
+}
