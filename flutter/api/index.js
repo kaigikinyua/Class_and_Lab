@@ -2,14 +2,15 @@ const express=require('express')
 const fs=require("fs");
 const app=express();
 
-app.get('/',(req,res)=>{
-    var data={"category":"Ele"}
-    res.send()
+app.get('/:product',(req,res)=>{
+    console.log(req.params.products)
+    var data=DataBase.fetchProducsCategory("Electronics")
+    res.end(JSON.stringify(data))
 })
 
 app.listen(4000,()=>{
     console.log("server running on port 4000")
-    console.log(DataBase.fetchProducsCategory("Electronics"));
+    //console.log(DataBase.fetchProducsCategory("Electronics"));
 })
 
 
