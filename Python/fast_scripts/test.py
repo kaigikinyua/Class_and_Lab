@@ -2,8 +2,9 @@
 
 class MyDecoratorClass:
 	def present(param_func):
+		#print(args)
 		def func(self,*args,**kwargs):
-			print("Decorratting function{m}".format(m=param_func.__name__))
+			#print("Decorratting function{m}".format(m=param_func.__name__))
 			param_func(self,*args,**kwargs)
 			print("Done")
 
