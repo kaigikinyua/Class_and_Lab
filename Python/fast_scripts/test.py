@@ -1,7 +1,7 @@
 
 
 class MyDecoratorClass:
-	def present(param_func):
+	def present(param_func,*args,**kwargs):
 		#print(args)
 		def func(self,*args,**kwargs):
 			#print("Decorratting function{m}".format(m=param_func.__name__))
@@ -18,6 +18,11 @@ class Play(MyDecoratorClass):
 		else:
 			print("I got you {m}".format(m=present))
 
+	#@MyDecoratorClass.present
+	def play_two(self):
+		print("Play Two")
+
 X=Play()
 X.play(0)
 X.play("Computer")
+X.play_two()
