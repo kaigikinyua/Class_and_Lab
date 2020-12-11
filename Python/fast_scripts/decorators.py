@@ -12,3 +12,10 @@ def print_curr_func(func):
 		print("Function {f}".format(f=func))
 		func(*args,**kwargs)
 	return func
+
+def post_func(func,*args,**kwargs):
+	def inner_func(self,*args,**kwargs):
+		func(self,*args,**kwargs)
+		print("Post Function")
+		return func
+	return inner_func
