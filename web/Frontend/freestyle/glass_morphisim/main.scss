@@ -51,6 +51,7 @@ div.slides{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height:70%;
 }
 div.slides:hover div.glass{
     //background: rgba($color: #EE09EE, $alpha: 0.3);
@@ -59,7 +60,7 @@ div.slides:hover div.glass{
 }
 div.top_menu{
     position: relative;
-    height:150px;
+    height:80px;
     width:100%;
     background:rgb(215,100,230);
     padding:10px;
