@@ -1,0 +1,83 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+div.topnav{
+    position: fixed;
+    top:0px;
+    left:0px;
+    padding:10px;
+    width:100vw;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    background: purple;
+    color:white;
+}
+ul.links{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width:100%;
+    li{
+        padding:5px;
+        margin-left:5px;
+    }
+}
+div.sidemenu{
+    position: relative;
+    max-width: 400px;
+    height: 100vh;
+    left:0px;
+    top:0px;
+    background:rgb(230,230,230);
+    overflow-x:hidden;
+    display: flexbox;
+    flex-direction: column;
+}
+div.glass{
+    background: rgba($color: #FFFFFF, $alpha: 0.3);
+    backdrop-filter: blur(2px);
+    max-width: 200px;
+    padding:10px;
+    color:white;
+    border-radius: 10px;
+    transition:1s;
+}
+div.slides{
+    padding:10px;
+    background-image: url("./bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div.slides:hover div.glass{
+    //background: rgba($color: #EE09EE, $alpha: 0.3);
+    backdrop-filter: blur(10px);
+    //transform: translateX(200px);
+}
+div.top_menu{
+    position: relative;
+    height:150px;
+    width:100%;
+    background:rgb(215,100,230);
+    padding:10px;
+}
+div.circle{
+    background:purple;
+    color:white;
+    font-size: 2em;
+    padding:5px;
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 10px rgba($color: #000000, $alpha: 0.05);
+    text-align: center;
+    font-family: Arial;
+}
+div.name{
+    margin:5px;
+    color:white;
+    font-size: 1.2em;
+}
