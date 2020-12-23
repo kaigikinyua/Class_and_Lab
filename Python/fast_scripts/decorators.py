@@ -19,3 +19,13 @@ def post_func(func,*args,**kwargs):
 		print("Post Function")
 		return func
 	return inner_func
+
+class ParamDecorators:
+	@staticmethod
+	def log_tofile(filename="log.txt"):
+		def logger(func):
+			def inner_func(*args,**kwargs):
+				print("{f} is running : fi argument is {fi}".format(f=func.__name__,fi=filename))
+				return func(*args,**kwargs)
+			return inner_func
+		return logger
