@@ -57,7 +57,7 @@ class Poke:
 class SiteParse:
     def __init__(self,siteText):
         self.img_tag=re.compile('^<img.*src=.*>$')
-        self.css_tag=re.compile('^<link.*rel=.* href=.*>$')
+        self.css_tag=re.compile('^<link[.]*rel=[.]*href=[.]*>$')
         self.js_tag=re.compile('^<script.*src=.*></script>$')
         self.siteText=siteText.split("\n")
 
@@ -76,6 +76,8 @@ class SiteParse:
                 print(self.css_tag.search(line))
                 print(line)
                 time.sleep(5)
+            else:
+                print(line)
 
     def parse_js(self):
         for line in self.siteText:
@@ -88,6 +90,7 @@ class SiteParse:
 
 x=Poke("https://kaigikinyua.github.io/StaticPortfolio/")
 sP=SiteParse(x.poke_site().text)
+print(sP)
 sP.parse_css()
 sP.parse_js()
 
