@@ -19,6 +19,9 @@ export class UI{
     static showElement(element){
         element.style.display="block"
     }
+    static showElementSpecial({element,style}){
+        element.style.display=`${style};`
+    }
     //hide elements
     static hideElements({id,className}){
         if(id!=undefined && id!=null)UI.hideElemByID(id)
