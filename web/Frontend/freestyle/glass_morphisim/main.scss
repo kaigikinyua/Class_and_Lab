@@ -45,6 +45,7 @@ div.glass{
     color:white;
     border-radius: 10px;
     transition:1s;
+    margin:10px 0px;
 }
 div.slides{
     padding:10px;
@@ -91,4 +92,43 @@ div#cover{
     height: 100vh;
     width:100vw;
     background:rgba($color: #000000, $alpha: 0.3);
+}
+
+
+//notification
+div.notification{
+    position: fixed;
+    left:50%;
+    top:10px;
+    transform: translateX(-50%);
+    max-width: 300px;
+    max-height: 100px;
+    overflow-y:scroll;
+    font-size: 1em;
+    padding:10px;
+    border-radius: 10px;
+    animation: 1s notificationshow 0s ease-in-out;
+    z-index: 100;
+    text-align: center; 
+}
+div.notification::-webkit-scrollbar{
+    width:1px;
+}
+.error{
+    background:crimson;
+    color:white;
+}
+.warning{
+    background:orange;
+    color:white;
+}
+.success{
+    background:lighten(green,15);
+    color:white;
+}
+
+@keyframes notificationshow{
+    0%{top:-100px;}
+    30%{top:50%;}
+    100%{top:10px;}
 }

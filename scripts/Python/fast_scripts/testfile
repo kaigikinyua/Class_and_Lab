@@ -1,0 +1,452 @@
+    1  ls -l
+    2  ./studio.sh 
+    3  ./blender
+    4  pwd
+    5  export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin"
+    6  echo $PATH
+    7  $PATH ="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:"
+    8  export $PATH ="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:"
+    9  export $PATH ="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+   10  cd /etc
+   11  ls
+   12  ls p*
+   13  cd profile.d/
+   14  ls
+   15  cd ..
+   16  cd profile
+   17  export $PATH ="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+   18  export $PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+   19  export $PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+   20  echo $PATH
+   21  pwd
+   22  export PATH="$PATH:/home/antony/MobileDev/android-studio-ide-183.5692245-linux/flutter/flutter/bin"
+   23  which flutter
+   24  flutter doctor
+   25  flutter devices
+   26  python
+   27  python3
+   28  pip3 install django==2.1.7
+   29  sudo apt install python3-pip
+   30  pip3 install django==2.1.7
+   31  sudo apt-get install vlc
+   32  sudo apt-get install code
+   33  code
+   34  sudo apt-get install git
+   35  sudo apt-get install node
+   36  sudo apt-get install npm
+   37  cd Desktop
+   38  nano t
+   39  cd bin/
+   40  ./studio.sh 
+   41  flutter
+   42  flutter doctor
+   43  sudo snap install flutter --classic
+   44  flutter doctor
+   45  flutter doctor --android-licenses
+   46  flutter doctor
+   47  flutter devices
+   48  npm install nodemon
+   49  npm install nodemon -g
+   50  flutter create myapp
+   51  flutter
+   52  cd myapp/
+   53  flutter run
+   54  flutter devices
+   55  flutter emulator
+   56  flutter emulators --launch Pixel_2
+   57  flutter run
+   58  ./studio.sh 
+   59  flutter devices
+   60  adb
+   61  flutter run
+   62  avd
+   63  flutter run
+   64  flutter devices
+   65  flutter emulators
+   66  flutter emulators --launch Pixel
+   67  flutter run
+   68  flutter emulators --launch Pixel
+   69  flutter run
+   70  flutter emulators --launch Pixel
+   71  adb
+   72  flutter clean
+   73  flutter emulators --launch Pixel
+   74  flutter run
+   75  flutter emulators --launch Pixel
+   76  adb
+   77  sudo apt install adb
+   78  adb
+   79  flutter emulators --launch Pixel
+   80  adb kill-server
+   81  flutter emulators --launch Pixel
+   82  adb kill-server
+   83  flutter emulators --launch Pixel
+   84  flutter run
+   85  ./studio.sh 
+   86  clear
+   87  ./studio.sh 
+   88  flutter emulators
+   89  flutter emulators --launch Nexus
+   90  echo $PATH
+   91  code .
+   92  flutter emulators --launch Nexus
+   93  flutter --emulators
+   94  flutter emulators
+   95  flutter emulators --launch Nexus
+   96  flutter emulators --launch Pixel
+   97  code .
+   98  flutter run
+   99  ./studio.sh 
+  100  ./studio.sh 
+  101  flutter emulators --launch Nexus
+  102  flutter --devices
+  103  flutter emulators --devices
+  104  flutter emulators
+  105  flutter emulators --launch Nexus
+  106  code .
+  107  npm
+  108  npm install -g nodemon
+  109  sudo npm install -g nodemon
+  110  sudo npm install -g express
+  111  sudo npm install -g sqlite3
+  112  sudo npm install -g @vue/cli
+  113  clear
+  114  flutter run
+  115  flutter build clean
+  116  flutter clean
+  117  flutter build
+  118  flutter build apk
+  119  flutter doctor
+  120  flutter run
+  121  clear
+  122  flutter run --verbrose
+  123  flutter run --verbose
+  124  flutter clean
+  125  clear
+  126  git
+  127  clear
+  128  flutter emulators --launch Nexus
+  129  flutter run
+  130  clear
+  131  google-chrome --use-gl=angle
+  132  Exec=/usr/bin/google-chrome-stable %U --use-gl=angle
+  133  google-chrome -disable-gpu
+  134  flutter emulators --launch Pixel
+  135  flutter emulators --launch Nexus
+  136  flutter run
+  137  flutter emulators --launch Nexus
+  138  flutter run
+  139  ./studio.sh 
+  140  git clone https://github.com/kaigikinyua/Class_and_Lab.git
+  141  ls
+  142  cd flutter/
+  143  ls
+  144  cd buggycode/
+  145  code .
+  146  flutter emulators --launch Nexus
+  147  flutter run
+  148  clear
+  149  flutter run
+  150  clear
+  151  git add --all
+  152  git commit -m "readblog.dart"
+  153  git config --global user.email "kaigikinyua@gmail.com"
+  154  git config --global user.name "kaigikinyua"
+  155  git commit -m "readblog.dart"
+  156  git push origin master
+  157  ./install.sh 
+  158  sudo ./install.sh
+  159  flutter create netstream
+  160  flutter emulators --launch Nexus
+  161  git add --all
+  162  git commit -m "buggycode and new fluttwe compatibility issues created new app netstream"
+  163  git push origin master
+  164  cd netstream/
+  165  flutter run
+  166  git fetch origin master
+  167  git pull origin master
+  168  flutter build clean
+  169  git pull
+  170  git pull --f
+  171  git pull -f
+  172  flutter clean
+  173  git pull
+  174  git log --oneline
+  175  git pull -f
+  176  git stash
+  177  git pull 
+  178  git add --all
+  179  git commit -m "thumbnail class"
+  180  git log --oneline
+  181  git add --all
+  182  git commit -m ""wrap up
+  183  git commit -m ""wrap up"
+  184  q
+  185  q
+  186  q;
+  187  git commit -m "wrap up"
+  188  git push origin master
+  189  git stash
+  190  git log --oneline
+  191  git add --all
+  192  git commit -m "Local blogs init"
+  193  git log --oneline
+  194  pwd
+  195  ls
+  196  cd ..
+  197  ls
+  198  cd '18BE2292BE226888/'
+  199  ls
+  200  cd Python/
+  201  cd advanced/
+  202  python regex.py 
+  203  git add --all
+  204  git fetch origin master
+  205  git pull origin master
+  206  git stash
+  207  git pull origin master
+  208  git add --all
+  209  git commit -m "regex"
+  210  git push origin master
+  211  code .
+  212  cd Python/advanced/
+  213  cd sites/
+  214  ls
+  215  cd ..
+  216  python3 poke.py
+  217  git add --all
+  218  git commit -m "regular expressions"
+  219  git push origin master
+  220  ipconfig
+  221  ip addr
+  222  man shutdown
+  223  shutdown -help
+  224  shutdown --help
+  225  shutdown 5
+  226  shutdown -c
+  227  shutdown 120
+  228  mkdir genapi
+  229  cd genapi
+  230  code .
+  231  mkdir src
+  232  touch Readme.md
+  233  cd src/
+  234  npm init
+  235  cd ..
+  236  touch .gitignore
+  237  cd src/
+  238  nodemon
+  239  npm link express
+  240  nodemon index.js 
+  241  npm link ejs
+  242  nodemon index.js 
+  243  shutdown 150
+  244  pwd
+  245  nodemon index.js 
+  246  cd /home/antony/Cave/Pit/tools/genapi/src
+  247  grep ../.gitignore 
+  248  cat ../.gitignore 
+  249  cls
+  250  clear
+  251  git add --all
+  252  git status
+  253  git commit -m "json files update in genapi"
+  254  ls
+  255  cd modules/
+  256  cd Data/
+  257  ls
+  258  cd gen/
+  259  python3 gen.py 
+  260  git add --all
+  261  git commit -m "random user generation in genAPI/src/modules/Data/gen/gen.py"
+  262  python3 gen.py 
+  263  ls
+  264  python3 gen.py 
+  265  git add --all
+  266  git commit -m "generating users and exporting them"
+  267  git log --oneline
+  268  git push origin master
+  269  clear
+  270  sudo +777 *.*
+  271  sudo chmod +777 *.*
+  272  sudo chmod +777 *
+  273  chmod +777 *
+  274  ls
+  275  ls -l
+  276  rm -r .Trash-1000/
+  277  sudo rm -r .Trash-1000/
+  278  sudo rm .Trash-1000/*.mkv
+  279  sudo rm ./.Trash-1000/*.mkv
+  280  shutdown 60
+  281  git fetch origin master
+  282  git pull origin master
+  283  cd modules/Data/gen/
+  284  python3 stddb.py 
+  285  git add --all
+  286  git commit -m "database schema script research"
+  287  git push origin master
+  288  shutdown 120
+  289  git fetch origin master
+  290  git pull origin master
+  291  git fetch origin master
+  292  git pull origin master
+  293  clear
+  294  git add --all
+  295  git commit -m "search engine"
+  296  git push origin master
+  297  cd search_engine/
+  298  code .
+  299  python3 engine.py 
+  300  git add --all
+  301  git commit -m "search_engine.engine.py"
+  302  git push origin master
+  303  git add --all
+  304  git commit -m "search engine"
+  305  git push origin master
+  306  clear
+  307  git log --oneline
+  308  git push origin master
+  309  git add --all
+  310  git commit -m "data schema for searches"
+  311  git push origin master
+  312  python3 engine/crawler.py 
+  313  python 3
+  314  python3
+  315  python3 engine/crawler.py 
+  316  cd engine/
+  317  python3 crawler.py 
+  318  git add --all
+  319  git commit -m "Crawler intergration with loading json data step one"
+  320  git push origin master
+  321  git add --all
+  322  git commit -m "tests init for search"
+  323  git push origin master
+  324  git add --all
+  325  git commit -m "theme init for search engine"
+  326  code .
+  327  mkdir templates
+  328  mkdir data
+  329  ls
+  330  flask
+  331  pip freeze
+  332  pip3 freeze
+  333  clear
+  334  pip3 install flask
+  335  service ssh
+  336  ssh
+  337  shutdown 120
+  338  git add --all
+  339  git commit -m "appending auto predict into the search field in search_engine"
+  340  git push origin master
+  341  cd tests/
+  342  ls
+  343  python3 modules_tests.py 
+  344  cd ..
+  345  ls
+  346  cd tests/
+  347  python3 modules_tests.py 
+  348  cd ..
+  349  ls
+  350  cd ..
+  351  ls
+  352  cd utilities/
+  353  ls
+  354  cd tests/
+  355  python3 modules_tests.py 
+  356  cd ..
+  357  ls
+  358  ls
+  359  cd engine/
+  360  cd utilities/
+  361  ls
+  362  python3 tests.py 
+  363  git add --all
+  364  git commit -m "tests for search engine utilities moved to the local path of the modules to be tested are located"
+  365  git add --all
+  366  git commit -m "exportJson test keeps on failing don't know why there is a none"
+  367  python3 tests.py 
+  368  git add --all
+  369  git commit -m "Utilities.Util.Files Tests complete"
+  370  python3 tests.py 
+  371  python3
+  372  python3 tests.py 
+  373  python3 
+  374  python3 tests.py 
+  375  python3
+  376  python3 tests.py 
+  377  git add --all
+  378  git commit -m "json tests success"
+  379  code .
+  380  cd ..
+  381  ls
+  382  code .
+  383  git add --all
+  384  git commit -m "dynamic change in search on the dom using vuejs in search_engine ui"
+  385  clear
+  386  ls
+  387  python3 server.py 
+  388  git add --all
+  389  git commit -m "first connection from the frontend to the backend [on different servers | liveserver and flask webserver] working | issue: the vue delimeters don't seem to work while using the flask webserver to render the search engine template"
+  390  git add --all
+  391  git commit -m "all is well for now with s_engine"
+  392  git add --all
+  393  git commit -m "all is well for now with s_engine"
+  394  git push origin master
+  395  ls
+  396  python3 server.py 
+  397  git add --all
+  398  git commit -m "displaying result from the server to the user interface in search_engine"
+  399  tsc
+  400  npm install -g typescript
+  401  sudo npm install -g typescript
+  402  tsc
+  403  code .
+  404  tsc index.ts -w
+  405  tsc canvas.ts -w
+  406  git add --all
+  407  git commit -m "typescript full"
+  408  git push origin master
+  409  cd ~/Cave
+  410  ls
+  411  cd Pit
+  412  ls
+  413  cd tools/
+  414  git push origin master
+  415  code .
+  416  git add *
+  417  git commit -m "freestyle ui implementation in web/frontend/freestyle - cool slide in and out on scroll effects"
+  418  git push origin master
+  419  dart --version
+  420  dart
+  421  tsc *.ts
+  422  tsc Database.ts -w
+  423  tsc *.ts -w
+  424  git add --all
+  425  git commit -m "typescript modules --- minefield"
+  426  clear
+  427  code .
+  428  git push origin master
+  429  ftp
+  430  ipconfig
+  431  ip addr
+  432  subl .
+  433  gedit test_ip.py
+  434  ping 192.168.0.142
+  435  clear
+  436  python3 test_ip.py 
+  437  flask
+  438  flask run test_ip.py 192.168.0.1
+  439  flask run -h 192.168.0.1
+  440  python3 test_ip.py 
+  441  code .
+  442  ls
+  443  pwd
+  444  clear
+  445  python3 server.py 
+  446  clear
+  447  cd /home/antony/Cave/Pit/class/scripts/Python/fast_scripts
+  448  python3 client.py 
+  449  git add --all
+  450  git commit -m "python scripts for sending data via tcp"
+  451  clear
+  452  history >testfile 
