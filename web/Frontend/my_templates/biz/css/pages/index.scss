@@ -1,0 +1,61 @@
+@import '../global/mixins.scss';
+@import '../global/variables.scss';
+
+body ::nth-child(odd) section.full{
+    background: lightseagreen;
+}
+header.landing{
+    position: relative;
+    height:100vh;
+    width:100vw;
+    //background:lightseagreen;
+}
+div.slide_container{
+    height: 90%;
+    width:100%;
+    max-width: 1500px;
+    background:none;
+    @include center_page;    
+    display: flex;
+    overflow-x:scroll;
+    overflow-y: hidden;
+    flex-wrap: wrap;
+    flex-direction: column;
+    //scroll-behavior: smooth;
+    scroll-snap-type:x mandatory;
+}
+div.slide_container::-webkit-scrollbar{
+    width:2px;
+}
+div.slide{
+    position: relative;
+    width:100%;
+    height:100%;
+    flex-shrink: 0px;
+    scroll-snap-align:start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.s_image{
+    position: relative;
+    height:100%;
+    width:100%;
+    background:blue;
+}
+.s_text{
+    position: relative;
+    max-height:80%;
+    @include center_v;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background:white;
+    box-shadow: 0px 1px 20px 3px $shadow;
+}
+.btn_c2a{
+    margin-top:10px;
+    @include button_default;
+    color:lightseagreen;
+    border:1px solid lightseagreen;
+}

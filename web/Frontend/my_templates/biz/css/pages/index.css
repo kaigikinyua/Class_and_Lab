@@ -1,0 +1,93 @@
+body ::nth-child(odd) section.full {
+  background: lightseagreen;
+}
+
+header.landing {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+div.slide_container {
+  height: 90%;
+  width: 100%;
+  max-width: 1500px;
+  background: none;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+div.slide_container::-webkit-scrollbar {
+  width: 2px;
+}
+
+div.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -ms-flex-negative: 0px;
+      flex-shrink: 0px;
+  scroll-snap-align: start;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.s_image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: blue;
+}
+
+.s_text {
+  position: relative;
+  max-height: 80%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: white;
+  -webkit-box-shadow: 0px 1px 20px 3px rgba(10, 10, 10, 0.1);
+          box-shadow: 0px 1px 20px 3px rgba(10, 10, 10, 0.1);
+}
+
+.btn_c2a {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: none;
+  outline: none;
+  font-size: 1em;
+  color: lightseagreen;
+  border: 1px solid lightseagreen;
+}
+/*# sourceMappingURL=index.css.map */
