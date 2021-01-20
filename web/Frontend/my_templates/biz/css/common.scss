@@ -30,7 +30,8 @@ body{
     font-size: 0.8em;
 }
 .p_normal{
-    font-size: 1em;
+    font-size: 1.1em;
+    margin:10px;
 }
 .p_big{
     font-size: 1.2em;
@@ -48,7 +49,7 @@ nav.topnav{
     position: fixed;
     top:0px;left:0px;
     width:100vw;
-    height: 50px;
+    height: 30px;
     padding:10px;
     z-index: $nav_bar;
     .barner,.links{
