@@ -101,20 +101,67 @@ div.slide {
   border: 1px solid lightseagreen;
 }
 
+div.card_scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 div.s_card {
   padding: 10px;
   border-radius: 20px;
   background: white;
-  -webkit-box-shadow: 0px 5px 20px 5px rgba(10, 10, 10, 0.1);
-          box-shadow: 0px 5px 20px 5px rgba(10, 10, 10, 0.1);
-  max-width: 100px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.1);
+          box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.1);
+  width: 120px;
+  height: 120px;
   text-align: center;
   margin: 20px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 div.s_card i {
   font-size: 2em;
   display: block;
   margin: 10px 0px;
+  color: lightseagreen;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+div.s_card:hover {
+  background: white;
+  -webkit-box-shadow: 0px 5px 20px 5px rgba(10, 10, 10, 0.1);
+          box-shadow: 0px 5px 20px 5px rgba(10, 10, 10, 0.1);
+}
+
+div.s_card:hover i {
+  font-size: 3em;
+}
+
+div.img {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(rgba(10, 10, 10, 0.1)), to(transparent));
+  background: linear-gradient(0, rgba(10, 10, 10, 0.1), transparent);
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=index.css.map */

@@ -15,7 +15,7 @@ body{
     font-weight: lighter;
 }
 .title{
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: lighter;
 }
 .big_title{
@@ -34,10 +34,10 @@ body{
     margin:10px;
 }
 .p_big{
-    font-size: 1.2em;
-    letter-spacing: 0.1em;
+    font-size: 1.4em;
     line-height: 1.2em;
     font-weight: lighter;
+    padding:10px;
 }
 a{
     text-decoration: none;
@@ -52,8 +52,10 @@ nav.topnav{
     height: 30px;
     padding:10px;
     z-index: $nav_bar;
+    background:$darker_shadow;
     .barner,.links{
         padding:10px;
+        color:white;
     }
 }
 
@@ -91,6 +93,8 @@ section.full{
 .btn{
     @include button_default;
 }
+
+
 
 //
 //

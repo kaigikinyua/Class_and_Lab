@@ -14,7 +14,7 @@ body {
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: lighter;
 }
 
@@ -38,10 +38,10 @@ body {
 }
 
 .p_big {
-  font-size: 1.2em;
-  letter-spacing: 0.1em;
+  font-size: 1.4em;
   line-height: 1.2em;
   font-weight: lighter;
+  padding: 10px;
 }
 
 a {
@@ -57,10 +57,12 @@ nav.topnav {
   height: 30px;
   padding: 10px;
   z-index: 10;
+  background: rgba(10, 10, 10, 0.7);
 }
 
 nav.topnav .barner, nav.topnav .links {
   padding: 10px;
+  color: white;
 }
 
 .container {
