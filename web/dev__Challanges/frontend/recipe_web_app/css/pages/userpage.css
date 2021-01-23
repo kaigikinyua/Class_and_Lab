@@ -1,0 +1,91 @@
+section.app {
+  position: relative;
+  max-width: 1520px;
+  height: 90vh;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  background: white;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+section.app::-webkit-scrollbar {
+  width: 1px;
+}
+
+#home, #saved, #trending {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+div.thumbnail {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.1);
+          box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.1);
+}
+
+div.dish {
+  margin: 10px;
+}
+
+div.details {
+  padding: 10px;
+}
+
+div.metrics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+i.fa {
+  margin: 0px 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #home, #saved, #trending {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  section.app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=userpage.css.map */
