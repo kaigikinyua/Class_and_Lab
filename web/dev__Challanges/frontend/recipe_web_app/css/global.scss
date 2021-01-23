@@ -1,0 +1,51 @@
+//colors
+$acc_color:lightseagreen;
+$prim_color:white;
+$darkl_txt:rgba(30,30,30,0.7);
+$light_text:gray;
+$dark_light:whitesmoke;
+$shadow:rgba(10,10,10,0.1);
+
+$dark_acc:darken(lightseagreen,50%);
+$dark:rgb(30,30,30);
+$h_dark:rgb(80,80,80);
+$dark_txt:darken(lightblue,30);
+
+//z-indexes
+$notification:4;
+$sidenav:3;
+$navs:2;
+$elements:0;
+//widths
+
+//mixins
+//positioning mixings
+@mixin  center_h {
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+}
+@mixin  center_v {
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+@mixin  middle_page {
+    position: relative;
+    left:50%;top:50%;
+    transform: translate(-50%,-50%);
+}
+
+//elements mixins
+@mixin button {
+    padding:10px;
+    border:1px solid transparent;
+    outline: none;
+}
+@mixin input {
+    padding:10px;
+    border:1px solid transparent;
+    outline: none;
+    display: block;
+}
+
