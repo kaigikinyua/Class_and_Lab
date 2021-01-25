@@ -33,3 +33,18 @@ class Paragraph extends  StatelessWidget {
     );
   }
 }
+
+class ThumbNail extends StatelessWidget{
+  String thumbnail_url;
+  ThumbNail(this.thumbnail_url);
+  @override
+    Widget build(BuildContext context) {
+      return Container(
+        child: Column(
+          children: [
+            Image.asset(this.thumbnail_url),
+          ],
+        ),
+      );
+    }
+}

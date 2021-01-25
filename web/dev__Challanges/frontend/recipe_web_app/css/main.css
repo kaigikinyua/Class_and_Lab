@@ -1,0 +1,104 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 2em;
+  margin: 20px;
+  font-weight: lighter;
+  letter-spacing: 3px;
+}
+
+.par {
+  font-size: 1.3em;
+  margin: 5px;
+}
+
+.barner_txt {
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.dark_elm {
+  background: whitesmoke;
+  color: rgba(30, 30, 30, 0.7);
+}
+
+.light_elm {
+  background: white;
+  color: rgba(30, 30, 30, 0.7);
+}
+
+.dual {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.dual_resp {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.container_flex {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.notification {
+  position: fixed;
+  top: 100px;
+  max-width: 400px;
+  min-width: 200px;
+  padding: 10px;
+  z-index: 4;
+}
+
+.err_notif {
+  background: crimson;
+  color: white;
+}
+
+.succ_notif {
+  background: ligten(green, 10);
+  color: white;
+}
+
+.cta_btn {
+  padding: 10px;
+  border: 1px solid transparent;
+  outline: none;
+  background: lightseagreen;
+  color: white;
+  border: 1px solid white;
+}
+
+.dark_component {
+  background: #1e1e1e;
+  color: #3a9fc0;
+}
+
+.dark_highlighted {
+  background: #505050;
+  color: white;
+}
+
+.s_dark {
+  background: #1a1a1a;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

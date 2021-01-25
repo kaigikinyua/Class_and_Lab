@@ -7,12 +7,12 @@ export class Database{
         //this.value=value
         Messages.error_msg("Hello World");
     }
-    static localStorageSupport=()=>{
+    localStorageSupport=()=>{
         if(window.localStorage)return true;
         return false;
     } 
     saveItem(){
-        if(Database.localStorageSupport()!=true){return false}
+        if(this.localStorageSupport()!=true){return false}
         try{
             localStorage.setItem(this.key,this.value.toString());        
         }catch(e){
@@ -20,7 +20,7 @@ export class Database{
         }
     }
     fetchItem(){
-        if(Database.localStorageSupport()!=true){return false};
+        if(this.localStorageSupport()!=true){return false};
         try{
             var data=localStorage.getItem(this.key)
             return data;
@@ -30,3 +30,4 @@ export class Database{
         }
     }   
 }
+//export default { Database } 

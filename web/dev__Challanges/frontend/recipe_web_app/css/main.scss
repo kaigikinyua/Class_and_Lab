@@ -1,0 +1,90 @@
+@import './global.scss';
+*{
+    padding:0px;
+    margin:0px;
+    font-family: Arial;
+}
+a{
+    color:currentColor;
+    text-decoration: none;
+}
+
+//text
+.title{
+    font-size: 2em;
+    margin:20px;
+    font-weight: lighter;
+    letter-spacing: 3px;
+}
+.par{
+    font-size: 1.3em;
+    margin:5px;
+}
+.barner_txt{
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+//elements bg color and text color
+.dark_elm{
+    background:$dark_light;
+    color:$darkl_txt;
+}
+.light_elm{
+    background:$prim_color;
+    color:$darkl_txt;
+}
+
+//element display
+.dual{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.dual_resp{
+    display: grid;
+    grid-template-columns:1fr 1fr; 
+}
+.container_flex{
+    position: relative;
+    width:100%;
+    display: flex;
+}
+
+//components
+    //notification
+.notification{
+    position: fixed;
+    top:100px;
+    max-width: 400px;
+    min-width: 200px;
+    padding:10px;
+    z-index: $notification;
+}
+.err_notif{
+    background:crimson;
+    color:white;
+}
+.succ_notif{
+    background:ligten(green,10);
+    color:white;
+}
+    //buttons
+.cta_btn{
+    @include button;
+    background:lightseagreen;
+    color:white;
+    border:1px solid white;
+}
+//dark mode elm
+.dark_component{
+    background: $dark;
+    color:$dark_txt;
+}
+.dark_highlighted{
+    background:$h_dark;
+    color:$prim_color;
+}
+.s_dark{
+    background:lighten(black,10%);
+    color:$prim_color;
+}

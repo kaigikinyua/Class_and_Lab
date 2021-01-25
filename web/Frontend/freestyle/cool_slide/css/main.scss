@@ -129,6 +129,38 @@ section.animated:hover{
     background:rgba(10,10,10,0.8);
 }
 
+
+.slide_in{
+    //opacity: 0;
+    position: relative;
+    animation: 1s slide_in 0s ease-in;
+}
+.slide_out{
+    left:100%;
+    position: relative;
+    animation: 1s slide_out 0s ease-out;
+}
+@keyframes slide_in{
+    from{
+        opacity: 0;
+        left:-100%;
+    }
+    to{
+        opacity: 1;
+        left:0px;
+    }
+}
+@keyframes slide_out{
+    from{
+        opacity: 1;
+        left:0px;
+    }
+    to{
+        opacity: 0;
+        left:200%;
+    }
+}
+
 @keyframes show{
     from{
         opacity: 0;

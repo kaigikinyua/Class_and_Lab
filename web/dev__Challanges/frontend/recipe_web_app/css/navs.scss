@@ -1,0 +1,31 @@
+@import './global.scss';
+
+@mixin  nav{
+    position: fixed;
+    left:0px;
+    width:100vw;
+    padding:10px;
+    z-index: $navs;
+    box-shadow: 1px 1px 40px 10px $shadow;
+}
+
+nav.topnav{
+    @include nav;
+    top:0px;
+}
+nav.bottom_nav{
+   @include nav;
+   bottom:0px;
+   text-align: center;
+}
+
+ul.links{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul.menu_hor{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
