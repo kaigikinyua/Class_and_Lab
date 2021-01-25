@@ -47,14 +47,36 @@ class JsonFile:
     def exportJson(filepath,data):
         f=Files(filepath)
         if(f.readFile()!=None):
-            f.writeFile(data,True)
-               
+            res=f.writeFile(data,append=True)
+            return JsonFile.handleExportRes(res,data,filepath)
+        else:
+            res=f.writeFile(data,append=False)
+            return JsonFile.handleExportRes(res,data,filepath)
 
-class DB:
-    pass
+    @staticmethod
+    def handleExportRes(res,data,filepath):
+        if(res==False):
+            Messages.error("Could not export data {d} to file {f}".format(d=data,f=filepath))
+            return False
+        else:
+            Messages.success("Exported data {d} to file {f}".format(d=data,f=filepath))
+            return True
 
-class Filter:
-    pass
+class JsonFilter:
+    @staticmethod
+    def equal_to():
+        pass
+    @staticmethod
+    def less_than():
+        pass
+    @staticmethod
+    def not_equal_to():
+        pass
+    @staticmethod
+    def greater_than():
+        pass
+    #relative to
+    
 
 class Messages:
     @staticmethod
