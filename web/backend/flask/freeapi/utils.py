@@ -1,4 +1,4 @@
-import json
+import json,requests
 class Files:
     def __init__(self,filepath):
         self.filepath=filepath
@@ -23,7 +23,7 @@ class Files:
                 Messages.error("Could not append data")
                 return False
         try:
-            f=open(self.filepath,'w'):
+            f=open(self.filepath,'w')
             f.write(wdata)
             f.close()
             data=True
@@ -77,16 +77,32 @@ class JsonFilter:
         pass
     #relative to
     
-
 class Messages:
+    c_warning='\033[93m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
     @staticmethod
     def error(message):
-        pass
-
+        Messages.printMessage(Messages.FAIL,"[Err]",message)
     @staticmethod
-    def success(messaege):
-        pass
-
+    def success(message):
+        Messages.printMessage(Messages.OKGREEN,"[OK]",message)
     @staticmethod
     def warning(message):
+        Messages.printMessage(Messages.c_warning,"[Warning]",message)
+    @staticmethod
+    def printMessage(mess_col,messagetype,message):
+        print("{mc} {mt} {m} {c}".format(mc=mess_col,mt=messagetype,m=message,c=Messages.ENDC))
+
+#advanced feature for populating websites
+"""class Requests:
+    @staticmethod
+    def post_to_site(url,data):
         pass
+    @staticmethod
+    def get_from_site(url):
+        pass
+"""
