@@ -1,0 +1,74 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  letter-spacing: 2px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.barner {
+  font-weight: lighter;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+.super_title {
+  font-size: 4em;
+  letter-spacing: 3px;
+  margin: 0px 20px;
+}
+
+.title {
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+.p {
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+.btn-btn {
+  padding: 10px;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.btn-callToAction {
+  padding: 10px;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.container {
+  width: 1000px;
+}
+
+.dual_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+ul.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style: none;
+  font-size: 1.1em;
+}
+/*# sourceMappingURL=main.css.map */

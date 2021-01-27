@@ -1,0 +1,11 @@
+@import '../components/mixins.scss';
+
+header.landing,section.full{
+    height: 100vh;
+    width:100vw;
+    .container{
+        height:80%;
+        @include center_s;
+        background:lightseagreen;
+    }
+}

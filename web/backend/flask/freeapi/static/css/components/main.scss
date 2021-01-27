@@ -1,0 +1,62 @@
+@import './mixins.scss';
+//defaults
+*{
+    padding:0px;
+    margin:0px;
+    font-family: Arial;
+}
+a{
+    text-decoration: none;
+    color:currentColor;
+    letter-spacing: 2px;
+}
+body{
+    overflow-x:hidden;
+}
+//fonts
+.barner{
+    font-weight: lighter;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+.super_title{
+    font-size: 4em;
+    letter-spacing: 3px;
+    margin:0px 20px;
+}
+.title{
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+.p{
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+//common components
+.btn-btn{
+    @include button;
+}
+.btn-callToAction{
+    @include button;
+}
+
+//components colors
+//.dark{}
+//.h-dark{}
+//.light{}
+//.h-light{}
+//re-useable components
+.container{
+    width: 1000px;
+}
+.dual_flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+ul.links{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 1.1em;
+}

@@ -1,0 +1,41 @@
+.topnav, .footer {
+  position: fixed;
+  width: 100vw;
+  left: 0px;
+  z-index: 10;
+  background: white;
+}
+
+.topnav .container, .footer .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.topnav {
+  top: 0px;
+}
+
+.topnav .barner {
+  padding: 5px;
+}
+
+ul.links {
+  padding: 10px;
+}
+
+.footer {
+  bottom: 0px;
+  padding: 10px;
+}
+
+.footer ul.links {
+  font-size: 0.8em;
+  padding: 0px;
+}
+/*# sourceMappingURL=navs.css.map */

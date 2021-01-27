@@ -1,0 +1,27 @@
+@import '../components/mixins.scss';
+#app{
+    position: relative;
+    height: 85vh;
+    width:100vw;
+    @include center_s;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.data_list{
+    margin:10px;
+}
+.list{
+    padding:10px;
+}
+ul{
+    list-style-type: none;
+    li{
+        padding:10px;
+    }
+}
+
+#selected_data{
+    position: relative;
+    height:100%;
+    overflow-y:scroll;
+}
