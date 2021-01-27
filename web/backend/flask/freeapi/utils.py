@@ -34,14 +34,15 @@ class Files:
 class JsonFile:
     @staticmethod
     def loadData(filepath):
-        f=Files(filepath)
-        data=f.readFile()
-        if(data!=None):
-            jsondata=json.load(data)
-            return jsondata
-        else:
-            Messages.error("Could not load data from {f} ".format(f=filepath))
-            return {}
+        #f=Files(filepath)
+        #data=f.readFile()
+        with open(filepath,'r') as f:
+            data=json.load(f)
+        return data
+    @staticmethod
+    def fetchField(filepath,field):
+        data=JsonFile.loadData(filepath)
+        return data[field]
 
     @staticmethod
     def exportJson(filepath,data):
