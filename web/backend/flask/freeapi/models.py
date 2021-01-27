@@ -1,6 +1,7 @@
 import os
 from utils import JsonFile
 from gen import User
+from mydb import UserDataBase
 class GenericData:
     @staticmethod
     def genericDataActions(action):
@@ -41,4 +42,18 @@ class GenericData:
 
     @staticmethod
     def bloglist():
+        pass
+
+class MyDBActions:
+    @staticmethod
+    def createDB(dbname):
+        pass
+    @staticmethod
+    def populateDB(dbname):
+        pass
+    @staticmethod
+    def fetchData(database):
+        pass
+    @staticmethod
+    def userDBConfgs(configs):
         pass

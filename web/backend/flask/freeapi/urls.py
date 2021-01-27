@@ -6,6 +6,15 @@ app=Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route('/mydb/<action>')
+def mydb(action):
+    return render_template("mydb.html")
+
+#@app.route('/populatesite')
+#def populateSite():
+#    pass
+
+#api endpoints
 @app.route('/getdata/<genericdata>')
 def getdata(genericdata):
     data=GenericData.genericDataActions(genericdata)
@@ -18,20 +27,10 @@ def getdata(genericdata):
         response=jsonify({"genericdata":None,"message":"There seems to be an error getting generic data"})
     return response
 
-@app.route('/mydb/<action>')
-def mydb(action):
-    return render_template("index.html")
-
 @app.route('/createDB/<randomID>')
 def createDB(randomID):
     return render_template("index.html")
 
-#@app.route('/populatesite')
-#def populateSite():
-#    pass
-
-
-#api endpoints
 @app.route('/api/getdata/<genericdata>')
 def api_getdata(genericdata):
     data={"package":"Open Api","message":"Endpoint not done"}
