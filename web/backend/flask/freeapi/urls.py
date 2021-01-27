@@ -33,6 +33,5 @@ def api_genericdatalist():
     datalist={"package":"Open Api","message":"Endpoint under construction"}
     return jsonify(data)
 
-
 if __name__=="__main__":
     app.run(debug=True)
