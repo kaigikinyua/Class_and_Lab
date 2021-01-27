@@ -1,8 +1,8 @@
 from random import randrange
 import json
 import requests
-from utils import JsonFile
-
+from utils import JsonFile,Messages
+#Base generic data generators
 class User:
     @staticmethod
     def gen_fulluser(dataset):
@@ -63,7 +63,7 @@ class User:
         male_names=uData["male"]
         female_names=uData["female"]
         Gen_Users=[]
-        if(male_names!=False and female_names!=False): 
+        if(uData!=False and uData!={}): 
             for i in range(number):
                 rand_gender=randrange(0,3)
                 if(rand_gender==0):
@@ -73,8 +73,29 @@ class User:
                 Gen_Users.append(user)
         else:
             print("Error while getting usernames and domains from ./users.json")
+            Messages.warning("Got {d} while loading user schema ".format(d=uData))
             Gen_Users=False
         return Gen_Users
+
+"""
+class UserProfile:
+    pass
+
+class UserReview:
+    pass
+
+class Blogs:
+    pass
+
+class BlogSnippets:
+    pass
+
+class Chat:
+    pass
+
+class List:
+    pass
+"""
 
 if __name__=="__main__":
     print(User.random_users(10))

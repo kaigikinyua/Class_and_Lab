@@ -37,7 +37,11 @@ class JsonFile:
         #f=Files(filepath)
         #data=f.readFile()
         with open(filepath,'r') as f:
-            data=json.load(f)
+            try:
+                data=json.load(f)
+            except:
+                Messages.error("Could not generate users")
+                data=False
         return data
     @staticmethod
     def fetchField(filepath,field):
