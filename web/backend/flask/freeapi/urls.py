@@ -1,4 +1,5 @@
 from flask import Flask,render_template,jsonify,request
+from models import GenericData
 app=Flask(__name__)
 #website
 @app.route('/')
@@ -7,7 +8,15 @@ def index():
 
 @app.route('/getdata/<genericdata>')
 def getdata(genericdata):
-    return render_template("index.html")
+    data=GenericData.genericDataActions(genericdata)
+    response={}
+    if(data!={} and data!=False and data!=None):
+        response=jsonify({"genericdata":data})
+    else:
+        #run diagnostics on generic data - new thread or process
+        #log the error to a file
+        response=jsonify({"genericdata":None,"message":"There seems to be an error getting generic data"})
+    return response
 
 @app.route('/mydb/<action>')
 def mydb(action):

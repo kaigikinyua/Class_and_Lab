@@ -5,9 +5,9 @@ class GenericData:
     @staticmethod
     def genericDataActions(action):
         if(action=="show"):
-            pass
+            return GenericData.show()
         elif(action=="users"):
-            pass
+            return GenericData.users()
         elif(action=="userprofiles"):
             pass
         elif(action=="bloglist"):
@@ -28,7 +28,7 @@ class GenericData:
         files=os.listdir("./genericdata")
         files_cleaned=[]
         for f in files:
-            files_cleaned+=f.split(".")[0]
+            files_cleaned+=[f.split(".")[0]]
         return files_cleaned
 
     @staticmethod

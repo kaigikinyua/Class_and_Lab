@@ -1,4 +1,4 @@
-import json,requests
+import json,requests,os
 class Files:
     def __init__(self,filepath):
         self.filepath=filepath
@@ -30,6 +30,25 @@ class Files:
         except:
             data=False
         return data
+
+    def file_exists():
+        if(os.path.isfile(self.filepath)):
+            return True
+        return False
+
+    def create_file():
+        file_path
+        while(self.file_exists()==True):
+            filename,extension=self.filepath.split(".")
+            filename+=str(randrange(1000))
+            self.filepath=str(filename)+str(extension)
+        try:
+            f=open(self.filepath,"w")
+            f.close()
+            return True
+        except:
+            Messages.error("Could not create file {f}".format(f=self.filepath))
+            return False
 
 class JsonFile:
     @staticmethod
@@ -67,21 +86,6 @@ class JsonFile:
             Messages.success("Exported data {d} to file {f}".format(d=data,f=filepath))
             return True
 
-class JsonFilter:
-    @staticmethod
-    def equal_to():
-        pass
-    @staticmethod
-    def less_than():
-        pass
-    @staticmethod
-    def not_equal_to():
-        pass
-    @staticmethod
-    def greater_than():
-        pass
-    #relative to
-    
 class Messages:
     c_warning='\033[93m'
     OKBLUE = '\033[94m'
@@ -102,6 +106,13 @@ class Messages:
     def printMessage(mess_col,messagetype,message):
         print("{mc} {mt} {m} {c}".format(mc=mess_col,mt=messagetype,m=message,c=Messages.ENDC))
 
+
+#system maintainence and assesment
+"""
+class Logs:
+    pass
+"""
+
 #advanced feature for populating websites
 """class Requests:
     @staticmethod
@@ -110,4 +121,23 @@ class Messages:
     @staticmethod
     def get_from_site(url):
         pass
+"""
+
+#filter functionalities for querying data
+"""
+class JsonFilter:
+    @staticmethod
+    def equal_to():
+        pass
+    @staticmethod
+    def less_than():
+        pass
+    @staticmethod
+    def not_equal_to():
+        pass
+    @staticmethod
+    def greater_than():
+        pass
+    #relative to
+
 """
