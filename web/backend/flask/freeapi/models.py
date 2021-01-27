@@ -1,16 +1,18 @@
 import os
 from utils import JsonFile
-from gen import User
+from gen import User,UserReview
 from mydb import UserDataBase
 class GenericData:
     @staticmethod
-    def genericDataActions(action):
+    def genericDataActions(action,number):
         if(action=="show"):
             return GenericData.show()
         elif(action=="users"):
-            return GenericData.users()
+            return GenericData.users(number)
         elif(action=="userprofiles"):
-            pass
+            return GenericData.users_profiles(number)
+        elif(action=="reviews"):
+            return GenericData.usersReviews(number)
         elif(action=="bloglist"):
             pass
         elif(action=="blog"):
@@ -33,13 +35,21 @@ class GenericData:
         return files_cleaned
 
     @staticmethod
-    def users():
+    def users(number):
         users=JsonFile.loadData("./genericdata/users.json")
         if(users!={} and users!=False):
             return users
         else:
-            return User.random_users(100)
+            return User.random_users(number)
 
+    @staticmethod
+    def users_profiles(number):
+        #add local storage for users profile
+        return User.random_users_profiles(number)
+
+    @staticmethod
+    def usersReviews(number):
+        return UserReview.random_reviews(number)
     @staticmethod
     def bloglist():
         pass

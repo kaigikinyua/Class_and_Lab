@@ -103,14 +103,25 @@ class User:
         else:
             return True
 
-class UserProfile:
-    @staticmethod
-    def usersProfile():
-        pass
-"""
 class UserReview:
-    pass
-
+    @staticmethod
+    def random_reviews(number):
+        userProfiles=User.random_users_profiles(number)
+        reviews=JsonFile.loadData("./schemas/reviews.json")
+        reviews_positive=reviews["reviews"][0]["positive"]
+        reviews_negative=reviews["reviews"][1]["negative"]
+        reviews=[reviews_positive,reviews_positive]
+        polished_reviews=[]
+        if(userProfiles!=False and reviews!=False):
+            for profile in userProfiles:
+                rev=reviews[randrange(0,2)]
+                f_rev=rev[randrange(0,len(rev))]
+                polished_reviews+=[{"user":profile,"review":f_rev}]
+        else:
+            Messages.error("Could not generate reviews")
+            polished_reviews=False
+        return polished_reviews
+"""
 class Blogs:
     pass
 
@@ -129,7 +140,5 @@ if __name__=="__main__":
     #print(User.random_users_profiles(10))
     #data=User.random_users(2)
     #User.export_data(data)
-        
-
-
-
+    #print(UserReview.random_reviews(100))
+    pass
