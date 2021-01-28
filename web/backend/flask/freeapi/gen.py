@@ -72,15 +72,42 @@ class User:
                     user=User.gen_fulluser(female_names)
                 Gen_Users.append(user)
         else:
-            print("Error while getting usernames and domains from ./users.json")
+            print("Error while getting usernames and domains from ./schemas/users_schema.json")
             Messages.warning("Got {d} while loading user schema ".format(d=uData))
             Gen_Users=False
         return Gen_Users
+    
+    @staticmethod
+    def random_users_profiles(number):
+        rusers=User.random_users(number)
+        rusersprofiles=[]
+        if(rusers!=False):
+            for user in rusers:
+                rusersprofiles+=[
+                    {
+                        "firsname":user["firstname"],
+                        "lastname":user["lastname"],
+                        "email":user["email"],
+                        "profile":"/images/one.png"
+                    }
+                ]
+        return rusersprofiles
 
-"""
+    @staticmethod
+    def export_data(data):
+        f=JsonFile.exportJson(filepath="./genericdata/users.json",data=data)
+        if(f==False):
+            Messages.error(message="Could not export users data to ./genericdata/users.json",log=True)
+            Messages.error(message="Userdata -> {d}".format(d=data))
+            return False
+        else:
+            return True
+
 class UserProfile:
-    pass
-
+    @staticmethod
+    def usersProfile():
+        pass
+"""
 class UserReview:
     pass
 
@@ -98,8 +125,10 @@ class List:
 """
 
 if __name__=="__main__":
-    print(User.random_users(10))
-
+    #print(User.random_users(10))
+    #print(User.random_users_profiles(10))
+    #data=User.random_users(2)
+    #User.export_data(data)
         
 
 

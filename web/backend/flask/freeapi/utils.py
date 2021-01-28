@@ -18,7 +18,7 @@ class Files:
         if(append==True):
             data=self.readFile()
             if(data!=None):
-                wdata=wdata+data
+                wdata=str(wdata)+str(data)
             else:
                 Messages.error("Could not append data")
                 return False
@@ -68,10 +68,11 @@ class JsonFile:
         return data[field]
 
     @staticmethod
-    def exportJson(filepath,data):
+    def exportJson(filepath,data,fieldname="users"):
         f=Files(filepath)
         if(f.readFile()!=None):
-            res=f.writeFile(data,append=True)
+            json_data=json.dumps({fieldname:data})
+            res=f.writeFile(json_data,append=False)
             return JsonFile.handleExportRes(res,data,filepath)
         else:
             res=f.writeFile(data,append=False)
@@ -80,7 +81,7 @@ class JsonFile:
     @staticmethod
     def handleExportRes(res,data,filepath):
         if(res==False):
-            Messages.error("Could not export data {d} to file {f}".format(d=data,f=filepath))
+            Messages.error("Could not export data to file {f}".format(f=filepath))
             return False
         else:
             Messages.success("Exported data {d} to file {f}".format(d=data,f=filepath))
@@ -94,7 +95,7 @@ class Messages:
     FAIL = '\033[91m'
     ENDC = '\033[0m'
     @staticmethod
-    def error(message):
+    def error(message,log=False):
         Messages.printMessage(Messages.FAIL,"[Err]",message)
     @staticmethod
     def success(message):
