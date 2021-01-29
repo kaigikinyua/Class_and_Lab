@@ -121,13 +121,37 @@ class UserReview:
             Messages.error("Could not generate reviews")
             polished_reviews=False
         return polished_reviews
-"""
+
 class Blogs:
-    pass
-
-class BlogSnippets:
-    pass
-
+    @staticmethod
+    def blogSnippets(number):
+        data=JsonFile.loadData("./schemas/blogs.json")
+        snippets=[]
+        if(data!=False and data!=None and data!={}):
+            for blog in data["blogs"]:
+                snippets+=[{
+                    "title":blog["title"],
+                    "author":blog["author"],
+                    "likes":blog["likes"],
+                    "dislikes":blog["dislikes"],
+                    "views":blog["views"],
+                    "date":blog["date"],
+                    "thumb_nail":blog["thumb_nail"]
+                }]
+        else:
+            Messages.error("Got {r} while retriving blog snippets".format(r=data))
+            snippets=None
+        return snippets
+    @staticmethod
+    def randomBlog():
+        blog=Blogs.blogSnippets(1)
+        if(blog!=None):
+            paragraphs=JsonFile.loadData('./schemas/text_blobs.json')
+            p=paragraphs["medium_par"]
+            paragraphs=p[0:randrange(0,len(p))]
+            blog[0]["paragraphs"]=paragraphs
+        return blog[0]
+"""
 class Chat:
     pass
 
@@ -141,4 +165,6 @@ if __name__=="__main__":
     #data=User.random_users(2)
     #User.export_data(data)
     #print(UserReview.random_reviews(100))
+    #print(Blogs.randomBlog())
+    #print(Blogs.blogSnippets(1))
     pass
