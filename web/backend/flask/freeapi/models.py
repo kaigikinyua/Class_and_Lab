@@ -1,6 +1,6 @@
 import os
 from utils import JsonFile
-from gen import User,UserReview
+from gen import User,UserReview,Blogs,List
 from mydb import UserDataBase
 class GenericData:
     @staticmethod
@@ -14,13 +14,13 @@ class GenericData:
         elif(action=="reviews"):
             return GenericData.usersReviews(number)
         elif(action=="bloglist"):
-            pass
+            return GenericData.bloglist(number)
         elif(action=="blog"):
-            pass
+            return GenericData.randomBlog()
         elif(action=="list"):
-            pass
-        elif(action=="detailedlist"):
-            pass
+            return GenericData.noramlList(number)
+        elif(action=="nestedlist"):
+            return GenericData.nestedList(number)
         elif(action=="chat"):
             pass
         else:
@@ -51,8 +51,17 @@ class GenericData:
     def usersReviews(number):
         return UserReview.random_reviews(number)
     @staticmethod
-    def bloglist():
-        pass
+    def bloglist(number):
+        return Blogs.blogSnippets(number)
+    @staticmethod
+    def randomBlog():
+        return Blogs.randomBlog()
+    @staticmethod
+    def nestedList(number):
+        return List.nested_list(number)
+    @staticmethod
+    def noramlList(number):
+        return List.simple_list(number)
 
 class MyDBActions:
     @staticmethod

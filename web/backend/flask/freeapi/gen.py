@@ -150,6 +150,7 @@ class Blogs:
             p=paragraphs["medium_par"]
             paragraphs=p[0:randrange(0,len(p))]
             blog[0]["paragraphs"]=paragraphs
+            blog[0]["comments"]=UserReview.random_reviews(3)
         return blog[0]
 
 """
