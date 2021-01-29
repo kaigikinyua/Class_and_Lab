@@ -151,13 +151,31 @@ class Blogs:
             paragraphs=p[0:randrange(0,len(p))]
             blog[0]["paragraphs"]=paragraphs
         return blog[0]
+
 """
 class Chat:
     pass
+"""
 
 class List:
-    pass
-"""
+    @staticmethod
+    def fetch_lists(obj_key):
+        data=JsonFile.loadData('./schemas/text_blobs.json')
+        if(data!=None and data!=False and data!={}):
+            return data[obj_key]
+        else:
+            Messages.error("Could not load data")
+            return False
+    @staticmethod
+    def nested_list(number):
+        l=List.fetch_lists("nested_lists")
+        if(l!=False):
+            return l[0:number]
+    @staticmethod
+    def simple_list(number):
+        l=List.fetch_lists("list")
+        if(l!=False):
+            return l[0:number]
 
 if __name__=="__main__":
     #print(User.random_users(10))
@@ -167,4 +185,6 @@ if __name__=="__main__":
     #print(UserReview.random_reviews(100))
     #print(Blogs.randomBlog())
     #print(Blogs.blogSnippets(1))
+    #print(List.nested_list(3))
+    #print(List.simple_list(3))
     pass
