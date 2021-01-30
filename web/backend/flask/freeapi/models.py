@@ -1,5 +1,5 @@
 import os
-from utils import JsonFile
+from utils import JsonFile,Messages
 from gen import User,UserReview,Blogs,List
 from mydb import UserDataBase
 class GenericData:
@@ -24,7 +24,8 @@ class GenericData:
         elif(action=="chat"):
             pass
         else:
-            pass
+            Messages.error("Unknown generic data {d}".format(d=action),log=True)
+            return None
 
     @staticmethod
     def show():
