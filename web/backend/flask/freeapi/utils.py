@@ -1,3 +1,7 @@
+"""
+Utility functions to be used by the scripts to manage various resources
+and keep the scripts consistent
+"""
 import json,requests,os
 class Files:
     def __init__(self,filepath):
@@ -98,21 +102,34 @@ class Messages:
     def error(message,log=False):
         Messages.printMessage(Messages.FAIL,"[Err]",message)
     @staticmethod
-    def success(message):
+    def success(message,log=False):
         Messages.printMessage(Messages.OKGREEN,"[OK]",message)
     @staticmethod
-    def warning(message):
+    def warning(message,log=False):
         Messages.printMessage(Messages.c_warning,"[Warning]",message)
     @staticmethod
     def printMessage(mess_col,messagetype,message):
         print("{mc} {mt} {m} {c}".format(mc=mess_col,mt=messagetype,m=message,c=Messages.ENDC))
-
+    @staticmethod
+    def logEvent(message,logtype="error"):
+        l=Logs(logtype)
+        l.log(message)
 
 #system maintainence and assesment
-"""
 class Logs:
-    pass
-"""
+    def __init__(self,logtype):
+        logtypes=["error","success","warning"]
+        if(logtype in logtypes):
+            self.logtype=logtype
+            self.logsLocation="./Logs"
+            self.logFiles={"error":"error.txt","success":"success.txt","warning":"warning.txt"}
+        else:
+            Messages.error("Logtype {l} is not in logtypes".format(l=logtype),log=False)
+    def log(self,message):
+        f=Files()
+        res=f.writeFile(str(message)+"\n",append=True)
+        if(res!=False):
+            Messages.printMessage(Messages.FAIL,'[Err]',"Could not log event to logs")
 
 #advanced feature for populating websites
 """class Requests:

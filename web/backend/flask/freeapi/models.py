@@ -1,3 +1,7 @@
+"""
+Various actions that can be processed by the backend
+Serialization of data to be consumed by user requests
+"""
 import os
 from utils import JsonFile,Messages
 from gen import User,UserReview,Blogs,List

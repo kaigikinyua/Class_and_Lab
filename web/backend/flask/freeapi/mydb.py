@@ -1,4 +1,6 @@
-
+"""
+Users custom db actions
+"""
 class UserDataBase:
     def __init__(self,dbname):
         pass

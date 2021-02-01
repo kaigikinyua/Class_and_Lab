@@ -1,3 +1,6 @@
+"""
+Generator functions for various generic data
+"""
 from random import randrange
 import json
 import requests

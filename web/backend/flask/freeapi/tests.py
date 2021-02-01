@@ -1,3 +1,6 @@
+"""
+Tests
+"""
 from unittest import TestCase
 
 #code base tests
