@@ -156,10 +156,39 @@ class Blogs:
             blog[0]["comments"]=UserReview.random_reviews(3)
         return blog[0]
 
-"""
-class Chat:
-    pass
-"""
+class Products:
+    @staticmethod
+    def getProductsInCategory(category):
+        product_data=JsonFile.loadData("./schemas/products.json")
+        categories=product_data["categories"]
+        if(category in categories):
+            products=product_data["products"]
+            for p in products:
+                try:
+                    return p[category]
+                except KeyError:
+                    del p
+        else:
+            msg="Could not find product category {c} in categories {cs}".format(c=category,cs=categories)
+            Messages.error(msg)
+        return None
+
+    @staticmethod
+    def genRandomProductList():
+        product_data=JsonFile.loadData("./schemas/products.json")
+        categories=product_data["categories"]
+        c=categories[randrange(0,len(categories))]
+        print(c)
+        product_list=Products.getProductsInCategory(c)
+        if(product_list==None):
+            Messages.error("Could not find category {x} ".format(x=c))
+            product_list=None
+        return product_list
+
+    @staticmethod
+    def getAllProductList():
+        product_data=JsonFile.loadData("./schemas/products.json")
+        return product_data["products"]
 
 class List:
     @staticmethod
@@ -191,4 +220,7 @@ if __name__=="__main__":
     #print(Blogs.blogSnippets(1))
     #print(List.nested_list(3))
     #print(List.simple_list(3))
+    #print(Products.getProductsInCategory("fashion"))
+    #print(Products.genRandomProductList())
+    #print(Products.getAllProductList())
     pass
