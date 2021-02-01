@@ -1,11 +1,31 @@
 """
 Tests
 """
-from unittest import TestCase
-
+import unittest
+from gen import *
+    
 #code base tests
-class GenTest:
-    pass
+class GenTest(unittest.TestCase):
+#User Generation
+    def test_randomUserGeneration(self):
+        users=User.random_users(10)
+        self.assertEqual(len(users),10)
+
+    def test_radomUserProfileGeneration(self):
+        users=User.random_users_profiles(10)
+        self.assertEqual(len(users),10)
+#Users Reviews
+    def test_randomReviews(self):
+        userReviews=UserReview.random_reviews(10)
+        self.assertEqual(len(userReviews),10)
+#Blogs
+    def test_randomBlog(self):
+        blog=Blogs.randomBlog()
+        self.assertEqual(len(blog),9)
+    def test_blogSnippets(self):
+        blogSnippets=Blogs.blogSnippets(1)
+        self.assertEqual(len(blogSnippets),1)
+
 
 class MyDBTest:
     pass
@@ -25,3 +45,6 @@ class SchemaTest:
 
 class GenericDataTest:
     pass
+
+if __name__=="__main__":
+    unittest.main()

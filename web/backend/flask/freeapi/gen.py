@@ -211,13 +211,9 @@ class List:
             return l[0:number]
 
 if __name__=="__main__":
-    #print(User.random_users(10))
-    #print(User.random_users_profiles(10))
     #data=User.random_users(2)
     #User.export_data(data)
     #print(UserReview.random_reviews(100))
-    #print(Blogs.randomBlog())
-    #print(Blogs.blogSnippets(1))
     #print(List.nested_list(3))
     #print(List.simple_list(3))
     #print(Products.getProductsInCategory("fashion"))
