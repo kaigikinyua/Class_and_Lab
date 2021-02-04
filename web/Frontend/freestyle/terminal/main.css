@@ -1,0 +1,59 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: gray;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+div.terminal {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: rgba(10, 10, 10, 0.5);
+  max-height: 300px;
+  width: 80%;
+}
+
+div.header {
+  padding: 10px;
+  background: rgba(10, 10, 10, 0.6);
+  color: white;
+}
+
+div.text {
+  padding: 0px 10px;
+  color: lightgreen;
+  font-family: monospace;
+  overflow-y: scroll;
+  height: 250px;
+}
+
+p.command {
+  font-size: 12px;
+}
+
+p.colored {
+  color: #00e600;
+}
+
+p.colored i {
+  color: black;
+}
+
+p.colored small {
+  color: lightgreen;
+}
+/*# sourceMappingURL=main.css.map */

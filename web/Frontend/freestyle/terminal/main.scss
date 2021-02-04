@@ -1,0 +1,45 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background:gray;
+}
+::-webkit-scrollbar{
+    width:2px;
+}
+div.terminal{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    background:rgba(10,10,10,0.5);
+    max-height: 300px;
+    width:80%;
+    
+}
+div.header{
+    padding:10px;
+    background:rgba(10,10,10,0.6);
+    color:white;
+}
+div.text{
+    padding:0px 10px;
+    color:lightgreen;
+    font-family: monospace;
+    overflow-y: scroll;
+    height: 250px;
+}
+p.command{
+    font-size: 12px;
+}
+p.colored{
+    color:lighten(green,20%);
+    i{
+        color:darken(green,30%);
+    }
+    small{
+        color:lightgreen;
+    }
+}
