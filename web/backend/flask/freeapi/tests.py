@@ -25,7 +25,21 @@ class GenTest(unittest.TestCase):
     def test_blogSnippets(self):
         blogSnippets=Blogs.blogSnippets(1)
         self.assertEqual(len(blogSnippets),1)
-
+#lists
+    def test_nestedList(self):
+        l=List.nested_list(3)
+        self.assertEqual(len(l),3)
+    def test_simpleList(self):
+        l=List.simple_list(3)
+        self.assertEqual(len(l),3)
+#products
+    def test_products(self):
+        specificPrdct=Products.getProductsInCategory("fashion")
+        randomPrdct=Products.genRandomProductList()
+        allPrdct=Products.getAllProductList()
+        self.assertIsNotNone(specificPrdct)
+        self.assertIsNotNone(randomPrdct)
+        self.assertIsNotNone(allPrdct)
 
 class MyDBTest:
     pass

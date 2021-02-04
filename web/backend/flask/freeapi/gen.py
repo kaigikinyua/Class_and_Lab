@@ -188,7 +188,10 @@ class Products:
     @staticmethod
     def getAllProductList():
         product_data=JsonFile.loadData("./schemas/products.json")
-        return product_data["products"]
+        if (product_data["products"]!=None):
+            return product_data["products"]
+        else:
+            return None
 
 class List:
     @staticmethod

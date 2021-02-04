@@ -3,7 +3,8 @@
         "Generic Data",
         "MyDB","PWA",
         "Download MyDB json file",
-        "Securing mydb from other users"
+        "Securing mydb from other users",
+        "NAME[RandomDataGenerator,RandomGenerator,RandomData,OpenApi,freeApi]"
     ],
     "feature_list":[
         {
