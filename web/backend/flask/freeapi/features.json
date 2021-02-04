@@ -10,15 +10,16 @@
         {
             "name":"Generic Data",
             "features":[
+                "Payment Details",
+                "Sales",
+                "Products and thumb nails",
+                "Products Pictures",
+                "messages|chats",
                 "Lists",
                 "Blogs",
                 "Blog Lists",
                 "Users",
-                "Products Pictures",
-                "Sales",
-                "Reviews and Comments",
-                "Products and thumb nails",
-                "messages|chats"
+                "Reviews and Comments"
             ]
         },
         {
