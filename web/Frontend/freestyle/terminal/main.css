@@ -56,4 +56,55 @@ p.colored i {
 p.colored small {
   color: lightgreen;
 }
+
+nav.topnav, nav.bottomnav {
+  position: fixed;
+  width: 100vw;
+  height: 30px;
+}
+
+nav.sidenav {
+  position: fixed;
+  height: 100vh;
+  width: 30px;
+}
+
+.topnav {
+  top: 0px;
+}
+
+.bottomnav {
+  bottom: 0px;
+}
+
+.right {
+  right: 0px;
+}
+
+.left {
+  left: 0px;
+}
+
+div.nav {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: white;
+}
+
+ul.links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */

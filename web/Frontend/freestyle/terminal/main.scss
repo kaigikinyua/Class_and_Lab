@@ -43,3 +43,44 @@ p.colored{
         color:lightgreen;
     }
 }
+nav.topnav,nav.bottomnav{
+    position: fixed;
+    width:100vw;
+    height:30px;
+    //background:blue;
+}
+nav.sidenav{
+    position: fixed;
+    height:100vh;
+    width:30px;
+    //background:purple;
+}
+.topnav{
+    top:0px;
+}
+.bottomnav{
+    bottom:0px;
+}
+.right{
+    right:0px;
+}
+.left{
+    left:0px;
+}
+
+div.nav{
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: white;
+}
+ul.links{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width:100%;
+}
+
+

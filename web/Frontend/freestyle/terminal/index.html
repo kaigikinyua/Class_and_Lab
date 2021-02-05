@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
+    <nav class="topnav" id="top" ondragover="allowDrop(event)">
+        <div class="nav" draggable="true" ondragstart="dragStart()" ondrop="dragDrop(event)">
+            <div class="barner">MyTerminal</div>
+            <div class="links">
+                <ul class="links">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Gallery</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="sidenav left" id="left" ondragover="allowDrop(event)"></nav>
+    <nav class="sidenav right" id="right" ondragover="allowDrop(event)"></nav>
+    <nav class="bottomnav" id="bottom" ondragover="allowDrop(event)"></nav>
     <div class="terminal">
         <div class="header">MyTerminal</div>
         <div class="text" id="text_term">

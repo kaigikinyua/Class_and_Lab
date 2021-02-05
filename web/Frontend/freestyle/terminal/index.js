@@ -48,14 +48,39 @@ function typeCommand(command){
 
 }
 
-printText(3)
-async function addCharacter({char,commandLine}){
+
+function addCharacter({char,commandLine}){
     var prev_inner=commandLine.innerHTML
     prev_inner+=char
     commandLine.innerHTML=prev_inner
     console.log(`Adding character ${char}`)
 }
 
+function allowDrop(event){
+    event.preventDefault()
+    console.log(event.target.id)
+    //var elm=document.getElementById(event.target.id)
+   // elm.styles.display="none;"
+   var nav=document.querySelectorAll("div.nav")
+    nav[0].style.width="100%"
+    event.innerHTML=nav[0]
+}
+function dragStart(event){
+    console.log("Dragging")
+    console.log(event)
+    var nav=document.querySelectorAll("div.nav")
+    nav[0].style.width="100px"
+}
+function dragDrop(event){
+    console.log("Drop")
+    console.log(event)
+    var nav=document.querySelectorAll("div.nav")
+    nav[0].style.width="100%"
+}
+
+
+
+printText(3)
 setInterval(()=>{
     printText(Math.floor((Math.random()*10+1)/2))
     typeCommand(text[lastText].toString())
