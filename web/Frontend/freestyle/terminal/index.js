@@ -58,18 +58,25 @@ function addCharacter({char,commandLine}){
 
 function allowDrop(event){
     event.preventDefault()
-    console.log(event.target.id)
+    //console.log(event.target.id)
     //var elm=document.getElementById(event.target.id)
    // elm.styles.display="none;"
    var nav=document.querySelectorAll("div.nav")
     nav[0].style.width="100%"
     event.innerHTML=nav[0]
+    //console.log(event.innerHTML)
+    //console.log(event.target)
+}
+function dropedElement(event){
+    event.preventDefault()
+    var elemID=event.dataTransfer.getData("element_id")
+    event.target.appendChild(document.getElementById(elemID))
 }
 function dragStart(event){
-    console.log("Dragging")
-    console.log(event)
-    var nav=document.querySelectorAll("div.nav")
-    nav[0].style.width="100px"
+    //event.preventDefault()
+    event.dataTransfer.setData("element_id",event.target.id)
+    //var nav=document.querySelectorAll("div.nav")
+    //nav[0].style.width="50%"
 }
 function dragDrop(event){
     console.log("Drop")
