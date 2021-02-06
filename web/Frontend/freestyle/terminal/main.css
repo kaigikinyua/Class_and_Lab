@@ -75,6 +75,15 @@ nav.sidenav div.nav {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  font-size: 0.4em;
+}
+
+nav.sidenav div.nav ul.links {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 0.4em;
 }
 
 .topnav {
@@ -91,6 +100,12 @@ nav.sidenav div.nav {
 
 .left {
   left: 0px;
+}
+
+nav.highlight {
+  background: rgba(100, 100, 200, 0.4);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 div.nav {

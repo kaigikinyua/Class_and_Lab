@@ -56,6 +56,11 @@ nav.sidenav{
     div.nav{
         flex-direction: column;
         height: 100%;
+        font-size: 0.4em;
+        ul.links{
+            flex-direction: column;
+            font-size: 0.4em;
+        }
     }
     //background:purple;
 }
@@ -70,6 +75,10 @@ nav.sidenav{
 }
 .left{
     left:0px;
+}
+nav.highlight{
+    background:rgba(100,100,200,0.4);
+    transform: scale(1.2);
 }
 
 div.nav{
