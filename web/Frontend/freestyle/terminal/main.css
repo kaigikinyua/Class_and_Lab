@@ -75,7 +75,6 @@ nav.sidenav div.nav {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  font-size: 0.4em;
 }
 
 nav.sidenav div.nav ul.links {
@@ -83,7 +82,15 @@ nav.sidenav div.nav ul.links {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 0.4em;
+}
+
+nav.sidenav div.nav ul.links li {
+  padding: 10px 0px;
+  margin: 10px 0px;
+}
+
+nav.sidenav div.nav small {
+  display: none;
 }
 
 .topnav {
@@ -118,6 +125,7 @@ div.nav {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background: white;
+  padding: 10px;
 }
 
 ul.links {
@@ -125,9 +133,24 @@ ul.links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   position: relative;
-  width: 100%;
+}
+
+ul.links small {
+  display: none;
+}
+
+ul.links li {
+  text-align: center;
+  padding: 0px 10px;
+  margin: 0px 10px;
+}
+
+ul.links i {
+  font-size: 1.2em;
+  color: gray;
 }
 /*# sourceMappingURL=main.css.map */

@@ -86,10 +86,6 @@ function droppableArea(){
         element.classList.add("highlight")
     });
 }
-
-
-
-
 printText(3)
 setInterval(()=>{
     printText(Math.floor((Math.random()*10+1)/2))

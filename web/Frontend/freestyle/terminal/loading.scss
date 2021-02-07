@@ -1,0 +1,37 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+section.cover{
+    position: fixed;
+    top:0px;left:0px;
+    height:100vh;
+    width:100vw;
+    background:lightseagreen;
+    display: flex;
+    justify-content: center;
+}
+div.animation_container{
+    position: relative;
+    width:300px;
+    height: 300px;
+    justify-content: center;
+}
+div.animation{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    border-left:5px solid white;
+    border-top:4px solid rgba(255,255,255,0.9);
+    border-right:3px solid rgba(255,255,255,0.8);
+    border-bottom:5px rgba(255,255,255,0.0);
+    animation:2s 3s spin infinite;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
