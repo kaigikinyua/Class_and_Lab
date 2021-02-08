@@ -11,8 +11,13 @@
     }
     background: white;
 }
-.topnav{
+.topnavshow{
+    animation:1s 0s revealFromTop ease-in;
     top:0px;
+}
+.topnavhide{
+    top:-100%;
+    animation:2s 1s revealFromTop reverse;
 }
 .topnav .barner{
     padding:5px;
@@ -20,7 +25,6 @@
 ul.links{
     padding:10px;
 }
-
 .footer{
     bottom:0px;
     padding:10px;

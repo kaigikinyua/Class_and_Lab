@@ -1,3 +1,21 @@
+@-webkit-keyframes revealFromTop {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes revealFromTop {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
 .topnav, .footer {
   position: fixed;
   width: 100vw;
@@ -17,8 +35,15 @@
           transform: translateX(-50%);
 }
 
-.topnav {
+.topnavshow {
+  -webkit-animation: 1s 0s revealFromTop ease-in;
+          animation: 1s 0s revealFromTop ease-in;
   top: 0px;
+}
+
+.topnavhide {
+  top: -100%;
+  animation: 2s 1s revealFromTop reverse;
 }
 
 .topnav .barner {

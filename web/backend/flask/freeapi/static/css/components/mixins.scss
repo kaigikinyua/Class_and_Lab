@@ -28,3 +28,13 @@ $notification:13;
     border:1px solid transparent;
     outline:none;
 }
+
+//animations
+//animations
+@keyframes revealFromTop{
+    0%{
+        top:-100%;
+    }100%{
+        top:0px;
+    }
+}

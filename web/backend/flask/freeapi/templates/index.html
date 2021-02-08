@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="../static/css/components/main.css">
     <link rel="stylesheet" href="../static/css/components/navs.css">
     <link rel="stylesheet" href="../static/css/pages/index.css">
+    <link rel="stylesheet" href="../static/css/all.min.css">
 </head>
 <body>
-    <div class="topnav">
+    <div class="topnav topnavshow" id="topnav">
         <div class="container">
             <div class="barner">
                 <h3 class="barner">OpenAPI</h3>
@@ -25,29 +26,64 @@
     </header>
     <section class="full about">
         <div class="container">
-            <div class="usecase">
-                <h3 class="sub_title">UseCase Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
-                <!--i.fa.fa-icon-->
-            </div>
-            <div class="usecase">
-                <h3 class="sub_title">UseCase Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
-                <!--i.fa.fa-icon-->
-            </div>
-            <div class="usecase">
-                <h3 class="sub_title">UseCase Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
-                <!--i.fa.fa-icon-->
-            </div>
-            <div class="usecase">
-                <h3 class="sub_title">UseCase Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
-                <!--i.fa.fa-icon-->
+            <h3 class="title">Use Cases</h3>
+            <div class="card_container">
+                <div class="usecase">
+                    <h3 class="sub_title">UseCase Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
+                    <!--i.fa.fa-icon-->
+                </div>
+                <div class="usecase">
+                    <h3 class="sub_title">UseCase Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
+                    <!--i.fa.fa-icon-->
+                </div>
+                <div class="usecase">
+                    <h3 class="sub_title">UseCase Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
+                    <!--i.fa.fa-icon-->
+                </div>
+                <div class="usecase">
+                    <h3 class="sub_title">UseCase Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
+                    <!--i.fa.fa-icon-->
+                </div>
+                <div class="usecase">
+                    <h3 class="sub_title">UseCase Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
+                    <!--i.fa.fa-icon-->
+                </div>
+                <div class="usecase">
+                    <h3 class="sub_title">UseCase Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, deserunt.</p>
+                    <!--i.fa.fa-icon-->
+                </div>
             </div>
         </div>
     </section>
     <!--section.quick_start-->
+    <section class="full generic_Data">
+        <div class="container">
+            <h3 class="title">Generic Data</h3>
+            <div class="card_container">
+                <div class="usecase">
+                    <h3 class="sub_title">R_Users</h3>
+                    <p class="big_number" data-curr="3450">0</p>
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="usecase">
+                    <h3 class="sub_title">R_Products</h3>
+                    <p class="big_number" data-curr="21304">0</p>
+                    <i class="fa fa-building"></i>
+                </div>
+                <div class="usecase">
+                    <h3 class="sub_title">R_Bank</h3>
+                    <p class="big_number" data-curr="30000">0</p>
+                    <i class="fa fa-coins"></i>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="footer">
         <div class="container dual_flex">
             <div class="info"><small>Open API</small></div>
@@ -57,4 +93,22 @@
         </div>
     </div>
 </body>
+<script>
+    window.onload=async ()=>{
+        for (let i=0;i<100;i++){
+            increment()
+            await sleep(100)
+        }
+    }
+    async function increment(){
+        var big_numbers=document.querySelectorAll("p.big_number")
+        big_numbers.forEach(e=>{
+            e.innerHTML=parseInt(e.innerHTML)+Math.floor(Math.random()*100)
+    })
+    }
+    function sleep(time){
+        return new Promise(resolve=>setTimeout(resolve,time));
+    }
+</script>
+<script src="../static/js/ui.js"></script>
 </html>
