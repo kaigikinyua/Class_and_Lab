@@ -4,7 +4,16 @@ if(debug==false){
     url="https://hostedurl"
 }
 function message({type="error",msg}){
-    console.log(msg)
+    var notification=document.getElementById("notification")
+    notification.innerHTML=msg
+    notification.classList.add(type)
+    setTimeout(()=>{
+        var notification=document.getElementById("notification")
+        notification.classList.remove("error")
+        notification.classList.remove("success")
+        notification.classList.remove("warning")
+    },5000)
+    console.error(msg)
 }
 
 function getRequest(url,callback){
@@ -42,4 +51,4 @@ function notNull(value){
     }
 }
 
-export{getRequest,postRequest}
+export{getRequest,postRequest,message}
