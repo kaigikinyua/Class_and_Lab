@@ -224,9 +224,10 @@ class Analysis:
         femaleLast=len(users["female"][1]["last"])
         maxNumFemale=femaleFirst*femaleLast
         maxUniqEmails=(maxNumMale+maxNumFemale)*len(users["emails"])
-        Messages.success("Number of uniq male names {n}".format(n=maxNumMale))
-        Messages.success("Number of uniq femamale names {n}".format(n=maxNumFemale))
-        Messages.success("Number of uniq emails {n}".format(n=maxUniqEmails))
+        #Messages.success("Number of uniq male names {n}".format(n=maxNumMale))
+        #Messages.success("Number of uniq femamale names {n}".format(n=maxNumFemale))
+        #Messages.success("Number of uniq emails {n}".format(n=maxUniqEmails))
+        return {"male":maxNumMale,"female":maxNumFemale,"emails":maxUniqEmails}
 if __name__=="__main__":
     #data=User.random_users(2)
     #User.export_data(data)
@@ -234,5 +235,5 @@ if __name__=="__main__":
     #print(Products.getProductsInCategory("fashion"))
     #print(Products.genRandomProductList())
     #print(Products.getAllProductList())
-    Analysis.max_numberUniqUsers()
+    #Analysis.max_numberUniqUsers()
     pass
