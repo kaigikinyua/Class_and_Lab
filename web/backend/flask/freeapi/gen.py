@@ -213,6 +213,20 @@ class List:
         if(l!=False):
             return l[0:number]
 
+class Analysis:
+    @staticmethod
+    def max_numberUniqUsers():
+        users=JsonFile.loadData("schemas/users_schema.json")
+        maleFirst=len(users["male"][0]["first"])
+        maleLast=len(users["male"][1]["last"])
+        maxNumMale=maleFirst*maleLast
+        femaleFirst=len(users["female"][0]["first"])
+        femaleLast=len(users["female"][1]["last"])
+        maxNumFemale=femaleFirst*femaleLast
+        maxUniqEmails=(maxNumMale+maxNumFemale)*len(users["emails"])
+        Messages.success("Number of uniq male names {n}".format(n=maxNumMale))
+        Messages.success("Number of uniq femamale names {n}".format(n=maxNumFemale))
+        Messages.success("Number of uniq emails {n}".format(n=maxUniqEmails))
 if __name__=="__main__":
     #data=User.random_users(2)
     #User.export_data(data)
@@ -220,4 +234,5 @@ if __name__=="__main__":
     #print(Products.getProductsInCategory("fashion"))
     #print(Products.genRandomProductList())
     #print(Products.getAllProductList())
+    Analysis.max_numberUniqUsers()
     pass
