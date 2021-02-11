@@ -93,28 +93,6 @@
         </div>
     </div>
 </body>
-<script>
-    var genDataContainer=document.getElementById("generic_data_container")
-        console.log(genDataContainer.offsetTop)
-    window.onscroll=async()=>{
-            if(window.pageYOffset>genDataContainer.offsetTop){
-            for (let i=0;i<100;i++){
-                increment()
-                await sleep(100)
-            }
-        }
-    }
-    window.onload=async ()=>{
-    }
-    async function increment(){
-        var big_numbers=document.querySelectorAll("p.big_number")
-        big_numbers.forEach(e=>{
-            e.innerHTML=parseInt(e.innerHTML)+Math.floor(Math.random()*100)
-    })
-    }
-    function sleep(time){
-        return new Promise(resolve=>setTimeout(resolve,time));
-    }
-</script>
 <script src="../static/js/ui.js"></script>
+<script src="../static/js/pages/index.js"></script>
 </html>
