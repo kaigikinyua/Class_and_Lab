@@ -63,7 +63,7 @@
     </section>
     <!--section.quick_start-->
     <section class="full generic_Data">
-        <div class="container">
+        <div class="container" id="generic_data_container">
             <h3 class="title">Generic Data</h3>
             <div class="card_container">
                 <div class="usecase">
@@ -94,11 +94,17 @@
     </div>
 </body>
 <script>
-    window.onload=async ()=>{
-        for (let i=0;i<100;i++){
-            increment()
-            await sleep(100)
+    var genDataContainer=document.getElementById("generic_data_container")
+        console.log(genDataContainer.offsetTop)
+    window.onscroll=async()=>{
+            if(window.pageYOffset>genDataContainer.offsetTop){
+            for (let i=0;i<100;i++){
+                increment()
+                await sleep(100)
+            }
         }
+    }
+    window.onload=async ()=>{
     }
     async function increment(){
         var big_numbers=document.querySelectorAll("p.big_number")
