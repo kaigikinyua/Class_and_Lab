@@ -16,6 +16,10 @@
   }
 }
 
+body {
+  overflow: hidden;
+}
+
 #app {
   position: relative;
   height: 85vh;
@@ -47,9 +51,22 @@ ul li {
   padding: 10px;
 }
 
+div.barner {
+  padding: 10px;
+}
+
 #selected_data {
   position: relative;
   height: 100%;
+}
+
+#selected_data div.sect {
+  padding: 10px;
+}
+
+div.resources {
+  position: relative;
   overflow-y: scroll;
+  height: 80%;
 }
 /*# sourceMappingURL=genericdata.css.map */
