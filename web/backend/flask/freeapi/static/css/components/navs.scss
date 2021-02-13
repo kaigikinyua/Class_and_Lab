@@ -8,8 +8,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         @include center_h;
+        
     }
-    background: white;
+    background: $lightbg;
+    color:white;
 }
 .topnavshow{
     animation:1s 0s revealFromTop ease-in;

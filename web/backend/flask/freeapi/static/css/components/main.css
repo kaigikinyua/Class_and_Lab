@@ -36,6 +36,14 @@ body {
   font-weight: lighter;
   font-size: 1.1em;
   letter-spacing: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+img.logo {
+  height: 30px;
+  width: 30px;
 }
 
 .super_title {
@@ -73,7 +81,7 @@ body {
 }
 
 .container {
-  width: 1000px;
+  width: 1500px;
 }
 
 .dual_flex {

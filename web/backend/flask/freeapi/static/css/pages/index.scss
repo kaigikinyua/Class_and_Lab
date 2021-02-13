@@ -3,12 +3,18 @@
 header.landing,section.full{
     height: 100vh;
     width:100vw;
+    background:$darkbg;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     .container{
         height:90%;
         @include center_s;
-        background:lightseagreen;
+        background:rgba(10,10,10,0.4);
+        
     }
 }
+
 
 div.card_container{
     display: flex;

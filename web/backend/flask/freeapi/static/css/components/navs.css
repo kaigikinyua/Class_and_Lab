@@ -21,7 +21,8 @@
   width: 100vw;
   left: 0px;
   z-index: 10;
-  background: white;
+  background: #24264f;
+  color: white;
 }
 
 .topnav .container, .footer .container {

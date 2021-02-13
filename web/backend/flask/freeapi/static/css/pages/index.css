@@ -19,6 +19,10 @@
 header.landing, section.full {
   height: 100vh;
   width: 100vw;
+  background: #14152c;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 header.landing .container, section.full .container {
@@ -28,7 +32,7 @@ header.landing .container, section.full .container {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: lightseagreen;
+  background: rgba(10, 10, 10, 0.4);
 }
 
 div.card_container {
