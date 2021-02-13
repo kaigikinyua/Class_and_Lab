@@ -1,6 +1,8 @@
 @import '../components/mixins.scss';
-
-header.landing,section.full{
+body{
+    background:$darkbg;
+}
+header.landing{
     height: 100vh;
     width:100vw;
     background:$darkbg;
@@ -8,20 +10,49 @@ header.landing,section.full{
     background-size: cover;
     background-attachment: fixed;
     .container{
-        height:90%;
+        height:70%;
         @include center_s;
-        background:rgba(10,10,10,0.4);
-        
+        background:rgba(10, 10, 10, 0.6);
+        color:white;
+        padding:20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+section.full{
+    height: 100vh;
+    width:100vw;
+    .container{
+        height:70%;
+        @include center_s;
+        text-align: center;
+    }
+    .title{
+        color:lightseagreen;
+        font-size: 1.6em;
     }
 }
 
+div.text{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+div.image{
+    position: relative;
+    text-align: center;
+    img{
+        height:auto;
+        width:80%;
+    }
+}
 
 div.card_container{
     display: flex;
     justify-content: space-evenly;
     //flex-flow: wrap;
     flex-wrap: wrap;
-    padding:10px;
     text-align: center;
 }
 div.usecase{

@@ -49,7 +49,7 @@ img.logo {
 .super_title {
   font-size: 4em;
   letter-spacing: 3px;
-  margin: 0px 20px;
+  margin: 20px 0px;
 }
 
 .title {
@@ -63,9 +63,13 @@ img.logo {
   font-weight: lighter;
 }
 
-.p {
+p {
   font-size: 1em;
   line-height: 1.2em;
+}
+
+p.large {
+  font-size: 1.5em;
 }
 
 .btn-btn {
@@ -74,10 +78,14 @@ img.logo {
   outline: none;
 }
 
-.btn-callToAction {
+button.btn-callToAction {
   padding: 10px;
   border: 1px solid transparent;
   outline: none;
+  font-size: 30px;
+  background: lightseagreen;
+  color: white;
+  border-radius: 10px;
 }
 
 .container {
