@@ -25,7 +25,10 @@ section.full{
     .container{
         height:70%;
         @include center_s;
-        text-align: center;
+        //text-align: center;
+        h3.title{
+            text-align: center;
+        }
     }
     .title{
         color:lightseagreen;
@@ -71,4 +74,25 @@ div.usecase{
 p.big_number{
     font-size: 3em;
     font-family: monospace;
+}
+div.quick_start{
+    color:white;
+    div.instruction{
+        padding:10px;
+        margin:10px 0px;
+        position: relative;
+        @include center_h;
+        max-width: 800px;
+
+    }
+    pre{
+        text-align: left;
+        justify-content: left;
+        background:$lightbg;
+        margin:0px;
+        position: relative;
+        max-width: 300px;
+        @include center_h;
+        overflow-x: scroll;
+    }
 }

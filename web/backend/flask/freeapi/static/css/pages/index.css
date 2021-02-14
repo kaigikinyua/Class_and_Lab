@@ -57,6 +57,9 @@ section.full .container {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+section.full .container h3.title {
   text-align: center;
 }
 
@@ -126,5 +129,36 @@ div.usecase {
 p.big_number {
   font-size: 3em;
   font-family: monospace;
+}
+
+div.quick_start {
+  color: white;
+}
+
+div.quick_start div.instruction {
+  padding: 10px;
+  margin: 10px 0px;
+  position: relative;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 800px;
+}
+
+div.quick_start pre {
+  text-align: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  background: #24264f;
+  margin: 0px;
+  position: relative;
+  max-width: 300px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  overflow-x: scroll;
 }
 /*# sourceMappingURL=index.css.map */
