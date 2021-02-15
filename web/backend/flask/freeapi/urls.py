@@ -27,6 +27,18 @@ def getdata(genericdata,number=100):
         response=jsonify({"state":"error","genericdata":{},"message":"There seems to be an error getting generic data {g}".format(g=genericdata)})
     return response
 
+#fake bank
+"""
+@app.route('/fakebank')
+def fakebankIndex():
+    return 
+@app.route('/fakebank/pay',[POST])
+def pay():
+    return 
+"""
+
+
+
 """
 future features
 #mydb
