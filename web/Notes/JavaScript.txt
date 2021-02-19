@@ -1,0 +1,7 @@
+#Parsing values
+ parseInt(value,base)
+	-value is the variable or the hardcoded value that you would like to parse
+	-base is the current base level you want your value to be parsed to
+	-- example [ parseInt("FF",16) will give result 255] since the value 'FF'
+	is parsed to become an integer of base 10 from hexadecimal (base 16)
+
