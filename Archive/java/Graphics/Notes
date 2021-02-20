@@ -149,3 +149,19 @@ Graphics2D
             .
         }
     </code>
+
+
+Events
+    For an event to have any effect, a program must detect the event and react to it. In order to
+    detect an event, the program must “listen” for it. Listening for events is something that is done
+    by an object called an event listener . An event listener object must contain instance methods
+    for handling the events for which it listens.
+    The body of the method defines how the object responds when it is notified that a mouse button
+    has been pressed. The parameter, evt, contains information about the event. This information
+    can be used by the listener object to determine its response.
+        Mouse Events
+            public void mousePressed(MouseEvent evt);
+            public void mouseReleased(MouseEvent evt);
+            public void mouseClicked(MouseEvent evt);
+            public void mouseEntered(MouseEvent evt);
+            public void mouseExited(MouseEvent evt);
