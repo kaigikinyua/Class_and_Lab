@@ -1,2 +1,0 @@
-//lambda functions
-//overriding and overloading
