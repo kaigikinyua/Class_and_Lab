@@ -116,3 +116,36 @@ Colors
 
 Fonts
     //readmore on clolors in javanotes page 260
+
+Shapes
+    Java graphics library provides some methods you can use to draw many shapes.
+    Note that all these methods are in the Graphics class, so they all must be called through an object of type
+    Graphics.
+        examples //pg 261
+            drawString(String str, int x, int y)
+            drawLine(int x1, int y1, int x2, int y2)
+            drawRect(int x, int y, int width, int height)
+            drawOval(int x, int y, int width, int height)
+            drawRoundRect(int x, int y, int width, int height, int xdiam, int ydiam)
+            draw3DRect(int x, int y, int width, int height, boolean raised)
+            drawArc(int x, int y, int width, int height, int startAngle, int arcAngle)
+
+Graphics2D
+    The Graphics class provides basic commands for such things as drawing shapes and text and for selecting a drawing color.
+    These commands are adequate in many cases, but they fall far short of what’s needed in a serious computer graphics program.
+    Java has another class, Graphics2D, that provides a larger set of drawing operations. Graphics2D is a sub-class of Graphics,
+    so all the methods from the Graphics class are also available in a Graphics2D.
+    The paintComponent() method of a JComponent gives you a graphics context of type
+    Graphics that you can use for drawing on the component. In fact, the graphics context actually
+    belongs to the sub-class Graphics2D (in Java version 1.2 and later), and can be type-cast to
+    gain access to the advanced Graphics2D drawing methods:
+    <code>
+        public void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            Graphics2D g2;
+            g2 = (Graphics2D)g;
+            .
+            . // Draw on the component using g2.
+            .
+        }
+    </code>
