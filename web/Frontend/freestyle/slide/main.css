@@ -1,0 +1,48 @@
+* {
+  padding: 0px;
+  margin: 10px;
+}
+
+div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+span.container2 {
+  position: relative;
+  overflow-x: scroll;
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+div.adjustable {
+  position: relative;
+  padding: 10px;
+  background: lightseagreen;
+  color: white;
+  resize: vertical;
+  overflow: hidden;
+  border-radius: 20px;
+  max-width: 100px;
+}
+
+div.adjustable::after {
+  content: '';
+  background: #eb1f48;
+  width: 5px;
+  height: 20px;
+  position: absolute;
+  margin-top: -30px;
+  left: 50%;
+}
+
+div.container2::nth-child(odd) div.adjustable {
+  background: yellow !important;
+}
+/*# sourceMappingURL=main.css.map */
