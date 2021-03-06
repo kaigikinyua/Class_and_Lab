@@ -1,0 +1,167 @@
+Graphics and Painting
+    In Java, GUI components are represented by objects belonging to subclasses of the
+    class java.awt.Component
+
+    When you want to draw on a component. You will have to do this
+    whenever you want to display something that is not included among the standard, pre-defined
+    component classes. When you want to do this, you have to define your own component class
+    and provide a method in that class for drawing the component
+
+    You can always use a subclass
+    of JPanel when I need a drawing surface of this kind
+    To create a drawing surface, you may define a subclass of JPanel and provide a custom
+    paintComponent() method
+    Note that the paintComponent() method has a parameter of type Graphics. The Graphics
+    object will be provided by the system when it calls your method
+    You need this object to
+    do the actual drawing. To do any drawing at all in Java, you need a graphics context
+    A
+    graphics context is an object belonging to the class java.awt.Graphics.
+    The Graphics class is an abstract class, which means
+    that it is impossible to create a graphics context directly, with a constructor.
+
+    There are actually
+    two ways to get a graphics context for drawing on a component: First of all, of course, when
+    the paintComponent() method of a component is called by the system, the parameter to that
+    method is a graphics context for drawing on the component. Second, every component has
+    an instance method called getGraphics(). This method is a function that returns a graphics
+    context that can be used for drawing on the component outside its paintComponent() method.
+    The official line is that you should not do this, and I will avoid it for the most part. But I have
+    found it convenient to use getGraphics() in a few cases
+
+    The paintComponent() method in the JPanel class simply fills the panel with the panel’s
+    background color. When defining a subclass of JPanel for use as a drawing surface, you will
+    almost always want to fill the panel with the background color before drawing other content
+    onto the panel (although it is not necessary to do this if the drawing commands in the method
+    cover the background of the component completely.) This is traditionally done with a call to
+    super.paintComponent(g), so most paintComponent() methods that you write will have the
+    form:
+        <code>
+            public void paintComponent(g) {
+            super.paintComponent(g);
+            . . . // Draw the content of the component.
+            }
+        </code>
+
+    Most components do, in fact, do all drawing operations in their paintComponent() methods.
+    What happens if, in the middle of some other method, you realize that the content of the
+    component needs to be changed? You should not call paintComponent() directly to make the
+    change; this method is meant to be called only by the system. Instead, you have to inform
+    the system that the component needs to be redrawn, and let the system do its job by calling
+    paintComponent(). You do this by calling the component’s repaint() method. The method
+        <code>
+            public void repaint();
+        </code>
+    is defined in the Component class, and so can be used with any component. You should call
+    repaint() to inform the system that the component needs to be redrawn. The repaint()
+    method returns immediately, without doing any painting itself. The system will call the com-
+    ponent’s paintComponent() method later, as soon as it gets a chance to do so, after processing
+    other pending events if there are any.
+
+
+    Note that the system can also call paintComponent() for other reasons. 
+        ->It is called whenthe component first appears on the screen.
+        ->It will also be called if the component is resized or if it is covered up by another window and then uncovered. 
+        The system does not save a copy of thecomponent’s contents when it is covered. When it is uncovered, the component
+         is responsible
+        for redrawing itself.
+
+    This means that, to work properly, the paintComponent() method must be smart enough
+    to correctly redraw the component at any time. To make this possible, a program should store
+    data about the state of the component in its instance variables. These variables should contain
+    all the information necessary to redraw the component completely. The paintComponent()
+    method should use the data in these variables to decide what to draw. When the program
+    wants to change the content of the component, it should not simply draw the new content.
+    It should change the values of the relevant variables and call repaint(). When the system
+    calls paintComponent(), that method will use the new values of the variables and will draw
+    the component with the desired modifications. This might seem a roundabout way of doing
+    things. Why not just draw the modifications directly? There are at least two reasons. First
+    of all, it really does turn out to be easier to get things right if all drawing is done in one
+    method. Second, even if you did make modifications directly, you would still have to make the
+    paintComponent() method aware of them in some way so that it will be able to redraw the
+    component correctly on demand.
+    You will see how all this works in practice as we work through examples in the rest of this
+    chapter. For now, we will spend the rest of this section looking at how to get some actual
+    drawing done.
+
+Cordinates
+
+    Topmost and Leftmost pixel = pixel[0][0] ->x,y
+    x increases from left to right
+    y increases from top to bottom
+
+    For any component, you can find out the size of the rectangle that it occupies by calling
+    the instance methods getWidth() and getHeight(), which return the number of pixels in the
+    horizontal and vertical directions, respectively
+    example
+    <code>
+        public void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            int width = getWidth();
+            // Find out the width of this component.
+            int height = getHeight(); // Find out its height.
+            . . .
+            // Draw the content of the component.
+        }
+    </code>
+
+Colors
+    Java was designed to use the RGB color system
+    A color in Java is an object of the class,java.awt.Color. You can construct a new color 
+    by specifying its red, blue, and green compo-nents. For example,
+    <code> 
+        Color myColor = new Color(r,g,b);
+    </code>
+    //readmore on clolors in javanotes page 259
+
+Fonts
+    //readmore on clolors in javanotes page 260
+
+Shapes
+    Java graphics library provides some methods you can use to draw many shapes.
+    Note that all these methods are in the Graphics class, so they all must be called through an object of type
+    Graphics.
+        examples //pg 261
+            drawString(String str, int x, int y)
+            drawLine(int x1, int y1, int x2, int y2)
+            drawRect(int x, int y, int width, int height)
+            drawOval(int x, int y, int width, int height)
+            drawRoundRect(int x, int y, int width, int height, int xdiam, int ydiam)
+            draw3DRect(int x, int y, int width, int height, boolean raised)
+            drawArc(int x, int y, int width, int height, int startAngle, int arcAngle)
+
+Graphics2D
+    The Graphics class provides basic commands for such things as drawing shapes and text and for selecting a drawing color.
+    These commands are adequate in many cases, but they fall far short of what’s needed in a serious computer graphics program.
+    Java has another class, Graphics2D, that provides a larger set of drawing operations. Graphics2D is a sub-class of Graphics,
+    so all the methods from the Graphics class are also available in a Graphics2D.
+    The paintComponent() method of a JComponent gives you a graphics context of type
+    Graphics that you can use for drawing on the component. In fact, the graphics context actually
+    belongs to the sub-class Graphics2D (in Java version 1.2 and later), and can be type-cast to
+    gain access to the advanced Graphics2D drawing methods:
+    <code>
+        public void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            Graphics2D g2;
+            g2 = (Graphics2D)g;
+            .
+            . // Draw on the component using g2.
+            .
+        }
+    </code>
+
+
+Events
+    For an event to have any effect, a program must detect the event and react to it. In order to
+    detect an event, the program must “listen” for it. Listening for events is something that is done
+    by an object called an event listener . An event listener object must contain instance methods
+    for handling the events for which it listens.
+    The body of the method defines how the object responds when it is notified that a mouse button
+    has been pressed. The parameter, evt, contains information about the event. This information
+    can be used by the listener object to determine its response.
+        Mouse Events
+            public void mousePressed(MouseEvent evt);
+            public void mouseReleased(MouseEvent evt);
+            public void mouseClicked(MouseEvent evt);
+            public void mouseEntered(MouseEvent evt);
+            public void mouseExited(MouseEvent evt);
