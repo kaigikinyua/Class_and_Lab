@@ -38,7 +38,7 @@ function renderAdjustable2(){
         adjstble.classList.add('adjustable')
         adjstble.innerHTML=ts.text
         adjstble.style.height=(ts.end-ts.start)/1.2
-        adjstble.style.dragable=true
+        adjstble.style.draggable=true
         adjstble.dataset['index']=i
         //adjstble.style.resize='horizontal'
         new ResizeObserver(resizeAdjustable).observe(adjstble)
@@ -51,3 +51,42 @@ function resizeAdjustable(element){
     transcription[index].end=parseInt(element[0].target.style.height)*2
     console.log(element[0].target.style.height)
 }
+
+//option3
+
+function renderAdjustable3(){
+    var container=document.getElementById('container3')
+    var mousedown=false
+    container.addEventListener('mousedown',(e)=>{
+        mousedown=true        
+    })
+    container.addEventListener('mousemove',(e)=>{
+        if(mousedown==true){
+            
+        }
+    })
+    container.addEventListener('mouseup',(e)=>{
+        mousedown=false
+    })
+    transcription.forEach(function(ts,i){
+        var adjstble=document.createElement('div')
+        adjstble.classList.add('adjustable')
+        adjstble.draggable=true
+        adjstble.ondrag=(e)=>{
+            e.preventDefault()
+            //console.log(e.target.clientX)
+        }
+        adjstble.ondragstart=(e)=>{
+            return false
+        }
+        adjstble.id=`adjustable${i}`
+        adjstble.innerHTML=ts.text
+        adjstble.style.height=(ts.end-ts.start)/1.2
+        adjstble.style.dragable=true
+        adjstble.dataset['index']=i
+        //adjstble.style.resize='horizontal'
+        new ResizeObserver(resizeAdjustable).observe(adjstble)
+        container.appendChild(adjstble)
+    })
+}
+renderAdjustable3()
