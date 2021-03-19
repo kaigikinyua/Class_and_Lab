@@ -14,15 +14,56 @@
             background:lightseagreen;
             color:white;
         }
+        div.item{
+            padding:10px;
+            margin:5px;
+        }
+        i.curly{
+            color:lightseagreen;
+        }
+        i.square{
+            color:crimson;
+        }
+        i{
+            font-style: normal;
+        }
     </style>
 </head>
 <body>
     <div class="field">
-        <input type="text" class="text" placeholder="String to test..."/>
-        <button>Submit</button>
+        <textarea type="text" id="text" class="text" placeholder="String to test...">
+                {"names":["james","john"],"ages":[100,200,300]}
+        </textarea>
+        <button id='submit'>Submit</button>
     </div>
     <div class="result" id="result">
 
     </div>
+    <script>
+        const submit=document.getElementById('submit')
+        const text=document.getElementById("text")
+        submit.addEventListener('click',(e)=>{
+            var string=text.value
+            var formated_string=''
+            for(i=0;i<string.length;i++){
+                element=string[i]
+                if(element=='[' || element==']'){
+                    formated_string+=` <i class='square'>${element}</i> `
+                }else if(element=='{' || element=='}'){
+                    formated_string+=` <i class='curly'>${element}</i> `
+                }else{
+                    formated_string+=element
+                }
+            }
+            addToDom(formated_string)
+        });
+        function addToDom(string){
+            var parent=document.getElementById('result')
+            var el=document.createElement('div')
+            el.classList.add('item')
+            el.innerHTML=`${string}`
+            parent.appendChild(el)
+        }
+    </script>
 </body>
 </html>
