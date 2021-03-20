@@ -82,14 +82,40 @@ div#transaction_list{
 div.transaction_item{
     padding:10px;
     position: relative;
-    width:100%;
-    box-shadow: 1px 1px 10px 10px rgba(10,10,10,0.5);
+    margin:8px;
+    box-shadow: 1px 1px 20px 30px rgba(100,100,100,0.1);
     h4{
-        color:lighten(lightseagreen,10%);
         padding:10px;
     }
-    div.details{
+    div{
         padding:10px;
         font-size: 1.1em;
     }
+}
+
+div.invoice{
+    border-left: 5px solid lightseagreen;
+    h4{
+        color:lighten(lightseagreen,10%);
+    }
+}
+div.payment{
+    h4{
+        color:lighten(crimson,10%);
+    }
+    border-left: 5px solid crimson;
+}
+
+.dual{
+    display: flex;
+}
+div.search{
+    background:white;
+    border-radius: 20px;
+    margin:0px 10px;
+}
+input#search{
+    padding:5px 0px;
+    background:none;
+    border:none;
 }
