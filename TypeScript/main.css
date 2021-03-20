@@ -4,6 +4,17 @@
   font-family: Arial;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 7px;
+  border-radius: 5px;
+  background: lightseagreen;
+}
+
 body {
   background: lightgray;
 }
@@ -101,8 +112,8 @@ div.transaction_item {
   padding: 10px;
   position: relative;
   margin: 8px;
-  -webkit-box-shadow: 1px 1px 20px 30px rgba(100, 100, 100, 0.1);
-          box-shadow: 1px 1px 20px 30px rgba(100, 100, 100, 0.1);
+  -webkit-box-shadow: 1px 1px 10px 10px rgba(100, 100, 100, 0.1);
+          box-shadow: 1px 1px 10px 10px rgba(100, 100, 100, 0.1);
 }
 
 div.transaction_item h4 {

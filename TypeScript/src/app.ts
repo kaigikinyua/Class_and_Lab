@@ -30,9 +30,9 @@ searchField.addEventListener('keyup',(e)=>{
     elements.forEach(elem=>{
         var title:string=elem.children[0].innerHTML
         if(title.toLowerCase().indexOf(sTearm.toLowerCase())==-1){
-            console.log("elem does not match")
+            elem.setAttribute("style","display:none;")
         }else{
-            console.log(elem)
+            elem.setAttribute("style","display:block;")
         }
     })
 })
