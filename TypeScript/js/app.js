@@ -8,5 +8,9 @@ submitBtn.addEventListener('click', function (e) {
     var amt = amount.value;
     var pType = paymentType.value;
     var pDesc = paymentDesc.value;
-    console.log(amt + " " + pType + " " + pDesc);
+    printToConsole(amt + " " + pType + " " + pDesc);
 });
+var printToConsole;
+printToConsole = function (stringToPrint) {
+    console.log(stringToPrint);
+};

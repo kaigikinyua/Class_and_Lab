@@ -8,5 +8,11 @@ submitBtn.addEventListener('click',(e)=>{
     let amt:string=amount.value;
     let pType:string=paymentType.value;
     let pDesc:string=paymentDesc.value
-    console.log(`${amt} ${pType} ${pDesc}`)
+    printToConsole(`${amt} ${pType} ${pDesc}`)
 });
+
+
+let printToConsole:Function
+printToConsole=(stringToPrint:string)=>{
+    console.log(stringToPrint);
+}
