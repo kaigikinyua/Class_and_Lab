@@ -6,8 +6,20 @@ var Transaction = /** @class */ (function () {
     }
     Transaction.prototype.component = function () {
         var container = document.createElement('div');
+        container.dataset.open = '0';
         container.classList.add('transaction_item');
-        container.innerHTML = "<h4>" + this.title + "</h4><div><span class='amount'>" + this.amount + " </span><span class='desc'>" + this.desc + "</span></div>";
+        container.innerHTML = "<h4>" + this.title + "</h4>\n                        <div class='desc'>\n                            <span class='desc'>" + this.desc + "</span>\n                        </div>";
+        container.addEventListener('click', function (e) {
+            var open = container.getAttribute('data-open');
+            if (open == '0') {
+                container.children[1].setAttribute('style', 'display:block;');
+                container.setAttribute('data-open', '1');
+            }
+            else {
+                container.children[1].setAttribute('style', 'display:none;');
+                container.setAttribute('data-open', '0');
+            }
+        });
         return container;
     };
     return Transaction;

@@ -4,3 +4,9 @@ make sure that you change the 'module' json key in tsconfig
 from 'commonJS' to 'es2015' 
 It will require that you use modern browsers in order for the site to properly work
 This can be bypassed by using webpack to bundle *.js files into 1 big gigantic file
+
+---dynamic style editing----
+Typescript does not have 'element.style' instead it uses
+'element.setAttribute('attribute','css decription')'
+example
+    elementx.setAttribute('style','display:none');

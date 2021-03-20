@@ -93,12 +93,14 @@ div.transaction_item{
     position: relative;
     margin:8px;
     box-shadow: 1px 1px 10px 10px rgba(100,100,100,0.1);
-    h4{
-        padding:10px;
+    div.title{
+        display: grid;
+        grid-template-columns: 10fr 1fr;
     }
-    div{
+    div.desc{
         padding:10px;
         font-size: 1.1em;
+        display: none;
     }
 }
 
@@ -114,6 +116,7 @@ div.payment{
     }
     border-left: 5px solid crimson;
 }
+
 
 .dual{
     display: flex;
