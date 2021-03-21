@@ -37,6 +37,7 @@ class GameCharacter extends JPanel{
     }
     public void repaint(){
         super.repaint();
+// Failed to execute bounce effect
         if(getHeight()-(100+this.currX)<0){
             this.deltaX=-this.deltaX;
         }
