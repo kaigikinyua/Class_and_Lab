@@ -59,6 +59,7 @@ div.appbar {
   color: white;
   font-weight: bolder;
   letter-spacing: 2px;
+  overflow-x: hidden;
 }
 
 div.contacts, div.message_box {
@@ -113,6 +114,10 @@ div.contact div.details div.preview span.notif {
   border-radius: 50%;
 }
 
+div.message_box {
+  overflow: hidden;
+}
+
 div.messages {
   padding: 10px;
   position: relative;
@@ -149,5 +154,63 @@ span.time {
   font-size: 11px;
   color: gray;
   margin-left: 20px;
+}
+
+div.send_msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: lightseagreen;
+  padding: 20px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+input {
+  padding: 5px;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+div.search, div.keyboard {
+  padding: 0px 10px;
+  background: white;
+  border-radius: 20px;
+}
+
+div.search {
+  width: 100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+div.search:hover {
+  width: 70%;
+}
+
+div.keyboard {
+  width: 150px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+div.keyboard:hover {
+  width: 50%;
+}
+
+button.send_message {
+  padding: 5px;
+  background: none;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
 }
 /*# sourceMappingURL=main.css.map */

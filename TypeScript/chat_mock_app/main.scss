@@ -46,6 +46,7 @@ div.appbar{
     color:white;
     font-weight: bolder;
     letter-spacing: 2px;
+    overflow-x: hidden;
 }
 div.contacts,div.message_box{
     position: relative;
@@ -94,6 +95,9 @@ div.contact{
     }
 }
 
+div.message_box{
+    overflow: hidden;
+}
 div.messages{
     padding:10px;
     position: relative;
@@ -127,5 +131,51 @@ span.time{
     color:gray;
     margin-left: 20px;
 }
+div.send_msg{
+    display: flex;
+    justify-content: center;
+    background:lightseagreen;
+    padding:20px;
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+}
+input{
+    padding:5px;
+    outline:none;
+    border:none;
+    background:none;
+}
 
+//search $ send_msg
+div.search,div.keyboard{
+    padding:0px 10px;
+    background:white;
+    border-radius: 20px;
+}
 
+div.search{
+    width:100px;
+    transition:0.3s;
+}
+div.search:hover{
+    width:70%;
+}
+div.keyboard{
+    width:150px;
+    transition:0.4s;
+}
+div.keyboard:hover{
+    width:50%;
+}
+
+button.send_message{
+    padding:5px;
+    background:none;
+    color:white;
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    border:none;
+    font-size: 20px;
+}
