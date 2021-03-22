@@ -1,20 +1,18 @@
-var messages:string[]=[]
-var contacts:object[]=[
-    {name:"James",message:{}},
-    {name:"April",message:{}},
-    {name:"John",message:{}},
-    {name:"Nick",message:{}},
-    {name:"Jane",message:{}},
-    {name:"Alison",message:{}},
-    {name:"Jake",message:{}},
-]
-
-/*var msgObject:Object={
-    receiver:string,
-    sender:string,
+interface Contact{
+    name:string,
+    id:string
+}
+interface Message{
+    read:boolean,
     message:string,
-    timeSent:string
-}*/
+    author:string,
+    receiver:string,
+    time:string
+}
+interface ContactMessages{
+    id:string,
+    messages:Message[]
+}
 
 class MessageClass{
     constructor(
@@ -27,4 +25,17 @@ class MessageClass{
     sendMessage(){}
     receiveMessage(){}
 }
+class Filter{
+    static filterUserMessages(id:string,messages:Message[]){
+        var filteredMessages:Message[]=[]
+        messages.forEach(m=>{
+            if(m.author==id || m.receiver==id){
+                filteredMessages.push(m)
+            }
+        })
+        return filteredMessages
+    }
+}
+
+export {Contact,Message,MessageClass,ContactMessages,Filter}
 

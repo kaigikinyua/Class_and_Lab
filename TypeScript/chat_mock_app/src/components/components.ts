@@ -1,3 +1,4 @@
+import { Message } from '../models/models.js'
 class MessageAppBar{}
 
 class MessageComponent{
@@ -24,29 +25,24 @@ class MessageComponent{
 class ContactComponent{
     constructor(
         readonly name:string,
-        readonly messages:object[],
-        public read:boolean,
+        readonly messages:Message[],
     ){}
     component(){
+        var previewMessage:string=(this.messages.length>0)?`<span class='msg'>${this.messages[0].message}</span>`:"<span class='msg'></span>"
         var notif='read';var unreadNum=1
-        if(this.read==true){
-            notif='unread';
-            messages.forEach(m=>{
-                //logic to add count unread messages
-            })
-        }
-        let c=`
-            <div class='contact'>
-                <div class='avatar'>${this.name[0]}</div>
-                <div class='details'>
-                    <div class='name'>${this.name}</div>
-                    <div class='preview'>
-                        <span class='msg'>${this.messages[0]}</span>
-                        <span class='${notif}'>${unreadNum}</span>
-                    </div>
+        let c=document.createElement('div')
+        c.classList.add('contact')
+        c.innerHTML=`
+            <div class='avatar'>${this.name[0]}</div>
+            <div class='details'>
+                <div class='name'>${this.name}</div>
+                <div class='preview'>
+                    ${previewMessage}
+                    <span class='${notif}'>${unreadNum}</span>
                 </div>
             </div>
         `
         return c
     }
 }
+export {ContactComponent,MessageComponent}
