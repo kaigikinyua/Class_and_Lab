@@ -1,0 +1,34 @@
+{
+    "contacts":[
+        {"name":"James","id":"j11"},
+        {"name":"Luke","id":"l21"},
+        {"name":"April","id":"ap1"},
+        {"name":"Max","id":"m11"},
+        {"name":"Jim","id":"ji1"},
+        {"name":"Alex","id":"al2"},
+        {"name":"Ben","id":"b10"},
+        {"name":"Pattric","id":"ptk"},   
+        {"name":"Asha","id":"as32"},
+        {"name":"Reddington","id":"fbi1"},
+        {"name":"Thanos","id":"mrcy"}
+    ],
+    "messages":[
+        {"read":false,"message":"Hae","author":"j11","receiver":"me","time":""},
+        {"read":false,"message":"Are you coming to the party?","author":"j11","receiver":"me","time":""},
+        {"read":false,"message":"Yeah","author":"me","receiver":"j11","time":""},
+        {"read":false,"message":"Cool!","author":"j11","receiver":"me","time":""},
+        {"read":false,"message":"Is there a dress code?","author":"me","receiver":"j11","time":""},
+        {"read":false,"message":"Science fiction heros and villains!","author":"j11","receiver":"me","time":""},
+        {"read":false,"message":"Dibs on Iron Man","author":"me","receiver":"j11","time":""},
+        
+        {"read":false,"message":"Hae","author":"","receiver":"","time":""},
+        {"read":false,"message":"Hae","author":"","receiver":"","time":""},
+        {"read":false,"message":"Hae","author":"","receiver":"","time":""},
+        {"read":false,"message":"Hae","author":"","receiver":"","time":""},
+        {"read":false,"message":"Hae","author":"","receiver":"","time":""},
+        {"read":false,"message":"Hae","author":"","receiver":"","time":""},
+        {"read":false,"message":"Hae","author":"","receiver":"","time":""},
+        {"read":false,"message":"Hae","author":"","receiver":"","time":""},
+        {"read":false,"message":"Hae","author":"","receiver":"","time":""}
+    ]
+}
