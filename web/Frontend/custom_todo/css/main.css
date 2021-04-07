@@ -4,117 +4,128 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-::-webkit-scrollbar {
-  background: rgba(10, 10, 10, 0.5);
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: lightseagreen;
-  width: 7px;
+button {
+  padding: 5px 5px;
+  border: 1px solid gray;
+  background: none;
   border-radius: 10px;
+  margin: 5px 10px;
+  outline: none;
 }
 
-body {
-  overflow-x: hidden;
-  background: rgba(150, 150, 150, 0.8);
-}
-
-nav.topnav {
-  padding: 20px;
-  -webkit-box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.5);
-          box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.5);
-  margin-bottom: 20px;
-  background: lightseagreen;
-  color: white;
-  letter-spacing: 2px;
-}
-
-nav.topnav h3 {
-  font-weight: lighter;
-}
-
-footer {
-  position: fixed;
-  bottom: 0px;
-}
-
-div.container {
+section.app {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  max-width: 1000px;
-}
-
-section.full {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
-div.split_screen {
-  position: relative;
-  height: 100%;
+  height: 95%;
+  width: 900px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+  overflow-y: hidden;
 }
 
-div.tiles {
-  position: relative;
-  height: 100%;
-  max-height: 600px;
-  overflow-y: scroll;
-  background: whitesmoke;
-  overflow-x: hidden;
-  margin-right: 5px;
-}
-
-div.tiles h3.tileHeader {
-  margin-bottom: 20px;
+div.banner {
   padding: 10px;
-  background: white;
-  border-bottom: 2px solid rgba(150, 150, 150, 0.8);
-}
-
-div.tiles div.tile {
-  padding: 10px;
-  background: white;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
-  margin: 10px;
-  border-bottom: 1px solid rgba(201, 201, 201, 0.8);
-}
-
-div.tiles div.tile h3 {
-  font-size: 18px;
   font-weight: lighter;
+  text-align: center;
 }
 
-div.mainbar {
-  background: white;
+div.menu {
+  position: relative;
   height: 100%;
-  max-height: 600px;
   overflow-y: scroll;
 }
 
-div.group {
+div.menu_item {
+  margin: 20px 0px;
+}
+
+button.menu_button {
+  position: relative;
+  width: 90%;
+  font-size: 1.1em;
+}
+
+div.sub_menu {
+  text-align: center;
+  height: 0px;
+  overflow-y: hidden;
+  -webkit-transition: height 0.7s;
+  transition: height 0.7s;
+}
+
+button.inner_menu {
+  position: relative;
+  width: 80%;
+}
+
+div.app {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+div.tab {
+  position: relative;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+div.appbar {
   padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
-.clickable {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+div.current_screen {
+  position: relative;
+  height: 90%;
+  overflow-y: scroll;
 }
 
-.clickable:hover {
-  -webkit-box-shadow: 1px 1px 3px 3px rgba(10, 10, 10, 0.5);
-          box-shadow: 1px 1px 3px 3px rgba(10, 10, 10, 0.5);
-  -webkit-transform: scale(1.005);
-          transform: scale(1.005);
+div.todo {
+  margin: 10px;
+  border-radius: 10px;
+  background: white;
+}
+
+div.todo h3 {
+  padding: 10px;
+  background: whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.todo h3::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  border-radius: 10px;
+  right: 10px;
+}
+
+div.todo p.tododesc {
+  height: 0px;
+  overflow: hidden;
+}
+
+div.done h3::after {
+  background: lightgreen;
+}
+
+div.undone h3::after {
+  background: #f16581;
 }
 /*# sourceMappingURL=main.css.map */

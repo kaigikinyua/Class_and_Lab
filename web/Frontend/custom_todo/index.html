@@ -1,47 +1,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TodoList</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css"/>
 </head>
 <body>
-    <nav class="topnav">
-        <div class="container dual">
-            <div class="barner"><h3 class="title">TodoList</h3></div>
-            <div class="links"></div>
-        </div>
-    </nav>
-    <section class="full">
-        <div class="container split_screen">
-            <div class="tiles">
-                <h3 class="tileHeader">Todos</h3>
-                <div class="tile clickable">
-                    <h3>Todo One</h3>
-                    <small class="tile_footer">Thu Sep 2020</small>
-                </div>
+    <section class="app">
+        <div class="sidenav">
+            <div class="banner">
+                <h3>Organizer</h3>
             </div>
-            <div class="mainbar">
-                <div class="group">
-                    <h3 class="title">This week's schedule</h3>
-                    <div class="days">
-                        <div class="day"></div>
-                        <div class="day"></div>
-                        <div class="day"></div>
-                        <div class="day"></div>
-                        <div class="day"></div>
-                        <div class="day"></div>
-                        <div class="day"></div>
+            <div class="menu">
+                <!--add schedule and schedule tab-->
+                <div class="menu_item">
+                    <button class="menu_button" id="todoListMenuButton" data-open='0'>Todos</button>
+                    <div class="sub_menu" id="todo_list">
+                        <button class="inner_menu">Item One</button>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <button class="menu_button" id="projectMenuButton" data-open="0">Projects</button>
+                    <div class="sub_menu" id="project_list">
+                        <button class="inner_menu">Item One</button>
+                        <button class="inner_menu">Item One</button>
+                        <button class="inner_menu">Item One</button>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="app">
+            <div class="tab" id="todos_tab">
+                <div class="appbar">
+                    <h3>Todos</h3>
+                    <div class="actions">
+                        <button class="add">New Todo</button>
+                    </div>
+                </div>
+                <div class="current_screen todos" id="todo_list_container"></div>
+            </div>
+            <div class="tab" id="projects_tab">
+                <div class="appbar">
+                    <h3 id="project_title">Project</h3>
+                    <div class="actions">
+                        <button class="add">Add Task</button>
+                    </div>
+                </div>
+                <div class="current_screen projects" id="project_container"></div>
+            </div>
+        </div>
     </section>
+    <script type="module" src='./js/UI.js'></script>
 </body>
-<footer>
-    <div class="container">
-        <small>TodoList</small>
-    </div>
-</footer>
 </html>

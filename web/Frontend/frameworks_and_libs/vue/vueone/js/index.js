@@ -9,7 +9,7 @@ function auto_scroll(){
     slides_parent.scrollRight=scroll_by
     console.log(scroll_by)
 }
-//setInterval(auto_scroll,1000)
+setInterval(auto_scroll,1000)
 //vue
 new Vue({
     el:"#slides",
