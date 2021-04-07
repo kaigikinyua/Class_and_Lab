@@ -1,11 +1,11 @@
 import {Contact,Message,ContactMessages,Filter} from './models/models.js'
-import {ContactComponent} from './components/components.js'
+import {ContactComponent,EmojiPallete, userText} from './components/components.js'
 import { NotificationPopUp,Ajax } from './components/utils.js'
 import {Chat,MessageAppBar} from './components/views.js'
 
 const sendBtn=document.getElementById("send_message") as HTMLButtonElement
 const messageInput=document.getElementById("messageInput") as HTMLInputElement
-
+const emojiPalletBtn=document.getElementById('showEmoji') as HTMLElement
 
 let contactMessages:ContactMessages[]=[]
 
@@ -18,6 +18,13 @@ sendBtn.addEventListener('click',(e)=>{
     if(messageInput.value.length>0){
         sendMessage(messageInput.value)
     }
+})
+emojiPalletBtn.addEventListener('click',(e)=>{
+    userText.appendMessage(messageInput.value)
+    var ep=new EmojiPallete('emoji_pallete')
+    ep.render_emojis()
+    var pallet_container=document.getElementById('emoji_pallete') as HTMLDivElement
+    pallet_container.setAttribute('style','bottom:20px;')
 })
 
 window.onload=()=>{

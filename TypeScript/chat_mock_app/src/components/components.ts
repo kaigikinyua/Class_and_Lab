@@ -1,4 +1,12 @@
 import { Message } from '../models/models.js'
+var userText={
+    message:'',
+    appendMessage(append:string){
+        this.message+=append
+        console.log(this.message)
+    }
+}
+
 class MessageComponent{
     constructor(
         readonly timeSent:string,
@@ -45,4 +53,29 @@ class ContactComponent{
         return c
     }
 }
-export {ContactComponent,MessageComponent}
+
+class EmojiPallete{
+    constructor(readonly id:string){}
+    render_emojis(){
+            var emojis:Array<string>=['😜','😀','😁','😂','😃','😄','😅','😆','😇',
+            '😈','😉','😊','😋','😌','😍','😎','😏','😐','😑','😒','😓','😔','😕',
+            '😖','😗','😘','😙','😚','😛','😜','😝','😞','😟','😠','😡','😢','😣',
+            '😤','😥','😦','😧','😨','😩','😪','😫','😬','😭','😮','😯','😰','😱',
+            '😲','😳','😴','😵','😶','😷','🙁','🙂','🙃','🙄','🤐','🤑','🤒','🤓',
+            '🤔','🤕','🤠','🤡','🤢','🤣','🤤','🤥','🤧','🤨','🤩','🤪','🤫','🤬',
+            '🤭','🤮','🤯','🧐',
+        ]
+        var parent=document.getElementById(this.id) as HTMLDivElement
+        emojis.forEach(e=>{
+            var em=document.createElement('small')
+            em.innerHTML=e
+            em.addEventListener('click',(event)=>{
+                console.log(e)
+                userText.appendMessage(e)
+            })
+            parent.appendChild(em)
+        })
+    
+}
+}
+export {ContactComponent,MessageComponent,EmojiPallete,userText}

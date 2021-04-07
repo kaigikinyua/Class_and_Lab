@@ -32,7 +32,9 @@ section.app{
     left:50%;
     transform: translateX(-50%);
     margin-top:50px;
-    height:90vh;
+    height:80vh;
+    overflow: hidden;
+    //overflow:scroll;
     width:1000px;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -58,9 +60,10 @@ div.contacts,div.message_box{
 
 div.contact_list{
     position: relative;
-    max-height:70%;
+    height:70%;
     overflow-y:scroll;
     overflow-x:hidden;
+    //margin-bottom: 300px;
 }
 div.contact{
     padding:10px;
@@ -98,11 +101,13 @@ div.contact{
 
 div.message_box{
     overflow: hidden;
+    //position: relative;
+    //height:100%;
 }
 div.messages{
     padding:10px;
     position: relative;
-    height:80%;
+    height:45%;
     overflow-y:scroll;
 }
 div.message{
@@ -138,7 +143,7 @@ div.send_msg{
     background:lightseagreen;
     padding:20px;
     position: absolute;
-    bottom:0px;
+    //bottom:0px;
     width: 100%;
 }
 input{
@@ -165,6 +170,16 @@ div.search:hover{
 div.keyboard{
     width:150px;
     transition:0.4s;
+    display: flex;
+    justify-content: space-evenly;
+    input{
+        width:80%;
+    }
+    i{
+        margin-top:5px;
+        font-size: 15px;
+        color:gray;
+    }
 }
 div.keyboard:hover{
     width:50%;
@@ -179,4 +194,22 @@ button.send_message{
     border-radius: 10px;
     border:none;
     font-size: 20px;
+}
+
+div#emoji_pallete{
+    padding:20px;
+    width:300px;
+    height:300px;
+    background:white;
+    border-radius: 20px;
+    position: fixed;
+    bottom:-100%;
+    right:150px;
+    display: flex;
+    flex-flow: wrap;
+    overflow-y:scroll;
+    small{
+        font-size: 20px;
+        margin:5px;
+    }
 }

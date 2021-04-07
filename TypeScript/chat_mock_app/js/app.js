@@ -1,9 +1,10 @@
 import { Filter } from './models/models.js';
-import { ContactComponent } from './components/components.js';
+import { ContactComponent, EmojiPallete, userText } from './components/components.js';
 import { Ajax } from './components/utils.js';
 import { Chat, MessageAppBar } from './components/views.js';
 var sendBtn = document.getElementById("send_message");
 var messageInput = document.getElementById("messageInput");
+var emojiPalletBtn = document.getElementById('showEmoji');
 var contactMessages = [];
 messageInput.addEventListener('keyup', function (e) {
     if (e.key == 'Enter') {
@@ -14,6 +15,13 @@ sendBtn.addEventListener('click', function (e) {
     if (messageInput.value.length > 0) {
         sendMessage(messageInput.value);
     }
+});
+emojiPalletBtn.addEventListener('click', function (e) {
+    userText.appendMessage(messageInput.value);
+    var ep = new EmojiPallete('emoji_pallete');
+    ep.render_emojis();
+    var pallet_container = document.getElementById('emoji_pallete');
+    pallet_container.setAttribute('style', 'bottom:20px;');
 });
 window.onload = function () {
     Ajax.fetchData("http://localhost:5500/messages.json", function (data) {
