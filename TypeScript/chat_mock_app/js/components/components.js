@@ -1,3 +1,10 @@
+var userText = {
+    message: '',
+    appendMessage: function (append) {
+        this.message += append;
+        console.log(this.message);
+    }
+};
 var MessageComponent = /** @class */ (function () {
     function MessageComponent(timeSent, message) {
         this.timeSent = timeSent;
@@ -36,4 +43,30 @@ var ContactComponent = /** @class */ (function () {
     };
     return ContactComponent;
 }());
-export { ContactComponent, MessageComponent };
+var EmojiPallete = /** @class */ (function () {
+    function EmojiPallete(id) {
+        this.id = id;
+    }
+    EmojiPallete.prototype.render_emojis = function () {
+        var emojis = ['😜', '😀', '😁', '😂', '😃', '😄', '😅', '😆', '😇',
+            '😈', '😉', '😊', '😋', '😌', '😍', '😎', '😏', '😐', '😑', '😒', '😓', '😔', '😕',
+            '😖', '😗', '😘', '😙', '😚', '😛', '😜', '😝', '😞', '😟', '😠', '😡', '😢', '😣',
+            '😤', '😥', '😦', '😧', '😨', '😩', '😪', '😫', '😬', '😭', '😮', '😯', '😰', '😱',
+            '😲', '😳', '😴', '😵', '😶', '😷', '🙁', '🙂', '🙃', '🙄', '🤐', '🤑', '🤒', '🤓',
+            '🤔', '🤕', '🤠', '🤡', '🤢', '🤣', '🤤', '🤥', '🤧', '🤨', '🤩', '🤪', '🤫', '🤬',
+            '🤭', '🤮', '🤯', '🧐',
+        ];
+        var parent = document.getElementById(this.id);
+        emojis.forEach(function (e) {
+            var em = document.createElement('small');
+            em.innerHTML = e;
+            em.addEventListener('click', function (event) {
+                console.log(e);
+                userText.appendMessage(e);
+            });
+            parent.appendChild(em);
+        });
+    };
+    return EmojiPallete;
+}());
+export { ContactComponent, MessageComponent, EmojiPallete, userText };
