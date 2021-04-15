@@ -1,0 +1,86 @@
+:root {
+  --background:lightgray;
+  --dark_bg:rgb(50,50,50);
+  --container_bg:white;
+  --text:gray;
+  --text-light:lightgray;
+  --accent:lightseagreen;
+  --normal_padding:10;
+  --normal_margin:10;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial;
+}
+
+body {
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1da199;
+  text-decoration: underline;
+}
+
+.container {
+  width: 1400px;
+  padding: 5px;
+}
+
+.center_h {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.middle {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+ul.links {
+  list-style: none;
+}
+
+ul.links a li {
+  display: inline;
+  margin: 0px 5px;
+}
+
+.dark_container {
+  background: var(--dark_bg);
+  color: var(--text-light);
+}
+
+.light_container {
+  background: var(--container_bg);
+  color: var(--text);
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 600px;
+  }
+  .container div {
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

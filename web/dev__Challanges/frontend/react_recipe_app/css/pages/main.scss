@@ -1,0 +1,69 @@
+@import '../global.scss';
+//defaults
+*{
+    padding:0px;
+    margin:0px;
+    font-family: Arial;
+}
+body{
+    background:var(--background);
+    overflow-x:hidden;
+}
+a{
+    color:currentColor;
+    text-decoration: none;
+}
+a:hover{
+    color:darken(lightseagreen,4%);
+    text-decoration: underline;
+}
+//responsive container
+.container{
+    width:$desktop_monitor;
+    padding:5px;
+}
+.center_h{
+    position: relative;
+    @include center_h;
+}
+.middle{
+    position: relative;
+    @include middle;
+}
+
+//links
+ul.links{
+    list-style: none;
+    a li{
+        display: inline;
+        margin:0px 5px;
+    }
+}
+
+//fonts
+
+//elements background colors and text colors
+.dark_container{
+    background:var(--dark_bg);
+    color:var(--text-light);
+}
+.light_container{
+    background:var(--container_bg);
+    color:var(--text);
+}
+
+//media queries
+@media only screen and (max-width:$tablet){
+    .container{
+        width:$tablet;
+    }
+}
+
+@media only screen and (max-width:$phones){
+    .container{
+        width:$phones;
+        div{
+            padding:10px;
+        }
+    }
+}

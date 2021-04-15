@@ -1,0 +1,74 @@
+:root{
+    //colors
+    --background:lightgray;
+    --dark_bg:rgb(50,50,50);
+    --container_bg:white;
+    --text:gray;
+    --text-light:lightgray;
+    --accent:lightseagreen;
+    //padding and margin
+    --normal_padding:10;
+    --normal_margin:10;
+}
+//devices widths in pixels
+$desktop_monitor:1000px;
+$tablet:800px;
+$phones:600px;
+$small_phone:400px;
+//z-indexes
+$nav_bars:5;
+$notifications:7;
+$cover:6;
+
+//text
+@mixin super_title{
+    font-size: 4em;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+@mixin title {
+    font-size: 3em;
+    letter-spacing: 1px;
+}
+@mixin sub_title {
+    font-size: 2em;
+    font-weight: lighter;
+}
+@mixin paragraph {
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+//buttons
+@mixin  button {
+    padding:10px;
+    border:1px solid transparent;
+    outline: none;
+    border-radius: 5px;
+}
+
+@mixin icon_button{
+    padding:5px;
+    height:1.5em;
+    width:1.5em;
+    font-size: 1.2em;
+    border-radius: 50%;
+}
+
+//alignment
+@mixin middle {
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin center_h {
+    left:50%;
+    transform: translateX(-50%);
+}
+
+@mixin center_v {
+    top:50%;
+    transform: translateY(-50%);
+}
+

@@ -1,0 +1,46 @@
+@import '../global.scss';
+nav.topnav{
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index: $nav_bars;
+    padding:calc(var(--normal_padding)*"px");
+    height: 50px;
+    width:100vw;
+}
+nav.topnav div.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+nav.topnav div.container div{
+    padding:10px;
+    flex-shrink: 0;
+}
+
+
+
+//buttons
+.call_to_action{
+    padding:5px;
+    border:1px solid transparent;
+    background:var(--accent);
+    color:white;
+    margin:0px auto;
+}
+
+//page nav
+nav.page_nav{
+    position: fixed;
+    @include center_v;
+    z-index: $nav_bars;
+    padding:10px 5px;
+    width:30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    min-height: 200px;
+    max-height: 300px;
+}

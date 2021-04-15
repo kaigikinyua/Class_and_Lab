@@ -1,0 +1,11 @@
+:root {
+  --background:lightgray;
+  --dark_bg:rgb(50,50,50);
+  --container_bg:white;
+  --text:gray;
+  --text-light:lightgray;
+  --accent:lightseagreen;
+  --normal_padding:10;
+  --normal_margin:10;
+}
+/*# sourceMappingURL=global.css.map */
