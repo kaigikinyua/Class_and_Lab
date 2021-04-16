@@ -1,0 +1,51 @@
+:root {
+  --background:lightgray;
+  --dark_bg:rgb(50,50,50);
+  --container_bg:white;
+  --text:gray;
+  --text-light:lightgray;
+  --accent:lightseagreen;
+  --normal_padding:10;
+  --normal_margin:10;
+}
+
+div#app {
+  position: relative;
+  height: 60vw;
+  margin-top: 60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  overflow: hidden;
+}
+
+div.parentForm {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.form {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+.formOn {
+  padding: 20px;
+  height: auto;
+}
+
+.formOFF {
+  height: 0px;
+  overflow: hidden;
+}
+/*# sourceMappingURL=authpage.css.map */

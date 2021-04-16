@@ -4,19 +4,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accounts & Registration</title>
+    <link rel="stylesheet" href="./css/components/components.css">
+    <link rel="stylesheet" href="./css/fontawsome/all.min.css">
+    <link rel="stylesheet" href="./css/pages/main.css">
+    <link rel="stylesheet" href="./css/pages/authpages/authpage.css">
 </head>
 <body>
-    <nav class="topnav">
+    <nav class="topnav dark_container">
         <div class="container">
             <div class="banner">React Recipe</div>
             <div class="links"></div>
             <div class="cta"></div>
         </div>
     </nav>
-    <section class="app" id="app">
+    <div class="container" id="app">
         <!--Login Component-->
-        <div class="loginForm">
-            <div class="form">
+        <div class="parentForm">
+            <div class="form light_container formOn" data-active="true">
                 <h3 class="sub_title">Login</h3>
                 <div class="field">
                     <label for="emailLogin" data-label='Email'>Email</label>
@@ -27,11 +31,13 @@
                     <input type="text" class="text" name="password" id="passwordLogin"/>
                 </div>
                 <button class="submit" id="loginSubmit">Login</button>
+                <button class="submit">Sign Up</button>
+                <div class="animation"></div>
             </div>
         </div>
         <!--Signup Component-->
-        <div class="signupForm">
-            <div class="form">
+        <div class="parentForm">
+            <div class="form light_container formOFF" data-active="false">
                 <h3 class="sub_title">Register</h3>
                 <div class="field">
                     <label for="emailReg" data-label="Email">Email</label>
@@ -45,8 +51,11 @@
                     <label for="passConf">Confirm Password</label>
                     <input type="text" class="text" id="passConf" name="passConf">
                 </div>
+                <button class="submit" id="signUp">SignUp</button>
+                <button class="submit">Login</button>
+                <div class="animation"></div>
             </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>

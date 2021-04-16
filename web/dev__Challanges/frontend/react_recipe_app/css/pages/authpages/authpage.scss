@@ -1,0 +1,32 @@
+@import '../../global.scss';
+
+div#app{
+    position: relative;
+    height:60vw;
+    margin-top:60px;
+    @include center_h;
+    overflow: hidden;
+}
+
+div.parentForm{
+    position: relative;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.form{
+    position: relative;
+    width: 50%;
+    text-align: center;
+}
+
+.formOn{
+    padding:20px;
+    height: auto;
+}
+.formOFF{
+    height:0px;
+    overflow: hidden;
+}
