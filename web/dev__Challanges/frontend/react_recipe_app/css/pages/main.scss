@@ -41,6 +41,9 @@ ul.links{
 }
 
 //fonts
+.super_title{
+    @include super_title;
+}
 
 //elements background colors and text colors
 .dark_container{

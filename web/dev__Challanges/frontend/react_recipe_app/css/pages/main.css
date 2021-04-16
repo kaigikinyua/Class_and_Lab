@@ -31,7 +31,7 @@ a:hover {
 }
 
 .container {
-  width: 1400px;
+  width: 1000px;
   padding: 5px;
 }
 
@@ -57,6 +57,12 @@ ul.links {
 ul.links a li {
   display: inline;
   margin: 0px 5px;
+}
+
+.super_title {
+  font-size: 4em;
+  letter-spacing: 2px;
+  font-weight: lighter;
 }
 
 .dark_container {

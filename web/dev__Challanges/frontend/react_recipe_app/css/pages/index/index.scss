@@ -8,22 +8,28 @@ header.landing{
 header.landing .container{
     position: relative;
     text-align: center;
-    background:pink;
     overflow: hidden;
 }
 div#slides{
     position: relative;
     width:100%;
+    height: 75vh;
 }
 div.slide{
     position: relative;
+    @include center_v;
     width:100%;
-    height:70%;
     display: grid;
+    gap: 4px;
     grid-template-columns: 1fr 1fr;
+    text-align: center;
 }
 div.slide img{
     position: relative;
-    max-width: 70%;
+    width:100%;
+    height:auto;
 }
-
+p.big_par{
+    font-size: 1.4em;
+    margin-top:20px;
+}

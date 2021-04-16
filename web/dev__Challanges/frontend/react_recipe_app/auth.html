@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts & Registration</title>
+</head>
+<body>
+    <nav class="topnav">
+        <div class="container">
+            <div class="banner">React Recipe</div>
+            <div class="links"></div>
+            <div class="cta"></div>
+        </div>
+    </nav>
+    <section class="app" id="app">
+        <!--Login Component-->
+        <div class="loginForm">
+            <div class="form">
+                <h3 class="sub_title">Login</h3>
+                <div class="field">
+                    <label for="emailLogin" data-label='Email'>Email</label>
+                    <input type="text" class="text" name="email" id="emailLogin"/>
+                </div>
+                <div class="field">
+                    <label for="passwordLogin" data-label='Password'>Password</label>
+                    <input type="text" class="text" name="password" id="passwordLogin"/>
+                </div>
+                <button class="submit" id="loginSubmit">Login</button>
+            </div>
+        </div>
+        <!--Signup Component-->
+        <div class="signupForm">
+            <div class="form">
+                <h3 class="sub_title">Register</h3>
+                <div class="field">
+                    <label for="emailReg" data-label="Email">Email</label>
+                    <input type="text" class="text" name="email" id="emailReg"/>
+                </div>
+                <div class="field">
+                    <label for="passReg" data-label="Confirm">Password</label>
+                    <input type="text" class="text" name="registerPass" id="passReg"/>
+                </div>
+                <div class="field">
+                    <label for="passConf">Confirm Password</label>
+                    <input type="text" class="text" id="passConf" name="passConf">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
