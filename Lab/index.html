@@ -4,11 +4,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>React Test</title>
+    <style>
+        div.userlist{
+            display: flex;
+            flex-direction: row;
+        }
+        div.user{
+            width:100px;
+            text-align: center;
+            background:white;
+            padding:10px;
+            margin:10px;
+            border-radius: 20px;
+            box-shadow:1px 1px 10px 10px rgba(10,10,10,0.1);
+        }
+        div.user button{
+            background:none;
+            outline: none;
+            padding:5px;
+            border-radius: 10px;
+            border:none;
+        }
+        div.user button.friend{
+            background:purple;
+            color:white;
+        }
+        div.profile{
+            height:40px;
+            width:40px;
+            border-radius: 50%;
+            background:purple;
+            position: relative;
+            left:50%;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 <body>
     <h1>Hello World</h1>
     <div id="clickComponent"></div>
     <div id="clickComponent2"></div>
+    <div id="userlist"></div>
 </body>
 <script src="./babel.js"></script>
 <script src="./react.js"></script>

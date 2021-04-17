@@ -34,5 +34,44 @@ class ClickComponent2 extends React.Component{
     }
 }
 
+class UserProfileCard extends React.Component{
+    constructor(props,context){
+        super(props,context)
+        this.state={friend:false}
+        this.sendFriendRequest=this.sendFriendRequest.bind(this)
+    }
+    sendFriendRequest(){
+        this.setState(prevState=>{
+            return {friend:!prevState.friend}
+        });
+    }
+    render(){
+        return(
+            <div className="user">
+                <div className="profile"></div>
+                <div>{this.props.username}</div>
+                <button className={this.state.friend?"friend":""} onClick={this.sendFriendRequest}>
+                    {this.state.friend?"Friend":"Send Request"}
+                </button>
+            </div>
+        )
+    }
+}
+class Users extends React.Component{
+    constructor(props,context){super(props,context)}
+    render(){
+        var users=this.props.users.map((user,i)=>{
+            return <UserProfileCard username={user}/>
+        })
+        console.log(users)
+        return (
+            <div className='userlist'>{users}</div>
+        );
+    }
+}
+
+
 ReactDOM.render(<ClickComponent clicks="10"/>,document.getElementById('clickComponent'))
 ReactDOM.render(<ClickComponent2 clicks="100"/>,document.getElementById('clickComponent2'));
+var friends=['James','John','Lewis','Clarkson']
+ReactDOM.render(<Users users={friends}/>,document.getElementById('userlist'))
