@@ -63,7 +63,7 @@ class Users extends React.Component{
         var users=this.props.users.map((user,i)=>{
             return <UserProfileCard username={user}/>
         })
-        console.log(users)
+        //console.log(users)
         return (
             <div className='userlist'>{users}</div>
         );
