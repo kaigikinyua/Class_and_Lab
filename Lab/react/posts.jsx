@@ -4,7 +4,7 @@ class UserPostProfile extends React.Component{
     }
     render(){
         return(
-            <div className="user_profile">
+            <div className="profile_post">
                 <div className="profile"></div>
                 <span>{this.props.username}</span>
             </div>
@@ -21,23 +21,41 @@ class Post extends React.Component{
             userMetric:this.props.metrics.userMetric,
         }
         this.likePost=this.likePost.bind(this)
-        this.dislikes=this.disLikePost.bind(this)
+        this.disLikePost=this.disLikePost.bind(this)
     }
     likePost(){
-        this.setState(state=>{
-            return {
-                likes:this.props.metrics.likes+=1,
-                userMetric:"liked"
-            }
-        })
+        if(this.state.userMetric=="non"){
+            this.setState(state=>{
+                return {
+                    likes:this.props.metrics.likes+=1,
+                    userMetric:"liked"
+                }
+            })
+        }else if(this.state.userMetric=="liked"){
+            this.setState(state=>{
+                return{
+                    likes:this.props.metrics.likes-=1,
+                    userMetric:"non"
+                }
+            })
+        }
     }
     disLikePost(){
-        this.setState(state=>{
-            return {
-                dislikes:this.props.metrics.dislikes+=1,
-                userMetric:"disliked"
-            }
-        })
+        if(this.state.userMetric=="non"){
+            this.setState(state=>{
+                return {
+                    dislikes:this.props.metrics.dislikes+=1,
+                    userMetric:"disliked"
+                }
+            })
+        }else if(this.state.userMetric=="disliked"){
+            this.setState(state=>{
+                return {
+                    dislikes:this.props.metrics.dislikes-=1,
+                    userMetric:"non"
+                }
+            })
+        }
     }
     render(){
         var liked=false;var disliked=false;
@@ -74,10 +92,10 @@ class Posts extends React.Component{
     }
 }
 var posts=[
-    {"username":"William","likes":100,"dislikes":10,"userMetric":"non"},
-    {"username":"William","likes":100,"dislikes":10,"userMetric":"non"},
-    {"username":"William","likes":100,"dislikes":10,"userMetric":"non"},
-    {"username":"William","likes":100,"dislikes":10,"userMetric":"non"}
+    {"username":"William","likes":256,"dislikes":22,"userMetric":"non"},
+    {"username":"Clark","likes":789,"dislikes":101,"userMetric":"non"},
+    {"username":"Batman","likes":999,"dislikes":213,"userMetric":"non"},
+    {"username":"Wonder Woman","likes":119,"dislikes":5,"userMetric":"non"}
 ]
 
 ReactDOM.render(<Posts posts={posts}/>,document.getElementById("posts"))
