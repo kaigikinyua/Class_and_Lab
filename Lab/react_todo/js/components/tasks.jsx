@@ -2,32 +2,12 @@
 class App extends React.Component{
     constructor(props,context){
         super(props,context)
-        this.state={
-            cDayTasks:true,
-            pList:false
-        }
-        this.displayProjectListTab=this.displayProjectListTab.bind(this)
-        this.displayCurrentDayTab=this.displayCurrentDayTab.bind(this)
-    }
-    displayCurrentDayTab(){
-        this.setState(prevstate=>{return {cDayTasks:true,pList:false}});
-        //console.log("current tab")
-    }
-    displayProjectListTab(){
-        console.log("Hello")
-        this.setState(prevstate=>{return {cDayTasks:false,pList:true}});
     }
     render(){
-        var tabshow=this.state.cDayTasks?<CurrentDayTab tasks={getTodaysTasks()}/>:<ProjectListTab/>
         return(
-            <div>
-                <div className="tab_nav">
-                    <button onClick={this.displayCurrentDayTab} className={this.state.currentDayDisplay?'active':'inactive'}>Todays Tasks</button>
-                    <button onClick={this.displayProjectListTab} className={this.state.projectListDisplay?'active':'inactive'}>Project List</button>
-                </div>
-                <div className="tabs">
-                    {tabshow}
-                </div>
+            <div className="tabs">
+                <CurrentDayTab tasks={getTodaysTasks()}/>
+                <ProjectListTab projects={getProjects()}/>
             </div>
         )
     }
@@ -50,7 +30,7 @@ class CurrentDayTab extends React.Component{
                 <div className="appbar">
                     <h3 className="title">Todays Tasks</h3>
                     <div className="actions">
-                        <button className="iconbtn">Add Task</button>
+                        <button className="iconbtn"><i className="fa fa-plus"></i></button>
                     </div>
                 </div>
                 <div className="tile_list">
@@ -66,9 +46,20 @@ class ProjectListTab extends React.Component{
         super(props,context)
     }
     render(){
+        var projects=this.props.projects.map((p,index)=>{
+            return <Project title={p.title} tasksdone={p.tasksdone} tasks_all={p.tasks_all}/>
+        });
         return(
             <div>
-                <div className="appbar"></div>
+                <div className="appbar">
+                    <h3 className="title">Project List</h3>
+                    <div className="actions">
+                        <button className="iconbtn"><i className="fa fa-plus"></i></button>
+                    </div>
+                </div>
+                <div className="project_list">
+                    {projects}
+                </div>
             </div>
         )
     }
@@ -81,23 +72,49 @@ class Task extends React.Component{
         super(props,context)
     }
     render(){
+        {/* task state can be [done|stale|archived]*/}
         return (
             <div className='task'>
                 <div className="appbar">
-                    <h3 className='subtitle'>
-                        {this.props.title}
-                        {/* task state can be [done|stale|archived]*/}
+                    <div className='task_top'>
                         <span className={this.props.state}></span>
-                    </h3>
+                        <span>{this.props.title}</span>
+                    </div>
                     <div className="actions">
-                        <button className="iconbtn">Done</button>
-                        <button className="iconbtn">Delete</button>
+                        <button className="iconbtn"><i className="fa fa-check"></i></button>
+                        <button className="iconbtn"><i className="fa fa-trash"></i></button>
                     </div>
                 </div>
             </div>
         )
     }
 }
+
+class Project extends React.Component{
+    constructor(props,context){
+        super(props,context)
+    }
+    showProjectTasks(){}
+    render(){
+        return (
+            <div className="task">
+                <div className="appbar">
+                    <div className="project_top">
+                        <span>{this.props.title}</span>
+                        <span>{this.props.tasksdone}/{this.props.tasks_all}</span>
+                    </div>
+                    <div className="actions">
+                        <button className="iconbtn"><i className="fa fa-plus"></i></button>
+                        <button className="iconbtn"><i className="fa fa-trash"></i></button>
+                    </div>
+                </div>
+                <div className="project_task_list"></div>
+            </div>
+        )
+    }
+}
+
+
 
 
 //common functions
@@ -107,8 +124,16 @@ function getTodaysTasks(){
         {"title":"Get milk","state":"done"},
         {"title":"Buy chicken","state":"done"},
         {"title":"Buy Cigarettes","state":"stale"},
-        {"title":"Learn regex","state":"done"},
+        {"title":"Learn regex","state":"archived"},
         {"title":"Learn react","state":"done"},
+    ]
+}
+function getProjects(){
+    return[
+        {"title":"Learning blender","tasksdone":1,"tasks_all":100,"tasks":getTodaysTasks()},
+        {"title":"Learning Dart","tasksdone":4,"tasks_all":100,"tasks":getTodaysTasks()},
+        {"title":"Learning Inkscape","tasksdone":2,"tasks_all":100,"tasks":getTodaysTasks()},
+        {"title":"Learning jsx","tasksdone":10,"tasks_all":100,"tasks":getTodaysTasks()},
     ]
 }
 

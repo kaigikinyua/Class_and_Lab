@@ -1,0 +1,47 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  width: 1000px;
+}
+
+.cHalignment {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.cValignment {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+nav.topnav {
+  padding: 10px;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 100;
+}
+
+div.appbar {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  position: relative;
+  width: 100%;
+}
+
+button.iconbtn {
+  padding: 5px;
+  outline: none;
+  background: none;
+  border: none;
+  margin: 0px 5px;
+}
+/*# sourceMappingURL=main.css.map */

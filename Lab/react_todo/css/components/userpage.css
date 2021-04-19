@@ -1,0 +1,44 @@
+#app {
+  margin-top: 50px;
+}
+
+div.tabs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+div.task {
+  padding: 10px;
+  margin: 20px 0px;
+}
+
+span.done, span.stale, span.archived {
+  min-width: 30px;
+  min-height: 5px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+span.done {
+  background: green;
+}
+
+span.stale {
+  background: brown;
+}
+
+span.archived {
+  background: gray;
+}
+
+div.project_top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+}
+/*# sourceMappingURL=userpage.css.map */
