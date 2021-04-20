@@ -9,6 +9,18 @@ class Month extends React.Component{
 }
 
 class TextInput extends React.Component{
-    constructor(){}
-    render(){}
+    constructor(props,context){
+        super(props,context)
+        this.getValue()=this.getValue.bind(this)
+    }
+    getValue(){
+        return "value"
+    }
+    render(){
+        return (
+            <div className="input">
+                <input type="text" className="textInput" name={this.props.name}/>
+            </div>
+        )
+    }
 }

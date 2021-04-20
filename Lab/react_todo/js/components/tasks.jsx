@@ -71,6 +71,9 @@ class Task extends React.Component{
     constructor(props,context){
         super(props,context)
     }
+    delete(){
+
+    }
     render(){
         {/* task state can be [done|stale|archived]*/}
         return (
