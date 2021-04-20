@@ -23,7 +23,7 @@ $accentColor:lightseagreen;
 
 .btnLight{
     background: darken($lightBG,10%);
-    color:$accentColor;
+    color:lighten(blue,40%);
     border:1px solid $accentColor;
 }
 .btnDark{

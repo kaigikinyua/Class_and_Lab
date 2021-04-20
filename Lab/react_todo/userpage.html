@@ -7,21 +7,25 @@
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/components/userpage.css">
+    <link rel="stylesheet" href="./css/components/colors.css">
 </head>
 <body>
-    <nav class="topnav">
+    <nav class="topnav cTheme">
         <div class="container">
             <div class="banner">
                 <h3 class="banner">TaskFlow</h3>
             </div>
-            <div class="links"></div>
+            <div class="links">
+                <button class="btnLight" id="theme">Theme</button>
+            </div>
         </div>
     </nav>
-    <section id="app">
+    <section id="app" class="cFocusLight">
     </section>
 </body>
 <script src="./js/react/babel.js"></script>
 <script src="./js/react/react.js"></script>
 <script src="./js/react/react-dom.js"></script>
+<script src="./js/uitheme.js"></script>
 <script  type="text/jsx" src="./js/components/tasks.jsx"></script>
 </html>
