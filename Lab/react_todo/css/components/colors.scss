@@ -22,8 +22,8 @@ $accentColor:lightseagreen;
 }
 
 .btnLight{
-    background: darken($lightBG,10%);
-    color:lighten(blue,40%);
+    //background: darken($lightBG,10%);
+    color:$accentColor;
     border:1px solid $accentColor;
 }
 .btnDark{

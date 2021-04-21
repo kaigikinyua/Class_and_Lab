@@ -1,6 +1,6 @@
 //const { func } = require("prop-types")
 
-var switchToTheme="dark"
+var switchToTheme='light'
 const themeBtn=document.getElementById('theme')
 themeBtn.addEventListener('click',(e)=>{
     changeTheme()
@@ -10,9 +10,9 @@ function changeTheme(){
     var newTheme=null
     switch (switchToTheme){
         case 'light':
-            var containers=document.querySelectorAll('.cLight')
-            var focusContainers=document.querySelectorAll('.cFocusLight')
-            var buttons=document.querySelectorAll('.btnLight')
+            var containers=document.querySelectorAll('.cDark')
+            var focusContainers=document.querySelectorAll('.cFocusDark')
+            var buttons=document.querySelectorAll('.btnDark')
             swapThemeClass({elements:containers,currClass:"cLight",incomingClass:"cDark"})
             swapThemeClass({elements:focusContainers,currClass:"cFocusLight",incomingClass:"cFocusDark"})
             swapThemeClass({elements:buttons,currClass:"btnLight",incomingClass:"btnDark"})

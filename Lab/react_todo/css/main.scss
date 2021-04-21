@@ -43,3 +43,34 @@ button.iconbtn{
     margin:0px 5px;
 }
 
+
+//forms
+input.text{
+    padding:10px;
+    position: relative;
+    width:100%;
+}
+button.submit{
+    padding:10px;
+    display: block;
+    position: relative;
+    width:100%;
+    margin:10px 0px;
+}
+div.field{
+    border:1px solid lightseagreen;
+    margin:20px 0px;
+    padding:5px;
+    text-align: center;
+    input{
+        border:none;
+        outline: none;
+        padding:3px;
+    }
+}
+
+div.field:focus,div.field:hover{
+    label{
+        color:lightseagreen;
+    }
+}
