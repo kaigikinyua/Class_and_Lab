@@ -7,26 +7,29 @@ class App extends React.Component{
             projects:getProjects(),
             todaysTasks:getTodaysTasks()
         }
-        //this.hideAddProject=this.hideAddProject.bind(this)
         this.showAddProject=this.showAddProject.bind(this)
         this.addNewProject=this.addNewProject.bind(this)
+        this.deleteProject=this.deleteProject.bind(this)
     }
-    //hideAddProject(){this.setState({addProject:false})}
     showAddProject(){this.setState({addProject:true})}
     addNewProject=(title)=>{
-        console.log(title)
-        this.setState(
-            {
-                projects:this.state.projects.push({'title':title}),
-                addProject:false
-            }
-        )
+        this.setState((prevState)=>{
+                this.state.projects=prevState.projects.push({'title':title})
+        })
+        this.setState({addProject:false})
+    }
+    deleteProject=(projectKey)=>{
+        this.setState((prevState)=>{
+            var removedElem=prevState.projects.splice(projectKey,1)
+            this.state.projects=prevState.projects
+        })
+        console.log(this.state.projects)
     }
     render(){
         return(
             <div className="tabs">
                 <CurrentDayTab tasks={getTodaysTasks()}/>
-                <ProjectListTab projects={getProjects()} openAddProject={this.showAddProject}/>
+                <ProjectListTab projects={getProjects()} openAddProject={this.showAddProject} deleteProject={this.deleteProject}/>
                 {this.state.addProject?<AddProject addProject={this.addNewProject}/>:""}
             </div>
         )
@@ -64,10 +67,14 @@ class CurrentDayTab extends React.Component{
 class ProjectListTab extends React.Component{
     constructor(props,context){
         super(props,context)
+        this.deleteProject=this.deleteProject.bind(this)
+    }
+    deleteProject=(projectID)=>{
+        this.props.deleteProject(projectID)
     }
     render(){
         var projects=this.props.projects.map((p,index)=>{
-            return <Project title={p.title} tasksdone={p.tasksdone} tasks_all={p.tasks_all}/>
+            return <Project title={p.title} tasksdone={p.tasksdone} tasks_all={p.tasks_all} deleteProject={this.deleteProject} pkey={index}/>
         });
         return(
             <div>
@@ -177,6 +184,11 @@ class Task extends React.Component{
 class Project extends React.Component{
     constructor(props,context){
         super(props,context)
+        this.deleteProject=this.deleteProject.bind(this)
+    }
+    deleteProject(){
+        //console.log(this.props)
+        this.props.deleteProject(this.props.pkey)
     }
     showProjectTasks(){}
     render(){
@@ -189,7 +201,7 @@ class Project extends React.Component{
                     </div>
                     <div className="actions">
                         <button className="iconbtn"><i className="fa fa-plus"></i></button>
-                        <button className="iconbtn"><i className="fa fa-trash"></i></button>
+                        <button className="iconbtn" onClick={this.deleteProject}><i className="fa fa-trash"></i></button>
                     </div>
                 </div>
                 <div className="project_task_list"></div>
