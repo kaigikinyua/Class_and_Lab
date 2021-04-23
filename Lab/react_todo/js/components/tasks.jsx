@@ -20,6 +20,7 @@ class App extends React.Component{
     }
     deleteProject=(projectKey)=>{
         this.setState((prevState)=>{
+            //removing the project which has the index projectKey
             var removedElem=prevState.projects.splice(projectKey,1)
             this.state.projects=prevState.projects
         })
