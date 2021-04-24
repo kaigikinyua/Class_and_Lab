@@ -41,18 +41,21 @@ class App extends React.Component{
 class CurrentDayTab extends React.Component{
     constructor(props,context){
         super(props,context)
-        this.state{
+        this.state={
             tasks:this.props.tasks
         }
+        this.removeTask=this.removeTask.bind(this)
     }
     addTask(){}
     removeTask=(taskIndex)=>{
-
+        this.setState((prev)=>{
+            this.state.tasks=prev.tasks.splice(taskIndex,1)
+        })
     }
     render(){
         var tasks=this.state.tasks.map((task,index)=>{
             {/* add the date and task description */}
-            return <Task title={task.title} state={task.state}/>
+            return <Task title={task.title} state={task.state} removeTask={this.removeTask} tkey={index}/>
         })
         return (
             <div>
@@ -154,16 +157,18 @@ class Task extends React.Component{
         super(props,context)
         this.state={
             done:false,
-            delete:false
+            delete:false,
+            id:this.props.tkey
         }
         this.markDone=this.markDone.bind(this)
+        this.delete=this.delete.bind(this)
     }
     markDone(){
         this.setState((state)=>{return {done:true}})
         //console.log(this.state)
     }
     delete(){
-
+        this.props.removeTask(this.props.tkey)
     }
     render(){
         {/* task state can be [done|stale|archived]*/}
@@ -179,7 +184,7 @@ class Task extends React.Component{
                         <button className="iconbtn"onClick={this.markDone}>
                             <i className="fa fa-check" style={taskdoneStyle}></i>
                         </button>
-                        <button className="iconbtn"><i className="fa fa-trash"></i></button>
+                        <button className="iconbtn" onClick={this.delete}><i className="fa fa-trash"></i></button>
                     </div>
                 </div>
             </div>
