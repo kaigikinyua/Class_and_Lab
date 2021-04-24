@@ -41,11 +41,16 @@ class App extends React.Component{
 class CurrentDayTab extends React.Component{
     constructor(props,context){
         super(props,context)
+        this.state{
+            tasks:this.props.tasks
+        }
     }
     addTask(){}
-    removeTask(){}
+    removeTask=(taskIndex)=>{
+
+    }
     render(){
-        var tasks=this.props.tasks.map((task,index)=>{
+        var tasks=this.state.tasks.map((task,index)=>{
             {/* add the date and task description */}
             return <Task title={task.title} state={task.state}/>
         })

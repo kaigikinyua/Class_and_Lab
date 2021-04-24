@@ -24,3 +24,10 @@ class TextInput extends React.Component{
         )
     }
 }
+
+
+//text input
+
+//notifications
+
+//etc
