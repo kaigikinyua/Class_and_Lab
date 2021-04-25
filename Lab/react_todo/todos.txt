@@ -1,0 +1,16 @@
+1.Create a data set with the following schema
+    Projects:[
+        title:'',
+        start_date:'';
+        end_date:'',
+        tasks:[
+            {title,state,deadline}
+        ]
+        tasks_complete:[]
+    ]
+    tasks:[
+        {title,state,deadline}
+    ]
+    Routine:[
+        {name:'',start:'',end:'',every:'period',last_done:''}
+    ]
