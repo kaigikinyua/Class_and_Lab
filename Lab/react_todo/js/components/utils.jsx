@@ -24,7 +24,6 @@ class TextInput extends React.Component{
         )
     }
 }
-export default{ Calender,Month,TextInput}
 
 
 //text input
