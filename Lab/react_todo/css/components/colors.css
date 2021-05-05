@@ -1,0 +1,31 @@
+.cLight {
+  background: gray;
+  color: #343434;
+}
+
+.cDark {
+  background: #343434;
+  color: gray;
+}
+
+.cFocusLight {
+  background: white;
+  color: #343434;
+}
+
+.cFocusDark {
+  background: gray;
+  color: lightseagreen;
+}
+
+.btnLight {
+  color: lightseagreen;
+  border: 1px solid lightseagreen;
+}
+
+.btnDark {
+  background: #1a1a1a;
+  color: lightseagreen;
+  border: 1px solid lightseagreen;
+}
+/*# sourceMappingURL=colors.css.map */

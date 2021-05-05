@@ -1,0 +1,33 @@
+//themed container
+$lightBG:gray;
+$focusBG:white;
+$accentColor:lightseagreen;
+
+.cLight{
+    background:$lightBG;
+    color:darken($lightBG,30%);
+}
+.cDark{
+    background: darken($lightBG,30%);
+    color:gray;
+}
+
+.cFocusLight{
+    background: $focusBG;
+    color:darken($lightBG,30%);
+}
+.cFocusDark{
+    background: darken($focusBG,50%);
+    color:$accentColor;
+}
+
+.btnLight{
+    //background: darken($lightBG,10%);
+    color:$accentColor;
+    border:1px solid $accentColor;
+}
+.btnDark{
+    background: darken($lightBG,40%);
+    color:$accentColor;
+    border:1px solid $accentColor;
+}

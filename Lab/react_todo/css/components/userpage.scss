@@ -1,0 +1,49 @@
+#app{
+    margin-top:50px;
+}
+
+div.tabs{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+div.task{
+    padding:10px;
+    margin:20px 0px;
+}
+
+span.done,span.stale,span.archived{
+    min-width:30px;
+    min-height:5px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+span.done{
+    background:green;
+}
+span.stale{
+    background:brown;
+}
+span.archived{
+    background:gray;
+}
+
+div.project_top{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+div#addProject{
+    position: fixed;
+    z-index: 100;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:10px;
+    background: white;
+    box-shadow: 1px 1px 10px 10px rgba(10,10,10,0.1);
+    width:300px;
+}

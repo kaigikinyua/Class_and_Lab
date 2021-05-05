@@ -48,7 +48,7 @@ class UserProfileCard extends React.Component{
     render(){
         return(
             <div className="user">
-                <div className="profile"></div>
+                <div className="profile center"></div>
                 <div>{this.props.username}</div>
                 <button className={this.state.friend?"friend":""} onClick={this.sendFriendRequest}>
                     {this.state.friend?"Friend":"Send Request"}
@@ -63,7 +63,7 @@ class Users extends React.Component{
         var users=this.props.users.map((user,i)=>{
             return <UserProfileCard username={user}/>
         })
-        console.log(users)
+        //console.log(users)
         return (
             <div className='userlist'>{users}</div>
         );
@@ -73,5 +73,5 @@ class Users extends React.Component{
 
 ReactDOM.render(<ClickComponent clicks="10"/>,document.getElementById('clickComponent'))
 ReactDOM.render(<ClickComponent2 clicks="100"/>,document.getElementById('clickComponent2'));
-var friends=['James','John','Lewis','Clarkson']
+var friends=['James','John','Lewis','Clarkson','Mathew','Mark','Luke']
 ReactDOM.render(<Users users={friends}/>,document.getElementById('userlist'))
