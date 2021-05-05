@@ -131,3 +131,31 @@ input#search{
     background:none;
     border:none;
 }
+
+div.open_inputs{
+    height:30px;
+    width:30px;
+    position: fixed;
+    left:20px;
+    bottom:20px;
+    background: lighten(lightseagreen,10%);
+    font-size: 30px;
+    color:white;
+    border-radius: 50%;
+    text-align: center;
+    padding:5px;
+    display: none;
+}
+
+@media screen and (max-width:600px){
+    div.open_inputs{
+        display:block;
+    }
+    section.app{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #inputs{
+        display: none;
+    }
+}

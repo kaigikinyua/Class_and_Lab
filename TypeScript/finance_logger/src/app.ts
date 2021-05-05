@@ -5,6 +5,17 @@ const paymentType=document.getElementById('paymentType') as HTMLSelectElement
 const paymentDesc=document.getElementById('desc') as HTMLInputElement
 const clientField=document.getElementById('client') as HTMLInputElement
 const searchField=document.getElementById('search') as HTMLInputElement
+const openInputsBtn=document.getElementById('openInputs') as HTMLDivElement
+const formInputsContainer=document.getElementById('inputs') as HTMLDivElement
+const outPutContainer=document.getElementById('output') as HTMLDivElement
+openInputsBtn.addEventListener('click',(e)=>{
+    formInputsContainer.setAttribute('style','display:block;')
+    outPutContainer.setAttribute('style','display:none;')
+    submitBtn.addEventListener('click',(e)=>{
+        formInputsContainer.setAttribute('style','display:none;')
+        outPutContainer.setAttribute('style','display:block;')        
+    })
+})
 submitBtn.addEventListener('click',(e)=>{
     e.preventDefault()
     let amt:number=parseInt(amount.value);
@@ -36,3 +47,4 @@ searchField.addEventListener('keyup',(e)=>{
         }
     })
 })
+

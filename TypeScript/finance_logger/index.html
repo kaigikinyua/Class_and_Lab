@@ -17,7 +17,7 @@
         </ul>
     </nav>
     <section class="app">
-        <div class="form_inputs">
+        <div class="form_inputs" id="inputs">
             <div class="app_barner">New Transaction</div>
             <form name="transaction_form">
                 <div class="field">
@@ -42,7 +42,7 @@
                 <button id="submit">Submit</button>
             </form>
         </div>
-        <div class="lists">
+        <div class="lists" id="output">
             <div class="app_barner dual">
                 <div>Transactions</div>
                 <div class="search">
@@ -52,6 +52,7 @@
             <div class="transactions_list" id="transaction_list"></div>
         </div>
     </section>
+    <div class="open_inputs" id="openInputs">+</div>
 </body>
 <script type="module" src='./js/app.js'></script>
 </html>

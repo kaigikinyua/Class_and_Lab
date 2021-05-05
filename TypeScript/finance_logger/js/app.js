@@ -5,6 +5,17 @@ var paymentType = document.getElementById('paymentType');
 var paymentDesc = document.getElementById('desc');
 var clientField = document.getElementById('client');
 var searchField = document.getElementById('search');
+var openInputsBtn = document.getElementById('openInputs');
+var formInputsContainer = document.getElementById('inputs');
+var outPutContainer = document.getElementById('output');
+openInputsBtn.addEventListener('click', function (e) {
+    formInputsContainer.setAttribute('style', 'display:block;');
+    outPutContainer.setAttribute('style', 'display:none;');
+    submitBtn.addEventListener('click', function (e) {
+        formInputsContainer.setAttribute('style', 'display:none;');
+        outPutContainer.setAttribute('style', 'display:block;');
+    });
+});
 submitBtn.addEventListener('click', function (e) {
     e.preventDefault();
     var amt = parseInt(amount.value);

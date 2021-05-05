@@ -30,12 +30,8 @@ nav.topnav {
   width: 100vw;
   z-index: 10;
   background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   padding: 10px;
 }
 
@@ -43,27 +39,20 @@ ul.links {
   position: relative;
   width: 30%;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 section.app {
   position: relative;
   height: 90vh;
   width: 80vw;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
   grid-gap: 10px;
   margin-top: 50px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 div.app_barner {
@@ -97,8 +86,7 @@ input, select, button {
   position: relative;
   width: 80%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   margin: 5px;
 }
 
@@ -112,17 +100,12 @@ div.transaction_item {
   padding: 10px;
   position: relative;
   margin: 8px;
-  -webkit-box-shadow: 1px 1px 10px 10px rgba(100, 100, 100, 0.1);
-          box-shadow: 1px 1px 10px 10px rgba(100, 100, 100, 0.1);
+  box-shadow: 1px 1px 10px 10px rgba(100, 100, 100, 0.1);
 }
-
 div.transaction_item div.title {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10fr 1fr;
-      grid-template-columns: 10fr 1fr;
+  grid-template-columns: 10fr 1fr;
 }
-
 div.transaction_item div.desc {
   padding: 10px;
   font-size: 1.1em;
@@ -132,7 +115,6 @@ div.transaction_item div.desc {
 div.invoice {
   border-left: 5px solid lightseagreen;
 }
-
 div.invoice h4 {
   color: #2cd9d0;
 }
@@ -140,14 +122,11 @@ div.invoice h4 {
 div.payment {
   border-left: 5px solid crimson;
 }
-
 div.payment h4 {
   color: #ed365b;
 }
 
 .dual {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -162,4 +141,35 @@ input#search {
   background: none;
   border: none;
 }
+
+div.open_inputs {
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background: #2cd9d0;
+  font-size: 30px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  div.open_inputs {
+    display: block;
+  }
+
+  section.app {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #inputs {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
