@@ -111,6 +111,9 @@ div.transaction_item div.desc {
   font-size: 1.1em;
   display: none;
 }
+div.transaction_item h4::after {
+  content: "  ...";
+}
 
 div.invoice {
   border-left: 5px solid lightseagreen;
@@ -163,12 +166,19 @@ div.open_inputs {
   }
 
   section.app {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
   }
 
   #inputs {
     display: none;
+    width: 100%;
+  }
+
+  #output {
+    position: relative;
+    width: 100%;
   }
 }
 
