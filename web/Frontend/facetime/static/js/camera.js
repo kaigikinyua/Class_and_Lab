@@ -5,7 +5,7 @@ const recVideoBtn=document.getElementById("rec_camera")
 const recAudioBtn=document.getElementById("rec_audio")
 
 const audioOnly={audio:true,video:false}
-const videoConstraints={audio:true,video:false}
+const videoConstraints={audio:true,video:true}
 
 recAudioBtn.addEventListener('click',(e)=>{
     mediaStreamSupported()
@@ -17,7 +17,7 @@ recVideoBtn.addEventListener('click',(e)=>{
 })
 
 function mediaStreamSupported(){
-    if(navigator.getUserMedia){return true}
+    if(navigator.mediaDevices.getUserMedia){return true}
     alert("No Media support")
     return false
 }
@@ -26,18 +26,13 @@ function failed(error){
 }
 function useMic(stream){
     recAudioBtn.disabled=true
-    audioTag.src=stream
+    audioTag.srcObject=stream
     audioTag.play()
-    setTimeout(()=>{
-        recAudioBtn.disabled=false
-        audioTag.controls=true
-    },3000)    
+    var x=document.querySelector("div.audio_display")
+    x.classList.add("active_audio")    
 }
 function videoConference(stream){
     recVideoBtn.disabled=true
-    videoTag.src=stream
-    setTimeout(()=>{
-        videoTag.play()
-        recVideoBtn.disabled=false
-    },3000) 
+    videoTag.srcObject=stream
+    videoTag.play() 
 }

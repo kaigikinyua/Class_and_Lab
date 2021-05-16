@@ -1,0 +1,8 @@
+{
+    "liveServer.settings.https":{
+        "enable": true,
+        "cert": "/home/antony/Pit/class/web/Frontend/facetime/static/server.crt",
+        "key": "/home/antony/Pit/class/web/Frontend/facetime/static/keyless_key.key",
+        "passphrase": ""
+    }
+}
