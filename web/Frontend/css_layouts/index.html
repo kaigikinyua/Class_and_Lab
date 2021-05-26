@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout</title>
+    <style>
+        div.component{
+            padding:10px;
+            background:lightseagreen;
+            color:white;
+            height:30px;
+            width:30px;
+            font-size: 2em;
+            text-align: center;
+        }
+        div#gridcolumn{
+            display: grid;
+            grid-template-columns: repeat(10,1fr);
+            padding:10px;
+        }
+        div#gridcolumn :nth-child(1){
+            grid-column-start: 1;
+            grid-column-end:3;
+            color:green;
+            width:auto;
+        }
+        div#gridrow{
+            display: grid;
+            grid-template-rows: repeat(10,1fr);
+            grid-gap:10px;
+        }
+        div#gridrow :nth-child(1){
+            grid-row-start: 1;
+            grid-row-end:4;
+        }
+    </style>
+</head>
+<body>
+    <div id="gridcolumn"></div>
+    <div id="gridrow"></div>
+    <div id="reverse_grid"></div>
+    <div id="flex"></div>
+    <div id="reverse_flex"></div>
+</body>
+<script>
+    var elements=["gridcolumn","gridrow","reverse_grid","flex","reverse_flex"]
+    elements.forEach(elem=>{
+        var i=0
+        var container=document.getElementById(elem)
+        while(i<5){
+            container.appendChild(component(i))
+            i+=1
+        }
+    })
+    function component(content){
+        var comp=document.createElement('div')
+        comp.classList.add('component')
+        comp.innerHTML=content
+        return comp
+    }
+</script>
+</html>
