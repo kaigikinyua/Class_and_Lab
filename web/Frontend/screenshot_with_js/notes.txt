@@ -1,0 +1,5 @@
+command to take screen shot in gnome
+gnome-screenshot
+windows - \_o_/
+            |
+            /\
