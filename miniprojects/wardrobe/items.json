@@ -1,5 +1,7 @@
-{
-    "items":[
-        {"images":[],"name":"Item One","bodyPart":"head","price":100}
-    ]
-}
+[
+    {"images":["1.jpg","2.jpg"],"name":"Item One","bodyPart":"head","price":100},
+    {"images":["4.jpg","3.jpg"],"name":"Item Two","bodyPart":"head","price":100},
+    {"images":["3.jpg","5.png"],"name":"Item Three","bodyPart":"head","price":100},
+    {"images":["2.jpg","3.jpg"],"name":"Item Four","bodyPart":"head","price":100},
+    {"images":["5.png","1.jpg"],"name":"Item Five","bodyPart":"head","price":100}
+]

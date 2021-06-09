@@ -1,0 +1,9 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.dual{
+    display: grid;
+    grid-template-columns: 1fr,1fr;
+}
+
