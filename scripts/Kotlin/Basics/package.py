@@ -11,9 +11,13 @@ def compile():
         os.system("kotlinc {cd}/{f}".format(cd=cwd,f=ktFile))
 
 def build():
-    print("Bulding ...")
+    compile()
+    cwd=os.getcwd()
+    #check if ./bin folder exists
+    os.system("mv *.classes ./bin/")
+    print("Bulding Finished")
 
-def run():
+def run(filename):
     print("Running ...")
 
 def clean():
@@ -47,7 +51,7 @@ if __name__=="__main__":
         if(usr_command==command[0]):
             compile()
         elif(usr_command==command[1]):
-            run()
+            run(sys.argv[2])
         elif(usr_command==command[2]):
             build()
         elif(usr_command==command[3]):
