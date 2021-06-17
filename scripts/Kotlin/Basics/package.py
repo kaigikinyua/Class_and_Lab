@@ -1,17 +1,43 @@
-import sys
+import sys,os,re
 
 def compile():
-    pass
+    print("Compiling ...")
+    #list kotlin files
+    cwd=os.getcwd()
+    kt=Files(cwd)
+    files=kt.listFiles()
+    ktFiles=kt.filterExtension(files)
+    for ktFile in ktFiles:
+        os.system("kotlinc {cd}/{f}".format(cd=cwd,f=ktFile))
 
 def build():
-    pass
+    print("Bulding ...")
 
 def run():
-    pass
+    print("Running ...")
 
 def clean():
-    pass
+    print("Cleaning ...")
 
+class Files:
+    def __init__(self,src_dir):
+        self.src_dir=src_dir
+
+    def listFiles(self):
+        items=os.listdir(self.src_dir)
+        files=[]
+        for item in items:
+            if(os.path.isfile(self.src_dir+"/{f}".format(f=item))):
+                files+=[item]
+        return files
+
+    def filterExtension(self,files,ext=".kt"):
+        results=[]
+        for f in files:
+            kotlin_files=re.findall(ext,f)
+            if(len(kotlin_files)>0):
+                results+=[f]
+        return results
 
 if __name__=="__main__":
     #python3 package.py <run|build|clean> [??<filename>]
@@ -19,10 +45,12 @@ if __name__=="__main__":
         command=['compile','run','build','clean']
         usr_command=sys.argv[1]
         if(usr_command==command[0]):
-            run()
+            compile()
         elif(usr_command==command[1]):
-            build()
+            run()
         elif(usr_command==command[2]):
+            build()
+        elif(usr_command==command[3]):
             clean()
         else:
             print("Unknown command {c}".format(c=usr_command))
