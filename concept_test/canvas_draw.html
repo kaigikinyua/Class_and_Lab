@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChartDraw Test</title>
+</head>
+<body>
+    <canvas id="bargraph" width="500" height="150"></canvas>
+</body>
+    <script> 
+        const bargraphVariables={
+            width:30,
+            spacing:50
+        }
+        const dataRep={
+            "shoes":[
+                {"type":"men","num":60},
+                {"type":"children","num":100},
+                {"type":"women","num":120},
+                {"type":"dogs","num":10},
+                {"type":"cats","num":34},
+            ]
+            //array:[{"label":"","num":number,?"color":'#hexcode'}]
+        }
+        const colors=["#ff8baf","#f039f3","#99ff45","#343faf"]
+        const canvasBar=document.getElementById("bargraph")
+        const canvasContext=canvasBar.getContext('2d')
+        canvasContext.font="20px san-serif"
+        const canvasHeight=canvasBar.clientHeight
+        const canvasWidth=canvasBar.clientWidth
+        
+        //bar lines
+        var lineNumbers=Math.floor(canvasHeight/30)//get the number of lines to be drawn
+        for(var i=0;i<lineNumbers;i++){
+            canvasContext.fillStyle="#AAAAAA"
+            canvasContext.fillRect(0,i*30,canvasWidth,1)
+        }
+        
+        
+        var cursorPosition=bargraphVariables.spacing
+        dataRep.shoes.forEach((dataElem,index) => {
+            var barPos=cursorPosition+bargraphVariables.spacing
+            canvasContext.fillStyle=colors[index]
+            canvasContext.fillRect(barPos,canvasHeight-dataElem.num-bargraphVariables.spacing/2,bargraphVariables.width,dataElem.num)
+            canvasContext.fillText(dataElem.type,barPos,canvasHeight)
+            cursorPosition=barPos+bargraphVariables.width
+            /*
+                edge cases
+                    1.the number of bars may exceed the canvas width
+                    2.the differences between the highest and the lowest value might lead to unpleasant bar graphs
+            */
+        });
+
+        function findLargestNum(numbers){
+        //gets the maximum value in order to resize the canvas height
+            var max=numbers[0]
+            numbers.forEach(num=>{
+                if(num<max){
+                    max=num
+                }
+            })
+            return max
+        }
+
+    </script>
+</html>

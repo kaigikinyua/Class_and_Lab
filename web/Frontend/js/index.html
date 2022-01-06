@@ -4,8 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS modules</title>
+    <script src="./test.js"></script>
 </head>
 <body>
-    
+    <div id="app"></div>
+    <script>
+        var hParagraph=HtmlElements.createP("Hello World")
+        var parent=document.getElementById('app')
+        parent.appendChild(hParagraph)
+    </script>
 </body>
+<script type="text/javascript" src="./module.js"></script>
 </html>

@@ -1,0 +1,11 @@
+Graph data (Canvas)
+    1.Title
+    Edge cases[
+        bargraph->height of the canvas/graph needs to be determined by the highest value
+        to be plotted
+    ]
+    2.Data to plot
+        format->
+            "title":[
+                {"label":"...","quantity":<integer>,"color":"#hex value"}
+            ]
