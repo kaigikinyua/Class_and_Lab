@@ -1,14 +1,14 @@
 #include <iostream>
+#include<string>
 #include "Car.h"
 //functions
 //loops
-
-using namespace std;
-
 int main(){
-    Car c;
+    std::string carname="";
+    std::cin>>carname;
+    Car c(carname);  
     c.carProperties();
-    cout<<"Hello World"<<endl;
+    std::cout<<"Hello World"<<std::endl;
     return 0;
 }
 
