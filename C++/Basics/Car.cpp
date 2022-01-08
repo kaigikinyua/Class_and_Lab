@@ -13,6 +13,10 @@ int Car::accelerate(){
         currSpeed+=acceleration;
         return currSpeed;
 }
+int Car::decelerate(){
+        currSpeed-=deceleration;
+        return currSpeed;
+}
 void Car::carProperties(){
         std::cout<<"Car name is "<<carname<<std::endl;
 }
