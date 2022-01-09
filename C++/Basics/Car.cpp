@@ -7,7 +7,6 @@ Car::Car(std::string name,int tSpeed,int acc,std::string tires){
     topSpeed=tSpeed;
     tireType=tires;
     acceleration=acc;
-
 }
 int Car::accelerate(){
         currSpeed+=acceleration;
