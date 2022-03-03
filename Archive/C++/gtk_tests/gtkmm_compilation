@@ -1,0 +1,1 @@
+g++ `pkg-config --cflags --libs gtkmm-3.0` Main.cpp helloworld.cpp -o test `pkg-config --cflags --libs gtkmm-3.0`
