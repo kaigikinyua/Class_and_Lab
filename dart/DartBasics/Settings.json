@@ -1,0 +1,28 @@
+{
+    "server":{
+        "endpoint":"http://test.com",
+        "messages":"/messages",
+        "login":"/login",
+        "productsList":"/productsList"
+    },
+    "product_settings":{
+        "product_details":"/pDetails",
+        "product_sales_details":"/pSalesDetails",
+        "products_categories":[
+            "computers",
+            "vehicles",
+            "utilities",
+            "fashion"
+        ],
+        "products":[
+            {"name":"Product 2","id":"gasdkldjfa"},
+            {"name":"Product 1","id":"dgasdskldjfa"},
+            {"name":"Product 3","id":"dgasldjfa"}
+        ]
+    },
+    "logs":{
+        "errors":"./Logs/errors.json",
+        "success":"./Logs/success.json"
+    },
+    "devMode":"false"
+}

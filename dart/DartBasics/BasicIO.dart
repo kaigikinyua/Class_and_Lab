@@ -1,35 +1,44 @@
 import 'dart:convert';
 import 'dart:async';
 import 'dart:io';
+import 'DataClasses.dart';
 main() async{
-  print("Hello World");
-  String? name=stdin.readLineSync();
-  print("Hello ${name}");
-  String filedata=await readFileFunc('./test_file.txt');
-  print(filedata);
-  print(await testFut());
+//Command Line IO
+  // print("Hello World");
+  // String? name=stdin.readLineSync();
+  // print("Hello ${name}");
+
+//Files IO
+  //String filedata=readFileFunc('./test_file.txt');
+  //print(filedata);
+  //writeToFIle("./transfer_testfile.txt", filedata);
+
+//json data
+  /*simple json file
+    String jsonString=readFileFunc("./names.json");
+    Map<String,dynamic> programming_Languages=jsonDecode(jsonString);
+    programming_Languages.forEach((key, value) { 
+      print(key);
+    });
+    print(programming_Languages["names"]);
+  */
+  //moderate json file
+  String settingsFileData=readFileFunc('./Settings.json');
+  Map<String,dynamic> settings=jsonDecode(settingsFileData);
+  //print(settings["products"]);
+  var productSettings=ProductSettings.fromJson(settings["products_settings"]);
+  print(productSettings.productDetails);
+
+
 }
 
-Future<String> readFileFunc(String filePath) async{
-  var file=File(filePath);
-  Stream lines=file.openRead()
-  .transform(utf8.decoder)
-  .transform(LineSplitter());
-  String data="";
-  try{
-    await for(var line in lines){
-      print('$line');
-      data+=line+'\n';
-    }
-  }catch(e){
-    print('Error $e');
-  }
+String readFileFunc(String filePath){
+  String data=new File(filePath).readAsStringSync();
   return data;
 }
-Future<int> testFut() async{
-  return Future.delayed(
-    Duration(seconds:2),
-    (){return 100;}
-  );
+void writeToFIle(String filePath,String data){
+  var file=new File(filePath).writeAsString(data);
+  file.whenComplete(() =>print("Wrote to ${filePath}"));
 }
+
 //datatype ? -> variable can accept null
