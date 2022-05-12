@@ -1,0 +1,1 @@
+rm ./Processed_Images/*.*

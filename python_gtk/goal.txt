@@ -1,0 +1,7 @@
+1.Create a UI for an application that helps you to manage a color pallete
+    Functions
+    1)Creating a new color pallete
+    2)Adding new colors to your color pallete
+    3)Auto generating colors from a given color
+    4)Auto generate colors at random
+    5)Saves your color pallete in a json file
