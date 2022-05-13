@@ -1,6 +1,6 @@
 from ast import Global
 import logging,os,json
-from msilib.schema import Error
+logging.basicConfig(level=logging.DEBUG)
 #set up logger
 class Color:
     def __init__(self,colorHSV):
@@ -9,17 +9,38 @@ class Color:
         h,s,v=colorHSV.split(",")
         self.color={"h":h,"s":s,"v":v}
 
-    def increaseHue(self):
-        self.color["h"]+=1
+    def deltaHue(self,op):
+        v=self.delta(op,self.color["h"])
+        self.color["h"]=v
         return self.color
 
-    def increaseSaturation(self):
-        self.color["s"]+=1
+    def deltaSaturation(self,op):
+        v=self.delta(op,self.color["s"])
+        self.color["s"]=v
         return self.color
 
-    def increaseValue(self):
-        self.color["v"]+=1
+    def deltaValue(self,op):
+        v=self.delta(op,self.color["v"])
+        self.color["v"]=v
         return self.color
+
+    def delta(self,op,value):
+        try:
+            value=int(value)
+        except TypeError:
+            raise TypeError("Could not convert {value} to int")
+        if(op=='inc'):
+            if(value<255):
+                value=value+1
+        elif(op=='dec'):
+            if(value>0):
+                value=value-1
+        else:
+            logging.error("Unknown opperation {op}")
+        return value
+    @staticmethod
+    def colorDictToString(dict):
+        return str(dict['h'])+","+str(dict['s'])+","+str(dict['v'])
 
 class ColorPallete:
     # data-> {"colors":["palleteName":[colors...]]}
@@ -35,6 +56,7 @@ class ColorPallete:
         if(colorPallete!=None):
             GlobalData.colorPallete=colorPallete
         else:
+            logging.warning("No color pallete file was found")
             #show error in the UI
             GlobalData.colorPallete={"colors":[]}
 
@@ -42,6 +64,7 @@ class ColorPallete:
         if(len(GlobalData.colorPallete["colors"][self.palleteName])>0):
             return True
         else:
+            logging.debug("Name collision in color pallete name {self.palleteName}")
             return False
 
     def addColortoPallete(self,color):
@@ -50,10 +73,15 @@ class ColorPallete:
             return True
         else:
             #display error that the color already exists
+            logging.debug("Color {color} already exists in the pallete {self.palleteName}")
             return False
 
     def deleteColorFromPallete(self,color):
-        GlobalData.colorPallete["colors"][self.palleteName].remove(color)
+        try:
+            GlobalData.colorPallete["colors"][self.palleteName].remove(color)
+        except:
+            logging.error("Could not delete color {color} from the pallete {self.palleteName}")
+            logging.debug("Pallete: Contents-> {GlobalData.colorPallete}")
 
 class FileManager:
     def __init__(self,filePath):
@@ -71,8 +99,8 @@ class FileManager:
                 with open(self.filePath,"w") as f:
                     json.dump(data)
                     return True
-            except Error as e:
-                print(e)
+            except:
+                raise Exception("Error writing to file {self.filePath}")
         return False
 
     def checkValidFile(self):
@@ -80,7 +108,7 @@ class FileManager:
             if(os.path.isfile(self.filePath)):
                 return True
         except FileNotFoundError:
-            print(FileNotFoundError)
+            logging.error(FileNotFoundError)
             return False
 
 class GlobalData:
