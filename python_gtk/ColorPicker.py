@@ -2,6 +2,36 @@ from ast import Global
 import logging,os,json
 logging.basicConfig(level=logging.DEBUG)
 #set up logger
+
+class GlobalData:
+    debug=True
+    colorPallete={}
+    devModeParams={
+        "colorsFile":"./devMode/ColorsJsonData/testFile.json",
+        "logs":"./devMode/logs_debug/logs.log"
+    }
+    prodModeParams={
+        "colorsFile":"./data/ColorPallets/colors.json",
+        "logs":"./data/logs/logs.log"
+    }
+    @staticmethod
+    def envParams():
+        if(GlobalData.debug):
+            return GlobalData.devModeParams
+        else:
+            return GlobalData.prodModeParams
+
+    @staticmethod
+    def loadColors():
+        params=GlobalData.envParams()
+        fM=FileManager(params["colorsFile"])
+        colors=fM.readFile()
+        if(colors!=None):
+            GlobalData.colorPallete=colors
+        else:
+            GlobalData.colorPallete={}
+
+
 class Color:
     def __init__(self,colorHSV):
         #hue,saturation,value[000-255]
@@ -56,17 +86,7 @@ class ColorPallete:
                 logging.debug("Success: Saved Color Pallete")
             else:
                 logging.error("Could not save color pallete")
-
-    def fetchColorPalletes(self):
-        fM=FileManager("./colors.json")
-        colorPallete=fM.readFile()
-        if(colorPallete!=None):
-            GlobalData.colorPallete=colorPallete
-        else:
-            logging.warning("No color pallete file was found")
-            #show error in the UI
-            GlobalData.colorPallete={"colors":[]}
-
+        
     def checkNameCollisions(self):
         if(len(GlobalData.colorPallete["colors"][self.palleteName])>0):
             return True
@@ -129,8 +149,7 @@ class FileManager:
             return False
         return False
 
-class GlobalData:
-    colorPallete={}
+
 
 class ColorPickerUI:
     def __init__(self):
