@@ -48,7 +48,14 @@ class ColorPallete:
         self.palleteName=palleteName
 
     def savePallete(self):
-        pass
+        fM=FileManager("./colors.json")
+        initialColorPallete=fM.readFile()
+        if(initialColorPallete!=None):
+            writeStatus=fM.writeToFile(GlobalData.colorPallete)
+            if(writeStatus!=False):
+                logging.debug("Success: Saved Color Pallete")
+            else:
+                logging.error("Could not save color pallete")
 
     def fetchColorPalletes(self):
         fM=FileManager("./colors.json")
@@ -93,15 +100,25 @@ class FileManager:
                 return data
         return None
 
-    def writeToFile(self,data):
+    def writeToFile(self,data,force=False):
         if(self.checkValidFile()!=False):
             try:
                 with open(self.filePath,"w") as f:
-                    json.dump(data)
+                    json.dump(data,f)
                     return True
             except:
+                logging.error("Error while trying to write to {self.filePath}")
                 raise Exception("Error writing to file {self.filePath}")
-        return False
+        elif(force==True and self.checkValidFile()==False):
+            try:
+                with open(self.filePath,"w") as f:
+                    json.dump(data,f)
+                    return True
+            except:
+                logging.error("Error while creating file {self.filePath}")
+                raise Exception("Error while creating file {self.filePath}")
+        else:
+            logging.error("Unkown parameters with the FileManager.writeToFile")
 
     def checkValidFile(self):
         try:
@@ -110,6 +127,7 @@ class FileManager:
         except FileNotFoundError:
             logging.error(FileNotFoundError)
             return False
+        return False
 
 class GlobalData:
     colorPallete={}

@@ -1,0 +1,7 @@
+Data Models:
+    ColorsJsonData
+        1.{
+            "colors":[
+                {"palleteName":[col1,col2,....]}
+            ]
+        }

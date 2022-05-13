@@ -1,5 +1,23 @@
 import unittest
 from ColorPicker import Color,ColorPallete,FileManager
+
+class FileManagerTests(unittest.TestCase):
+    def test_checkValidFile(self):
+        f=FileManager("./ColorsJsonData/testFile.json")
+        fN=FileManager("./data/dfalksjkl")
+        self.assertEqual(f.checkValidFile(),True)
+        self.assertEqual(fN.checkValidFile(),False)
+
+    def test_writeToFile(self):
+        colors={"colors":[{"pallet1":['1,2,3','100,233,56']}]}
+        f=FileManager("./ColorsJsonData/writeTest.json")
+        self.assertEqual(f.writeToFile(colors),True) 
+
+    def test_readFile(self):
+        f=FileManager("./ColorsJsonData/testFile.json")
+        data=f.readFile()
+        self.assertNotEqual(data,None)
+
 class TestColor(unittest.TestCase):
     def test_delta(self):
         v=10
@@ -8,7 +26,7 @@ class TestColor(unittest.TestCase):
         self.assertEqual(v+1,deltaPlus)
         deltaMinus=c.delta('dec',v)
         self.assertEqual(v-1,deltaMinus)
-        
+
     def test_colorDictToString(self):
         cDict={"h":1,"s":2,"v":3}
         cToString=Color.colorDictToString(cDict)
@@ -41,7 +59,5 @@ class TestColor(unittest.TestCase):
 class ColorPalleteTests(unittest.TestCase):
     pass
 
-class FileManagerTests(unittest.TestCase):
-    pass
 if __name__=="__main__":
     unittest.main()
