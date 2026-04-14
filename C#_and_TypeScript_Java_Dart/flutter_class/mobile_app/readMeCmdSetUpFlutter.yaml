@@ -1,0 +1,9 @@
+#first run
+flutter emulators
+#OutPut:
+#will output the devices id's
+
+#then run
+flutter emulators --launch <device id>
+#output:
+#    Will launch the device and start the setup

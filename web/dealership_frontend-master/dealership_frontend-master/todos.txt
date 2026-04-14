@@ -1,0 +1,13 @@
+1.Create Landing page
+2.Create Signup and Login for helpdesk
+3.Create Dealership HelpDesk
+    Features.
+    i.Add, update and delete vehicle details
+    ii.Receive messages and questions from the customers
+    iii.Receive orders
+
+4.Intergrate dealership backend to dealership frontend [HelpDesk]
+5.Create Dealership guest customer page
+    i.View car list 
+    ii.Compare feature 
+    iii.Filter vehicles and search using [Price, model and brand]
